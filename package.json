@@ -1,0 +1,22 @@
+{
+    "name": "observablecompute-website",
+    "version": "1.0.0",
+    "description": "Observable Compute Foundation - Empirical Mapping of Technology Language Evolution",
+    "scripts": {
+        "start": "npx @11ty/eleventy --serve",
+        "build": "npx @11ty/eleventy",
+        "deploy": "npx @11ty/eleventy && echo 'Built to dist/'"
+    },
+    "dependencies": {
+        "@11ty/eleventy": "^3.0.0"
+    },
+    "keywords": [
+        "ai",
+        "terminology",
+        "legal-technical",
+        "research",
+        "nonprofit"
+    ],
+    "author": "Observable Compute Foundation",
+    "license": "CC-BY-4.0"
+}

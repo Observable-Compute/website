@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">Observable Compute Foundation</a>
+      <span class="tagline">Empirical Mapping of Technology Language Evolution</span>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav">
+      <a href="/lexicon/" {% if page.url.startsWith('/lexicon') %}class="active"{% endif %}>Lexicon</a>
+      <a href="/reports/" {% if page.url.startsWith('/reports') %}class="active"{% endif %}>Reports</a>
+      <a href="/framework/" {% if page.url.startsWith('/framework') %}class="active"{% endif %}>Framework</a>
+      <a href="/community/" {% if page.url.startsWith('/community') %}class="active"{% endif %}>Community</a>
+      <a href="/api/" {% if page.url.startsWith('/api') %}class="active"{% endif %}>API</a>
+      <a href="/about/" {% if page.url.startsWith('/about') %}class="active"{% endif %}>About</a>
+    </nav>
+  </div>
+</header>

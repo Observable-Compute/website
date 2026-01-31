@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} | {% endif %}Observable Compute Foundation</title>
+    <meta name="description" content="{{ description | default('Empirical Mapping of Technology Language Evolution. Tracking terminology across research, legal, industry, and public domains.') }}">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M73QWN4V');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415300754694996" crossorigin="anonymous"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Observable Compute Foundation",
+      "url": "https://observablecompute.org",
+      "description": "Nonprofit research institute providing empirical mapping of technology terminology evolution and legal-technical alignment.",
+      "foundingDate": "2026-01",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rapid City",
+        "addressRegion": "SD",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+    
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M73QWN4V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    {% include "header.njk" %}
+    
+    <main>
+        {{ content | safe }}
+    </main>
+    
+    {% include "footer.njk" %}
+    
+    <script src="/js/main.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

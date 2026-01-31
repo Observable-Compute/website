@@ -1,0 +1,128 @@
+---
+layout: layout.njk
+title: API Documentation
+description: Public API for querying technology terminology evolution, legal-technical gaps, and conceptual clustering.
+---
+
+<section class="section">
+  <div class="container container-narrow">
+    <h1>Observable Compute API</h1>
+    <p class="lead">Public API for querying technology terminology evolution, legal-technical gaps, and conceptual clustering. Free tier: 100 requests/day. Premium tier: unlimited.</p>
+    
+    <div class="api-quickstart">
+      <h2>Quick Start</h2>
+      <pre><code>curl https://api.observablecompute.org/v1/concept/agentic-ai</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container container-narrow">
+    <h2>Endpoints</h2>
+    
+    <div class="endpoint">
+      <h3>GET /v1/concept/{slug}</h3>
+      <p>Retrieve full concept data including definitions, sources, clustering, timeline.</p>
+      <pre><code>{
+  "id": "uuid",
+  "canonical_term": "Agentic AI",
+  "slug": "agentic-ai",
+  "first_observed": "2025-10-15",
+  "status": "emerging",
+  "definitions": [...],
+  "co_occurrence": [...],
+  "timeline": [...]
+}</code></pre>
+    </div>
+    
+    <div class="endpoint">
+      <h3>GET /v1/search?q={query}</h3>
+      <p>Search concepts by keyword, returns ranked results.</p>
+      <pre><code>{
+  "query": "reasoning",
+  "results": [
+    {
+      "concept": "Multi-step Reasoning",
+      "relevance": 0.95,
+      "url": "/concept/multi-step-reasoning"
+    }
+  ]
+}</code></pre>
+    </div>
+    
+    <div class="endpoint">
+      <h3>GET /v1/clustering?threshold={0.7}</h3>
+      <p>Retrieve concept clusters above correlation threshold.</p>
+    </div>
+    
+    <div class="endpoint">
+      <h3>GET /v1/gaps?severity={critical}</h3>
+      <p>List legal-technical alignment gaps by severity.</p>
+    </div>
+    
+    <div class="endpoint">
+      <h3>GET /v1/timeline?concept_id={uuid}</h3>
+      <p>Get evolution timeline for specific concept.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow">
+    <h2>Authentication</h2>
+    <p>Free tier requires API key (100 req/day). Premium tier requires subscription ($50/mo, unlimited).</p>
+    <pre><code>curl -H "Authorization: Bearer YOUR_API_KEY" \
+  https://api.observablecompute.org/v1/concept/agentic-ai</code></pre>
+    <a href="/api/get-key/" class="btn-primary">Get Free API Key</a>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container container-narrow">
+    <h2>Rate Limits</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tier</th>
+          <th>Requests/Day</th>
+          <th>Requests/Minute</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Free</td>
+          <td>100</td>
+          <td>10</td>
+          <td>$0</td>
+        </tr>
+        <tr>
+          <td>Premium</td>
+          <td>Unlimited</td>
+          <td>100</td>
+          <td>$50/mo</td>
+        </tr>
+        <tr>
+          <td>Enterprise</td>
+          <td>Unlimited</td>
+          <td>1000</td>
+          <td>Contact</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow">
+    <h2>SDKs & Libraries</h2>
+    <p>Official client libraries coming soon:</p>
+    <ul>
+      <li>Python: <code>pip install observablecompute</code> (planned)</li>
+      <li>JavaScript: <code>npm install @observablecompute/api</code> (planned)</li>
+    </ul>
+    
+    <h2 class="mt-lg">Need Help?</h2>
+    <p>Questions about the API? <a href="mailto:api@observablecompute.org">Contact our developer support</a> or join the <a href="/community/">community discussion</a>.</p>
+  </div>
+</section>

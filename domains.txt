@@ -1,0 +1,47 @@
+
+--- Server: 156.67.75.110 ---
+  Domains found:
+    - 2old2wife.com
+    - adamstratmeyer.com
+    - advancedsciencetoday.wiki
+    - alexinitiative.org
+    - badgertheriflecat.com
+    - cheatingpsychology.com
+    - christianastrology.org
+    - clubsnearme.org
+    - cremedepoignet.com
+    - emergencypassport.info
+    - emergencypassport.shop
+    - endtimeworld.com
+    - hackanyandroid.com
+    - hackanyiphone.com
+    - hackanyphone.com
+    - ifuckingmissyou.com
+    - irbgpt.com
+    - kindwell.org
+    - mydivorcekit.com
+    - myoldnumber.com
+    - nursesarahs.com
+    - obeyais.org
+    - observablecompute.org
+    - southdakotarepublican.com
+    - southdakotastrategies.com
+    - wristcream.com
+
+--- Server: 157.173.208.214 ---
+  Domains found:
+    - 2old2wife.com
+    - adamstratmeyer.com
+    - aismirror.live
+    - aismirror.sbs
+    - almosthot.com
+    - blindtext.org
+    - emergencypassport.shop
+    - fucktheops.com
+    - northdakotaeducation.com
+    - obeyais.xyz
+    - rapidcitygazette.com
+    - sickcatsurvival.com
+    - southdakotademocrat.com
+    - southdakotaeducation.com
+    - stratmeyeranalytica.org

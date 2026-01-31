@@ -1,0 +1,151 @@
+---
+layout: layout.njk
+title: Living Technology Lexicon
+description: Empirical mapping of technology terminology across research, legal, industry, and public domains. Search and explore AI concepts.
+---
+
+<section class="section">
+  <div class="container">
+    <h1>Living Technology Lexicon</h1>
+    <p class="lead">Empirical mapping of technology terminology across research, legal, industry, and public domains. Updated continuously as concepts evolve.</p>
+    
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="concept-search" 
+        placeholder="Search concepts (e.g., 'agentic AI', 'algorithmic decision', 'reasoning')"
+        autocomplete="off"
+      />
+      <button id="search-btn">Search</button>
+    </div>
+    
+    <div class="search-filters">
+      <label>
+        <input type="checkbox" name="filter" value="emerging"> 
+        Emerging (&lt;90 days)
+      </label>
+      <label>
+        <input type="checkbox" name="filter" value="legal-gap"> 
+        Legal-Technical Gap
+      </label>
+      <label>
+        <input type="checkbox" name="filter" value="high-velocity"> 
+        High Velocity
+      </label>
+      <label>
+        <input type="checkbox" name="domain" value="research"> Research
+      </label>
+      <label>
+        <input type="checkbox" name="domain" value="legal"> Legal
+      </label>
+      <label>
+        <input type="checkbox" name="domain" value="industry"> Industry
+      </label>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>Browse by Category</h2>
+    <div class="category-grid">
+      <a href="/lexicon/?category=ai-capabilities" class="category-card">
+        <h3>AI Capabilities</h3>
+        <p class="concept-count">47 concepts</p>
+      </a>
+      <a href="/lexicon/?category=safety-alignment" class="category-card">
+        <h3>Safety & Alignment</h3>
+        <p class="concept-count">32 concepts</p>
+      </a>
+      <a href="/lexicon/?category=legal-regulatory" class="category-card">
+        <h3>Legal & Regulatory</h3>
+        <p class="concept-count">28 concepts</p>
+      </a>
+      <a href="/lexicon/?category=deployment" class="category-card">
+        <h3>Deployment & Infrastructure</h3>
+        <p class="concept-count">19 concepts</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Featured Concepts</h2>
+    <div class="concept-list">
+      
+      <div class="concept-item">
+        <h3><a href="/lexicon/concept/agentic-ai/">Agentic AI</a></h3>
+        <p class="concept-summary">Systems capable of goal-directed behavior with autonomous decision-making. 7 competing definitions identified across domains.</p>
+        <div class="concept-meta">
+          <span class="badge badge-emerging">Emerging</span>
+          <span class="badge badge-high-velocity">High Velocity</span>
+          <span class="update-date">Updated 3 days ago</span>
+        </div>
+      </div>
+      
+      <div class="concept-item">
+        <h3><a href="/lexicon/concept/algorithmic-decision-system/">Algorithmic Decision System</a></h3>
+        <p class="concept-summary">Legal term with critical technical misalignment. Current California definition technically includes Excel spreadsheets.</p>
+        <div class="concept-meta">
+          <span class="badge badge-legal-gap">Legal Gap</span>
+          <span class="update-date">Updated 1 week ago</span>
+        </div>
+      </div>
+      
+      <div class="concept-item">
+        <h3><a href="/lexicon/concept/chain-of-thought/">Chain-of-Thought</a></h3>
+        <p class="concept-summary">Prompting technique that elicits step-by-step reasoning. Strong correlation with "reasoning" (0.89) and unexpected cluster with "error correction" (0.76).</p>
+        <div class="concept-meta">
+          <span class="badge badge-established">Established</span>
+          <span class="update-date">Updated 2 weeks ago</span>
+        </div>
+      </div>
+      
+      <div class="concept-item">
+        <h3><a href="/lexicon/concept/observable-function/">Observable Function</a></h3>
+        <p class="concept-summary">Framework for describing AI capabilities through observable behavioral patterns rather than anthropomorphic attribution or categorical denial.</p>
+        <div class="concept-meta">
+          <span class="badge badge-emerging">Emerging</span>
+          <span class="update-date">Updated 1 day ago</span>
+        </div>
+      </div>
+      
+      <div class="concept-item">
+        <h3><a href="/lexicon/concept/constitutional-ai/">Constitutional AI</a></h3>
+        <p class="concept-summary">Alignment method using explicit principles to guide model behavior. Anthropic-originated term with growing cross-industry adoption.</p>
+        <div class="concept-meta">
+          <span class="badge badge-established">Established</span>
+          <span class="update-date">Updated 1 month ago</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="text-center mt-lg">
+      <a href="/lexicon/browse/" class="btn-secondary">Browse All Concepts →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h4>Concepts Tracked</h4>
+        <p class="stat-number">156</p>
+      </div>
+      <div class="stat-card">
+        <h4>Legal-Technical Gaps</h4>
+        <p class="stat-number">32</p>
+      </div>
+      <div class="stat-card">
+        <h4>Sources Indexed</h4>
+        <p class="stat-number">847</p>
+      </div>
+      <div class="stat-card">
+        <h4>Last Updated</h4>
+        <p class="stat-number">Today</p>
+      </div>
+    </div>
+  </div>
+</section>

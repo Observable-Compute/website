@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://observablecompute.org/sitemap.xml
+
+# Allow all crawlers for research content
+User-agent: Googlebot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /

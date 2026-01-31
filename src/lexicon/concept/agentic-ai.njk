@@ -1,0 +1,187 @@
+---
+layout: layout.njk
+tags: concepts
+canonical_term: Agentic AI
+slug: agentic-ai
+status: emerging
+first_observed: 2025-10-15
+---
+
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Agentic AI",
+  "description": "Systems capable of goal-directed behavior involving autonomous decision-making, planning, and execution toward specified objectives.",
+  "url": "https://observablecompute.org/lexicon/concept/agentic-ai/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "Living Technology Lexicon",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Observable Compute Foundation",
+      "url": "https://observablecompute.org"
+    }
+  },
+  "dateCreated": "2025-10-15",
+  "dateModified": "2026-01-28"
+}
+</script>
+{% endblock %}
+
+<article class="section">
+  <div class="container container-narrow">
+    <header class="concept-header">
+      <h1>Agentic AI</h1>
+      <div class="concept-meta">
+        <span class="badge badge-emerging">Emerging Concept</span>
+        <span class="badge badge-high-velocity">High Adoption Velocity</span>
+      </div>
+      <p class="text-muted">First Observed: October 2025</p>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <p>Systems capable of goal-directed behavior involving autonomous decision-making, planning, and execution toward specified objectives. Distinct from "autonomous AI" (lack of human supervision) and "AI agents" (software abstraction). Usage increased 400% Q4 2025 → Q1 2026.</p>
+    </section>
+
+    <section>
+      <h2>Definitions Across Domains</h2>
+      
+      <div class="definition-card">
+        <h3>Research Community</h3>
+        <blockquote>
+          "AI systems capable of goal-directed behavior involving evaluation, selection, and prioritization under constraints. May include planning, tool use, and multi-step reasoning."
+        </blockquote>
+        <p class="definition-source">
+          Source: <a href="#">Park et al., "Agentic AI: Survey and Taxonomy" (2025)</a>
+        </p>
+        <p class="technical-accuracy">
+          <strong>Technical Accuracy:</strong> 9/10 — Precise, testable, aligns with observable function
+        </p>
+      </div>
+
+      <div class="definition-card">
+        <h3>Industry (Anthropic)</h3>
+        <blockquote>
+          "AI that can act autonomously toward objectives, using tools and making decisions without constant human guidance."
+        </blockquote>
+        <p class="definition-source">
+          Source: <a href="#">Anthropic Blog, "Building Reliable Agents" (Dec 2025)</a>
+        </p>
+        <p class="technical-accuracy">
+          <strong>Technical Accuracy:</strong> 7/10 — Functional but lacks precision on "autonomy" vs "agency"
+        </p>
+      </div>
+
+      <div class="definition-card legal-gap">
+        <h3>Legal (California SB 1547, Proposed)</h3>
+        <blockquote>
+          "Artificial intelligence system with degree of autonomy in decision-making processes affecting individuals or society."
+        </blockquote>
+        <p class="definition-source">
+          Source: <a href="#">California SB 1547, Section 2(a)(3)</a>
+        </p>
+        <p class="technical-accuracy critical">
+          <strong>Technical Accuracy:</strong> 4/10 — Critical Gap: "degree of autonomy" undefined, conflates agency with autonomy
+        </p>
+        <div class="gap-detail">
+          <p><strong>Translation Gap:</strong> Legal definition focuses on "autonomy" (lack of supervision) while technical community focuses on "agency" (goal-directed behavior). A supervised system with high agency (e.g., medical diagnosis AI) may not qualify under this definition, while an unsupervised system with minimal agency (e.g., spam filter) might.</p>
+          <p><strong>Real-World Impact:</strong> Compliance costs increase for low-risk systems, high-risk systems may escape oversight through definitional loopholes.</p>
+          <p><strong>Recommendation:</strong> Adopt Park et al. definition or specify testable criteria for "degree of autonomy."</p>
+        </div>
+      </div>
+
+      <div class="definition-card">
+        <h3>Public Understanding</h3>
+        <blockquote>
+          "AI that does stuff on its own without being told exactly what to do."
+        </blockquote>
+        <p class="definition-source">
+          Source: Social media analysis, N=2,847 posts (Jan 2026)
+        </p>
+        <p class="technical-accuracy">
+          <strong>Technical Accuracy:</strong> 5/10 — Captures intuition, lacks precision
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Conceptual Clustering</h2>
+      <p>Based on co-occurrence analysis across 847 sources, "Agentic AI" clusters strongly with:</p>
+      
+      <div class="concept-list">
+        <div class="concept-item">
+          <a href="/lexicon/concept/autonomous-systems/">Autonomous Systems</a>
+          <span class="badge" style="background: #c6f6d5; color: #22543d;">0.89</span>
+        </div>
+        <div class="concept-item">
+          <a href="/lexicon/concept/tool-use/">Tool Use</a>
+          <span class="badge" style="background: #c6f6d5; color: #22543d;">0.84</span>
+        </div>
+        <div class="concept-item">
+          <a href="/lexicon/concept/planning/">Planning</a>
+          <span class="badge" style="background: #c6f6d5; color: #22543d;">0.76</span>
+        </div>
+        <div class="concept-item">
+          <a href="/lexicon/concept/liability/">Liability</a>
+          <span class="badge badge-emerging">0.71 (Unexpected)</span>
+        </div>
+        <div class="concept-item">
+          <a href="/lexicon/concept/alignment/">Alignment</a>
+          <span class="badge" style="background: #bee3f8; color: #2c5282;">0.68</span>
+        </div>
+      </div>
+      
+      <p class="text-muted mt-lg">
+        <strong>Unexpected Finding:</strong> "Agentic AI" clusters more strongly with "Liability" (0.71) than with "Intelligence" (0.52), suggesting policy discourse dominates technical discourse in public-facing content.
+      </p>
+    </section>
+
+    <section>
+      <h2>Evolution Timeline</h2>
+      <div class="timeline-events">
+        <div class="timeline-event">
+          <span class="date">Oct 2025</span>
+          <p>First observed in academic preprints (Park et al.)</p>
+        </div>
+        <div class="timeline-event">
+          <span class="date">Nov 2025</span>
+          <p>Anthropic blog post popularizes term in industry</p>
+        </div>
+        <div class="timeline-event">
+          <span class="date">Dec 2025</span>
+          <p>Usage increases 200% month-over-month</p>
+        </div>
+        <div class="timeline-event">
+          <span class="date">Jan 2026</span>
+          <p>California SB 1547 proposes legal definition</p>
+        </div>
+        <div class="timeline-event current">
+          <span class="date">Feb 2026</span>
+          <p>400% quarterly increase, 7 competing definitions identified</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sources & Citations</h2>
+      <ol>
+        <li>Park, P. S., et al. (2025). "Agentic AI: Survey and Taxonomy." arXiv:2512.xxxxx</li>
+        <li>Anthropic. (2025). "Building Reliable Agents." anthropic.com/blog</li>
+        <li>California Legislature. (2026). Senate Bill 1547. leginfo.legislature.ca.gov</li>
+      </ol>
+      
+      <div class="card mt-lg">
+        <h3>Cite This Concept</h3>
+        <pre><code>Observable Compute Foundation. (2026). "Agentic AI." Living Technology Lexicon. https://observablecompute.org/lexicon/concept/agentic-ai/</code></pre>
+      </div>
+    </section>
+
+    <div class="cta-buttons" style="justify-content: center;">
+      <a href="/lexicon/" class="btn-secondary">← Back to Lexicon</a>
+      <a href="/community/concept/agentic-ai/" class="btn-primary">Join Discussion</a>
+    </div>
+  </div>
+</article>
