@@ -6,6 +6,15 @@
     <title>{% if title %}{{ title }} | {% endif %}Observable Compute Foundation</title>
     <meta name="description" content="{{ description | default('Empirical Mapping of Technology Language Evolution. Tracking terminology across research, legal, industry, and public domains.') }}">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}Observable Compute Foundation">
+    <meta property="og:description" content="{{ description | default('Empirical Mapping of Technology Language Evolution') }}">
+    <meta property="og:image" content="https://observablecompute.org/images/banner.png">
+    <meta property="og:url" content="https://observablecompute.org{{ page.url }}">
+    <meta property="og:type" content="website">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
