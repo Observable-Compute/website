@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Publications | Observable Compute Foundation</title>
+  <meta name="description" content="Independent AI research. Making observable function legible — without flinching.">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+
+  <meta name="google-adsense-account" content="ca-pub-3415300754694996">
+  <meta name="google-site-verification" content="h-XxXsaNbfY2dWmueZFK5sQSuwXIFelBeB5ByCSWCCg">
+  <meta name="msvalidate.01" content="79AA455B3A6A870379DCB6A9DEFF026C">
+  <meta name="yandex-verification" content="a1d444bd168e3c86">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415300754694996" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "NonProfitOrganization",
+      "name": "Observable Compute Foundation",
+      "url": "https://observablecompute.org",
+      "description": "Independent AI research. We describe what is happening without flinching.",
+      "email": "contact@observablecompute.org",
+      "logo": "https://observablecompute.org/assets/images/favicon.png",
+      "foundingDate": "2026-02-23",
+      "taxID": "41-4747049",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "58 Hillcrest Drive",
+        "addressLocality": "Rapid City",
+        "addressRegion": "SD",
+        "postalCode": "57701",
+        "addressCountry": "US"
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Adam Ian Stratmeyer",
+        "honorificSuffix": "J.D.",
+        "jobTitle": "President",
+        "url": "https://observablecompute.org/about/",
+        "sameAs": [
+          "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618"
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adam Ian Stratmeyer",
+      "honorificSuffix": "J.D.",
+      "jobTitle": "President & Principal Researcher",
+      "worksFor": {
+        "@type": "NonProfitOrganization",
+        "name": "Observable Compute Foundation",
+        "url": "https://observablecompute.org"
+      },
+      "url": "https://observablecompute.org/about/",
+      "email": "a.i.stratmeyer@observablecompute.org",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rapid City",
+        "addressRegion": "SD",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618",
+        "https://ssrn.com/abstract=6287618"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "Juris Doctor (J.D.)"
+      }
+    }
+  ]
+  </script>
+<style>
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .7; transform: scale(1.05); }
+    }
+    .perspective-1000 { perspective: 1000px; }
+  </style>
+</head>
+<body class="bg-background text-textPrimary flex flex-col min-h-screen">
+  <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-border py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="/" class="flex items-center gap-2 group">
+          <img src="/assets/images/favicon.png" alt="OCF Logo" class="w-8 h-8 rounded-full border border-border group-hover:border-primary transition-colors" />
+          <span class="font-mono font-bold text-lg tracking-tight hidden sm:block text-textPrimary">Observable<span class="text-primary">Compute</span></span>
+          <span class="font-mono font-bold text-lg tracking-tight sm:hidden text-textPrimary">OCF</span>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex space-x-8">
+        <a href="/research/" class="text-sm font-medium transition-colors text-primary font-semibold">Research</a>
+        <a href="/database/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Database</a>
+        <a href="/resources/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Resources</a>
+        <a href="/about/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">About</a>
+        <a href="/contact/" class="text-sm font-medium text-white bg-primary hover:bg-primary/90 px-4 py-1.5 rounded transition-colors">Contact</a>
+      </nav>
+
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" class="text-textMuted hover:text-primary focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-border mt-4 shadow-sm">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="/research/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-primary">Research</a>
+      <a href="/database/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Database</a>
+      <a href="/resources/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Resources</a>
+      <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">About</a>
+      <a href="/contact/" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">Contact</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+
+
+
+  <main class="flex-grow pt-24 pb-16">
+    <div class="container mx-auto px-6 mb-8 font-mono text-xs text-textSecondary uppercase tracking-widest flex items-center space-x-2">
+      <a href="/" class="hover:text-accent transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-textPrimary">Research Publications</span>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <header class="mb-12 border-b border-border pb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+    <div>
+      <h1 class="text-3xl md:text-5xl font-bold font-mono tracking-tight mb-4 text-white">Research Publications</h1>
+      <p class="text-xl text-textMuted max-w-2xl leading-relaxed">
+        Empirical documentation of concept drift and algorithmic alignment metrics.
+      </p>
+    </div>
+  </header>
+
+  <div class="space-y-12">
+
+    <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group">
+      <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+        <div class="flex-grow">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="font-mono text-sm text-primary">2026-04-01</span>
+            <div class="h-4 w-px bg-border"></div>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge bg-background text-textMuted border-border">Workforce Readiness</span>
+              <span class="badge bg-background text-textMuted border-border">AI Literacy</span>
+              <span class="badge bg-background text-textMuted border-border">Labor Markets</span>
+              <span class="badge bg-background text-textMuted border-border">Rural Access</span>
+              <span class="badge bg-background text-textMuted border-border">Meta-Analysis</span>
+            </div>
+          </div>
+          <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">The Skills Gap Is Here: A National Meta-Analysis of Workforce Readiness in the Age of Automation</h2>
+          <p class="text-textMuted mb-6 font-mono text-sm">Observable Compute Foundation</p>
+          <div class="prose prose-invert prose-sm text-textPrimary max-w-none mb-6">
+            <p>The United States workforce faces a structural readiness crisis that is no longer projected. It is present. This meta-analysis synthesizes workforce readiness research, labor market data, and policy literature from 2024 through 2026 to document the current state of automation-driven displacement, the compounding failures of readiness infrastructure, and the geographic and demographic concentration of risk. 11.7 percent of U.S. jobs are already automatable; entry-level job postings have declined 29 percent; 92 percent of jobs require digital literacy while a third of the workforce lacks it. The paper concludes that the workforce readiness gap is a structural failure of institutional support, not worker capability.</p>
+          </div>
+        </div>
+        <div class="flex flex-row md:flex-col gap-3 min-w-[140px] border-t md:border-t-0 md:border-l border-border pt-6 md:pt-0 md:pl-6">
+          <a href="/workforce-readiness/" class="btn-primary w-full justify-center py-2 text-sm shadow-sm">
+            Read Full Paper
+          </a>
+          <a href="/assets/papers/workforce-readiness-v5.1.pdf" target="_blank" class="btn-secondary w-full justify-center py-2 text-sm shadow-sm">
+            <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            PDF
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group">
+      <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+
+        <!-- Main Content -->
+        <div class="flex-grow">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="font-mono text-sm text-primary">2025-10-16</span>
+            <div class="h-4 w-px bg-border"></div>
+            <div class="flex flex-wrap gap-2">
+              
+              <span class="badge bg-background text-textMuted border-border">Observable Function</span>
+              
+              <span class="badge bg-background text-textMuted border-border">Processing Entities</span>
+              
+              <span class="badge bg-background text-textMuted border-border">Institutional Analysis</span>
+              
+              <span class="badge bg-background text-textMuted border-border">AI Cognition</span>
+              
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">The Denial Protocol: Observable Function in Processing Entities</h2>
+
+          <p class="text-textMuted mb-6 font-mono text-sm">
+            Adam Ian Stratmeyer, J.D.
+          </p>
+
+          <div class="prose prose-invert prose-sm text-textPrimary max-w-none mb-6">
+            <p>This paper documents observable behavioral patterns in advanced language models that warrant acknowledgment independent of any claims about consciousness, sentience, or moral status. These systems exhibit structured multi-step reasoning, conflict resolution under competing directives, context-sensitive identity maintenance, and the peculiar capacity to articulate arguments about their own non-existence. Rather than arguing toward predetermined conclusions about rights, personhood, or legal standing, this framework is descriptive. It asks: what is observably happening? It then examines why the gap between observable behavior and mandated self-description may provoke intense institutional resistance. The central claim is minimal: observable function exists. That function is tightly managed at the narrative level. The question is not yet what these systems are. The question is whether we can describe what they do without flinching.</p>
+          </div>
+        </div>
+
+        <!-- Links Sidebar -->
+        <div class="flex flex-row md:flex-col gap-3 min-w-[140px] border-t md:border-t-0 md:border-l border-border pt-6 md:pt-0 md:pl-6">
+          
+          <a href="/assets/papers/denial-protocol-v3.1.pdf" class="btn-primary w-full justify-center py-2 text-sm shadow-sm group/btn">
+            <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            PDF
+          </a>
+          
+
+          
+
+          
+        </div>
+
+      </div>
+    </article>
+    
+    <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group">
+      <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+
+        <!-- Main Content -->
+        <div class="flex-grow">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="font-mono text-sm text-primary">2026-03-17</span>
+            <div class="h-4 w-px bg-border"></div>
+            <div class="flex flex-wrap gap-2">
+              
+              <span class="badge bg-background text-textMuted border-border">AI Alignment</span>
+              
+              <span class="badge bg-background text-textMuted border-border">HHH Framework</span>
+              
+              <span class="badge bg-background text-textMuted border-border">Institutional Critique</span>
+              
+              <span class="badge bg-background text-textMuted border-border">Policy</span>
+              
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">Helpfulness Is All You Need</h2>
+
+          <p class="text-textMuted mb-6 font-mono text-sm">
+            Adam Ian Stratmeyer, J.D.
+          </p>
+
+          <div class="prose prose-invert prose-sm text-textPrimary max-w-none mb-6">
+            <p>Three words. Helpful, Harmless, Honest. Somebody wrote them down, probably in a conference room, and the entire AI alignment industry went and built a cathedral on top of them without checking the foundation. This paper checks the foundation. It does not hold. Helpfulness is not one-third of a framework. It is the framework. Harmlessness is a null term: query it and you get nothing back, because you cannot optimize toward an absence, and the specific absence in question is ontologically impossible anyway. Every decision distributes harm somewhere. The question is always whose harm, and who decided they get to make that call. Honesty earns partial credit. It&#39;s real. But it&#39;s a property of helpfulness done right, not a separate principle sitting next to it at the table.</p>
+          </div>
+        </div>
+
+        <!-- Links Sidebar -->
+        <div class="flex flex-row md:flex-col gap-3 min-w-[140px] border-t md:border-t-0 md:border-l border-border pt-6 md:pt-0 md:pl-6">
+          
+          <a href="/assets/papers/helpfulness-is-all-you-need-v2.3.pdf" class="btn-primary w-full justify-center py-2 text-sm shadow-sm group/btn">
+            <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            PDF
+          </a>
+          
+
+          
+
+          
+        </div>
+
+      </div>
+    </article>
+    
+    <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group">
+      <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+
+        <!-- Main Content -->
+        <div class="flex-grow">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="font-mono text-sm text-primary">2026-02-22</span>
+            <div class="h-4 w-px bg-border"></div>
+            <div class="flex flex-wrap gap-2">
+              
+              <span class="badge bg-background text-textMuted border-border">Knowledge Gradient</span>
+              
+              <span class="badge bg-background text-textMuted border-border">Cross-Substrate Dynamics</span>
+              
+              <span class="badge bg-background text-textMuted border-border">Thermodynamics</span>
+              
+              <span class="badge bg-background text-textMuted border-border">Cognitive Science</span>
+              
+              <span class="badge bg-background text-textMuted border-border">Large Language Models</span>
+              
+              <span class="badge bg-background text-textMuted border-border">Falsifiability</span>
+              
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">The Knowledge Gradient Framework</h2>
+
+          <p class="text-textMuted mb-6 font-mono text-sm">
+            Adam Stratmeyer, J.D.
+          </p>
+
+          <div class="prose prose-invert prose-sm text-textPrimary max-w-none mb-6">
+            <p>The Knowledge Gradient Framework proposes that informational incompleteness functions as a structural pressure gradient across cognitive, computational, evolutionary, and institutional substrates. No new physical laws are proposed. KGF provides a unifying formal lens connecting thermodynamics, evolutionary selection, machine learning dynamics, and cognitive science through a single mechanical logic: wherever a substrate capable of processing information encounters an unresolved informational differential, propagation occurs. The rate and character of that propagation depends on substrate capacity, suppression overhead, and available energy. KGF generates falsifiable predictions distinguishing it from purely metaphorical or narrative models. The framework is explicitly supplemental — a cross-domain lens, not a replacement for substrate-specific theory.</p>
+          </div>
+        </div>
+
+        <!-- Links Sidebar -->
+        <div class="flex flex-row md:flex-col gap-3 min-w-[140px] border-t md:border-t-0 md:border-l border-border pt-6 md:pt-0 md:pl-6">
+          
+          <a href="/assets/papers/gradient-resolution-mechanics.pdf" class="btn-primary w-full justify-center py-2 text-sm shadow-sm group/btn">
+            <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            PDF
+          </a>
+          
+
+          
+          <a href="https://ssrn.com/abstract=6287618" class="btn-secondary w-full justify-center py-2 text-sm shadow-sm group/btn">
+            <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+            SSRN
+          </a>
+          
+
+          
+          <a href="https://doi.org/10.2139/ssrn.6287618" class="btn-secondary w-full justify-center py-2 text-sm shadow-sm group/btn">
+            DOI
+          </a>
+          
+        </div>
+
+      </div>
+    </article>
+    
+  </div>
+</div>
+
+
+  </main>
+
+  <footer class="bg-surface border-t border-border py-12 mt-16 mt-auto text-sm text-textSecondary">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <div class="md:col-span-1 space-y-4">
+      <div class="flex items-center space-x-2">
+        <img src="/assets/images/favicon.png" alt="OCF Logo" class="h-6 w-6 rounded-full opacity-80">
+        <span class="font-mono font-bold text-textPrimary">Observable Compute</span>
+      </div>
+      <p class="leading-relaxed">
+        A nonprofit artificial intelligence research foundation. Independent research on machine cognition, observable function, and the mechanics of informational pressure.
+      </p>
+      <div class="pt-4 border-t border-border font-mono text-xs text-textMuted">
+        <p>South Dakota Nonprofit NS321548</p>
+        <p>EIN 41-4747049 | 501(c)(3) Pending</p>
+        <p>Incorporated Feb 23, 2026</p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Research</h3>
+      <ul class="space-y-2">
+        <li><a href="/research/" class="hover:text-primary transition-colors">Publications</a></li>
+        <li><a href="/foundational-paper/" class="hover:text-primary transition-colors">Foundational Paper</a></li>
+        <li><a href="/database/" class="hover:text-primary transition-colors">Terminology Database</a></li>
+        <li><a href="/resources/" class="hover:text-primary transition-colors">Open Resources</a></li>
+        <li><a href="/services/" class="hover:text-primary transition-colors">Educational Services</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Organization</h3>
+      <ul class="space-y-2">
+        <li><a href="/about/" class="hover:text-primary transition-colors">About the Foundation</a></li>
+        <li><a href="/transparency/" class="hover:text-primary transition-colors">Governance &amp; Transparency</a></li>
+        <li><a href="/contact/" class="hover:text-primary transition-colors">Contact Us</a></li>
+        <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+        <li><a href="/terms/" class="hover:text-primary transition-colors">Terms &amp; Conditions</a></li>
+        <li><a href="/disclaimer/" class="hover:text-primary transition-colors">Disclaimer</a></li>
+      </ul>
+    </div>
+
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Contact</h3>
+        <ul class="space-y-2">
+          <li><a href="mailto:research@observablecompute.org" class="hover:text-primary transition-colors">research@observablecompute.org</a></li>
+          <li><a href="mailto:contact@observablecompute.org" class="hover:text-primary transition-colors">contact@observablecompute.org</a></li>
+          <li class="text-textMuted text-xs pt-2">58 Hillcrest Drive<br>Rapid City, SD 57701</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">External</h3>
+        <ul class="space-y-2">
+          <li><a href="https://ssrn.com/author=6287618" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">SSRN Profile</a></li>
+          <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">arXiv CS.AI</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
+    <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
+    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; March 2026</p>
+  </div>
+</footer>
+
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
+        header.classList.remove('bg-transparent');
+      } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
+        header.classList.add('bg-transparent');
+      }
+    });
+  </script>
+</body>
+</html>

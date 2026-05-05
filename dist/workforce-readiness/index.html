@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Skills Gap Is Here | Observable Compute Foundation</title>
+  <meta name="description" content="A National Meta-Analysis of Workforce Readiness in the Age of Automation. Published by the Observable Compute Foundation, April 2026.">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <meta name="google-adsense-account" content="ca-pub-3415300754694996">
+  <meta name="google-site-verification" content="h-XxXsaNbfY2dWmueZFK5sQSuwXIFelBeB5ByCSWCCg">
+  <meta name="msvalidate.01" content="79AA455B3A6A870379DCB6A9DEFF026C">
+  <meta name="yandex-verification" content="a1d444bd168e3c86">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415300754694996" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "The Skills Gap Is Here: A National Meta-Analysis of Workforce Readiness in the Age of Automation",
+    "author": {
+      "@type": "Organization",
+      "name": "Observable Compute Foundation",
+      "url": "https://observablecompute.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Observable Compute Foundation",
+      "url": "https://observablecompute.org"
+    },
+    "datePublished": "2026-04-01",
+    "url": "https://observablecompute.org/workforce-readiness/",
+    "keywords": "workforce readiness, AI literacy, automation displacement, digital equity, rural workforce development, skills gap, K-12 pipeline, meta-analysis"
+  }
+  </script>
+  <style>
+    .stat-bar-fill { transition: width 0.6s ease; }
+    .callout { border-left: 3px solid #1d3f8a; padding: 1.25rem 1.5rem; background: #f0f6ff; margin: 1.5rem 0; font-style: italic; font-weight: 600; color: #1d3f8a; }
+    .finding-box { border-left: 3px solid #2b7cbf; padding: 0.75rem 1rem; background: rgba(43,124,191,0.08); margin: 0.75rem 0; }
+  </style>
+</head>
+<body class="bg-background text-textPrimary flex flex-col min-h-screen">
+
+  <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-border py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="/" class="flex items-center gap-2 group">
+          <img src="/assets/images/favicon.png" alt="OCF Logo" class="w-8 h-8 rounded-full border border-border group-hover:border-primary transition-colors" />
+          <span class="font-mono font-bold text-lg tracking-tight hidden sm:block text-textPrimary">Observable<span class="text-primary">Compute</span></span>
+          <span class="font-mono font-bold text-lg tracking-tight sm:hidden text-textPrimary">OCF</span>
+        </a>
+      </div>
+      <nav class="hidden md:flex space-x-8">
+        <a href="/research/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Research</a>
+        <a href="/database/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Database</a>
+        <a href="/resources/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Resources</a>
+        <a href="/about/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">About</a>
+        <a href="/contact/" class="text-sm font-medium text-white bg-primary hover:bg-primary/90 px-4 py-1.5 rounded transition-colors">Contact</a>
+      </nav>
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" class="text-textMuted hover:text-primary focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-border mt-4 shadow-sm">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="/research/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Research</a>
+      <a href="/database/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Database</a>
+      <a href="/resources/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Resources</a>
+      <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">About</a>
+      <a href="/contact/" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">Contact</a>
+    </div>
+  </div>
+</header>
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+
+  <main class="flex-grow pt-24 pb-16">
+    <div class="container mx-auto px-6 mb-8 font-mono text-xs text-textSecondary uppercase tracking-widest flex items-center space-x-2">
+      <a href="/" class="hover:text-accent transition-colors">Home</a>
+      <span>/</span>
+      <a href="/research/" class="hover:text-accent transition-colors">Research</a>
+      <span>/</span>
+      <span class="text-textPrimary">Workforce Readiness Meta-Analysis</span>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 py-8">
+
+      <!-- Paper Header -->
+      <header class="mb-12 border-b border-border pb-10">
+        <div class="font-mono text-xs text-primary uppercase tracking-widest mb-4">Observable Compute Foundation &mdash; Workforce Readiness Meta-Analysis &mdash; 2026</div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-textPrimary leading-tight">The Skills Gap Is Here.</h1>
+        <p class="text-xl md:text-2xl text-textSecondary italic font-serif mb-6">A National Meta-Analysis of Workforce Readiness in the Age of Automation</p>
+        <div class="flex flex-wrap gap-4 text-sm text-textMuted font-mono mb-6">
+          <span>v5.1</span>
+          <span>|</span>
+          <span>Published: April 2026</span>
+          <span>|</span>
+          <span>Observable Compute Foundation</span>
+          <span>|</span>
+          <span>Rapid City, South Dakota</span>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="/assets/papers/workforce-readiness-v5.1.pdf" target="_blank" class="btn-primary py-2 px-4 text-sm flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Download PDF
+          </a>
+          <a href="/research/" class="btn-secondary py-2 px-4 text-sm">All Publications</a>
+        </div>
+        <div class="mt-6 pt-6 border-t border-border">
+          <p class="text-xs font-mono text-textMuted"><span class="font-semibold text-textSecondary">Keywords:</span> workforce readiness, AI literacy, automation displacement, digital equity, rural workforce development, skills gap, K-12 pipeline, meta-analysis</p>
+        </div>
+      </header>
+
+      <article class="space-y-16 text-textSecondary leading-relaxed">
+
+        <!-- What This Paper Is / Is Not -->
+        <section>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-secondary/10 border border-secondary/30 rounded-lg p-6">
+              <h3 class="font-bold text-secondary font-mono text-sm uppercase tracking-wider mb-4">This paper is:</h3>
+              <ul class="space-y-3 text-sm text-textSecondary">
+                <li class="flex gap-2"><span class="text-secondary mt-1">&#8226;</span><span>A meta-analysis synthesizing workforce readiness research, frameworks, labor market data, and policy literature as it stands in 2025 and 2026.</span></li>
+                <li class="flex gap-2"><span class="text-secondary mt-1">&#8226;</span><span>A documentation of current conditions. What the disruption looks like right now, not a projection of what may come.</span></li>
+                <li class="flex gap-2"><span class="text-secondary mt-1">&#8226;</span><span>Written in OCF house style: direct, evidence-anchored, readable by humans and structured for AI-assisted analysis.</span></li>
+                <li class="flex gap-2"><span class="text-secondary mt-1">&#8226;</span><span>An honest accounting of what the research agrees on, where the evidence is thin, and what intervention models have actually shown results.</span></li>
+              </ul>
+            </div>
+            <div class="bg-warning/10 border border-warning/20 rounded-lg p-6">
+              <h3 class="font-bold text-warning font-mono text-sm uppercase tracking-wider mb-4">This paper is not:</h3>
+              <ul class="space-y-3 text-sm text-textSecondary">
+                <li class="flex gap-2"><span class="text-warning mt-1">&#8226;</span><span>A prediction or forecast. Every number cited here is reported by the source, not modeled by OCF.</span></li>
+                <li class="flex gap-2"><span class="text-warning mt-1">&#8226;</span><span>A policy prescription or program proposal. This paper documents the landscape. OCF's programmatic response follows separately.</span></li>
+                <li class="flex gap-2"><span class="text-warning mt-1">&#8226;</span><span>Celebratory of automation or dismissive of displaced workers. The disruption documented here is real, uneven, and disproportionate.</span></li>
+                <li class="flex gap-2"><span class="text-warning mt-1">&#8226;</span><span>A complete systematic review. This is a structured synthesis designed to be readable, citable, and machine-parseable.</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Abstract -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">Abstract</h2>
+          <blockquote class="border-l-4 border-primary pl-6 py-2 bg-surface/50 rounded-r-lg">
+            <p class="leading-relaxed text-textPrimary">The United States workforce faces a structural readiness crisis that is no longer projected. It is present. This meta-analysis synthesizes workforce readiness research, labor market data, and policy literature from 2024 through 2026 to document the current state of automation-driven displacement, the compounding failures of readiness infrastructure, and the geographic and demographic concentration of risk. Drawing on data from the World Economic Forum, MIT, the IMF, Gallup, Bain and Company, the National Skills Coalition, Jobs for the Future, the Center on Rural Innovation, SHRM, and multiple peer-reviewed and government sources, this paper finds that 11.7 percent of U.S. jobs are already automatable using existing technology; entry-level job postings have declined 29 percent since January 2024; 92 percent of jobs now require digital literacy while a third of the workforce lacks it; and only 12 percent of workers use AI daily despite broad enterprise deployment. Rural communities face compounding disadvantages across every dimension of readiness infrastructure: device ownership, broadband access, proximity to training facilities, and philanthropic funding. The paper identifies what the research consistently shows works: employer-connected training, modular credentials, hybrid delivery with local support, wrap-around services, and K-12 pathways tied to real employer commitments. It concludes that the workforce readiness gap is a structural failure of institutional support, not worker capability, and that correcting it requires deliberate investment in the communities and populations the market has consistently underserved.</p>
+          </blockquote>
+        </section>
+
+        <!-- At a Glance -->
+        <section>
+          <h2 class="text-2xl font-bold mb-2 font-sans text-textPrimary border-b border-border pb-3">At a Glance</h2>
+          <p class="text-center italic text-textMuted font-mono text-sm mb-8">These are not projections. They are current conditions.</p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="bg-surface border border-border rounded-lg p-4 text-center">
+              <div class="text-3xl font-extrabold text-primary font-mono mb-1">120M</div>
+              <div class="text-xs text-textMuted leading-tight">workers at redundancy risk</div>
+              <div class="text-xs text-textMuted font-mono mt-1 opacity-60">WEF FoJ 2025</div>
+            </div>
+            <div class="bg-surface border border-border rounded-lg p-4 text-center">
+              <div class="text-3xl font-extrabold text-primary font-mono mb-1">59/100</div>
+              <div class="text-xs text-textMuted leading-tight">workers need reskilling — 11 will not get it</div>
+              <div class="text-xs text-textMuted font-mono mt-1 opacity-60">WEF FoJ 2025</div>
+            </div>
+            <div class="bg-surface border border-border rounded-lg p-4 text-center">
+              <div class="text-3xl font-extrabold text-primary font-mono mb-1">11.7%</div>
+              <div class="text-xs text-textMuted leading-tight">U.S. jobs automatable now</div>
+              <div class="text-xs text-textMuted font-mono mt-1 opacity-60">MIT, Nov 2024</div>
+            </div>
+            <div class="bg-surface border border-border rounded-lg p-4 text-center">
+              <div class="text-3xl font-extrabold text-warning font-mono mb-1">-29%</div>
+              <div class="text-xs text-textMuted leading-tight">entry-level postings lost</div>
+              <div class="text-xs text-textMuted font-mono mt-1 opacity-60">Randstad, 126M postings</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-surface border border-border rounded-lg p-4 text-center">
+              <div class="text-3xl font-extrabold text-secondary font-mono mb-1">92%</div>
+              <div class="text-xs text-textMuted leading-tight">jobs require digital literacy</div>
+              <div class="text-xs text-textMuted font-mono mt-1 opacity-60">Nat'l Skills Coalition</div>
+            </div>
+            <div class="bg-surface border border-border rounded-lg p-4 text-center">
+              <div class="text-3xl font-extrabold text-secondary font-mono mb-1">1 in 3</div>
+              <div class="text-xs text-textMuted leading-tight">workforce lacks digital skills</div>
+              <div class="text-xs text-textMuted font-mono mt-1 opacity-60">NSC / IMF</div>
+            </div>
+            <div class="bg-surface border border-border rounded-lg p-4 text-center">
+              <div class="text-3xl font-extrabold text-secondary font-mono mb-1">12%</div>
+              <div class="text-xs text-textMuted leading-tight">workers use AI daily</div>
+              <div class="text-xs text-textMuted font-mono mt-1 opacity-60">Gallup 2026, n=22,000+</div>
+            </div>
+            <div class="bg-surface border border-border rounded-lg p-4 text-center">
+              <div class="text-3xl font-extrabold text-secondary font-mono mb-1">63%</div>
+              <div class="text-xs text-textMuted leading-tight">employers cite skills gap as #1 barrier</div>
+              <div class="text-xs text-textMuted font-mono mt-1 opacity-60">WEF FoJ 2025</div>
+            </div>
+          </div>
+          <p class="mt-6 text-sm text-textMuted bg-surface/50 border border-border rounded p-4"><span class="font-semibold text-textSecondary">Pipeline note:</span> 58% of K-12 teachers received no AI professional development as of late 2024. The next generation of workers is entering a labor market their teachers were not prepared to address.</p>
+        </section>
+
+        <!-- Section I -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">I. Defining the Problem: What Is Workforce Readiness?</h2>
+          <p class="mb-4">The term workforce readiness appears in federal labor policy, employer surveys, academic literature, and K-12 standards documents. It is used constantly and defined inconsistently. That inconsistency is not a minor academic problem. It shapes how money gets spent, how programs get designed, and which workers get left out. Before analyzing where readiness gaps exist, the field's own definitional fragmentation needs to be on the table.</p>
+          <p class="mb-4">The most widely cited academic definition holds that workforce readiness is the extent to which individuals possess the attitudes and attributes that make them prepared for success in the work environment. A 2024 peer-reviewed review in Higher Education Research and Development found that despite decades of research, no well-defined structural framework exists allowing consistent assessment across sectors, regions, or credential levels.</p>
+          <p class="mb-4">ACT's Work Readiness Standards and Benchmarks define a work-ready individual as someone who possesses foundational skills needed to be minimally qualified for a specific occupation as determined through job analysis. Those skills break into three categories: foundational cognitive skills such as reading, applied mathematics, and problem solving; noncognitive skills including communication, integrity, and work ethic; and occupation-specific technical skills.</p>
+          <p class="mb-4">The Learn and Work Ecosystem Library's 2024 synthesis notes that workforce readiness definitions consistently include communication, teamwork, problem-solving, work ethic, and initiative. These baseline definitions were constructed for a labor market that no longer exists. AI exposure has fundamentally altered what minimum qualification looks like across almost every occupational category.</p>
+          <p class="mb-4">Three distinct but related concepts now operate under the workforce readiness umbrella. Conflating them produces bad policy and worse programming. OCF names this framework the Readiness Stack.</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+            <div class="border border-primary/30 bg-primary/5 rounded-lg p-4">
+              <div class="font-mono text-xs text-primary uppercase tracking-wider mb-2">Tier 1</div>
+              <div class="font-bold text-textPrimary mb-2">Foundational Readiness</div>
+              <p class="text-sm text-textMuted">Basic literacy, numeracy, communication, and work ethic. These remain essential but are no longer sufficient.</p>
+            </div>
+            <div class="border border-secondary/30 bg-secondary/5 rounded-lg p-4">
+              <div class="font-mono text-xs text-secondary uppercase tracking-wider mb-2">Tier 2</div>
+              <div class="font-bold text-textPrimary mb-2">Digital Readiness</div>
+              <p class="text-sm text-textMuted">The ability to use technology tools effectively in a workplace context. Required by 92% of U.S. job postings.</p>
+            </div>
+            <div class="border border-success/30 bg-success/10 rounded-lg p-4">
+              <div class="font-mono text-xs text-success uppercase tracking-wider mb-2">Tier 3</div>
+              <div class="font-bold text-textPrimary mb-2">AI Readiness</div>
+              <p class="text-sm text-textMuted">The ability to work alongside, direct, and critically evaluate AI systems. The fastest-growing and least-addressed dimension of readiness.</p>
+            </div>
+          </div>
+          <p class="mb-4">A worker can be foundationally ready and digitally functional but AI-illiterate. That third gap is where 2026 labor market data shows the sharpest displacement. Workforce programs that treat all three as one undifferentiated thing are measuring the wrong thing, training for the wrong thing, and reporting success metrics that do not reflect whether anyone is actually better prepared for the current labor market.</p>
+          <p class="mb-4">This paper addresses all three levels but focuses on AI readiness because it is the newest, least infrastructure-supported, and most consequential in the near term. It is also the dimension where rural communities face the sharpest access constraints.</p>
+          <div class="callout">"Workforce readiness was never a single thing. In 2026, it has become three distinct problems that most institutions are still treating as one."</div>
+        </section>
+
+        <!-- Section II -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">II. The Disruption: What Automation Is Actually Doing</h2>
+          <p class="mb-4">The forecast-heavy discourse around automation has obscured a simpler and more urgent fact. The disruption is not coming. It is here. The debate over whether AI will replace jobs has been settled by data showing it already is. Selectively, unevenly, and at a pace that existing workforce infrastructure was not built to match.</p>
+          <p class="mb-6">That is the framing this paper operates from. Not doom, not hype. The data shows what it shows. The numbers below are reported figures from major institutions. OCF did not model any of them.</p>
+
+          <!-- Automation Risk Chart -->
+          <h3 class="text-lg font-bold mb-2 text-textPrimary">Automation Risk by Occupational Category</h3>
+          <p class="text-xs text-textMuted font-mono mb-4">Estimated percentage of tasks at moderate-to-high automation risk. Sources: WEF FoJ 2025, MIT 2024, ATE Framework 2026.</p>
+          <div class="space-y-3 mb-8 bg-surface border border-border rounded-lg p-6">
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Data Entry / Processing</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-red-600 rounded-full flex items-center justify-end pr-2" style="width:94%"><span class="text-white text-xs font-mono font-bold">94%</span></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Administrative / Clerical</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-red-600 rounded-full flex items-center justify-end pr-2" style="width:82%"><span class="text-white text-xs font-mono font-bold">82%</span></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Financial Analysis</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-red-600 rounded-full flex items-center justify-end pr-2" style="width:71%"><span class="text-white text-xs font-mono font-bold">71%</span></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Customer Service</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-red-600 rounded-full flex items-center justify-end pr-2" style="width:68%"><span class="text-white text-xs font-mono font-bold">68%</span></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Legal Research</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-red-600 rounded-full flex items-center justify-end pr-2" style="width:63%"><span class="text-white text-xs font-mono font-bold">63%</span></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Retail / Cashier</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-red-600 rounded-full flex items-center justify-end pr-2" style="width:65%"><span class="text-white text-xs font-mono font-bold">65%</span></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Transportation</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-amber-600 rounded-full flex items-center justify-end pr-2" style="width:58%"><span class="text-white text-xs font-mono font-bold">58%</span></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Healthcare Support</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-amber-600 rounded-full flex items-center justify-end pr-2" style="width:44%"><span class="text-white text-xs font-mono font-bold">44%</span></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Skilled Trades</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-green-700 rounded-full flex items-center justify-end pr-2" style="width:21%"><span class="text-white text-xs font-mono font-bold">21%</span></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Creative / Design</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-green-700 rounded-full flex items-center justify-end pr-2" style="width:18%"><span class="text-white text-xs font-mono font-bold">18%</span></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-xs font-mono text-textMuted w-44 text-right shrink-0">Human-AI Collaboration</div>
+              <div class="flex-grow bg-border/50 rounded-full h-5 overflow-hidden">
+                <div class="h-full bg-green-700 rounded-full flex items-center justify-end pr-2" style="width:8%"><span class="text-white text-xs font-mono font-bold">8%</span></div>
+              </div>
+            </div>
+            <div class="flex gap-6 pt-2 text-xs font-mono">
+              <span class="text-red-600">&#9646; High risk (&gt;60%)</span>
+              <span class="text-amber-600">&#9646; Moderate risk (30–60%)</span>
+              <span class="text-green-700">&#9646; Lower risk (&lt;30%)</span>
+            </div>
+          </div>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">Scale of Displacement</h3>
+          <p class="mb-4">Goldman Sachs estimates AI automation will affect roughly 6 to 7 percent of the U.S. workforce in direct job displacement. That is approximately 11 million workers. Globally, their modeling projects around 300 million full-time jobs affected by generative AI.</p>
+          <p class="mb-4">A November 2024 MIT study put a harder number on current exposure. 11.7 percent of U.S. jobs are already automatable using technology available today. Not a projection about future AI capability. A description of the present.</p>
+          <p class="mb-4">Bain and Company's Labor 2030 analysis found that approximately 80 percent of all workers will face some level of wage stagnation, displacement, or both in the coming decade. The benefits of automation will flow primarily to roughly 20 percent of the workforce: highly compensated, highly skilled workers and capital owners. By 2030, employers will need 20 to 25 percent fewer workers to produce the same output.</p>
+          <p class="mb-4">The National Bureau of Economic Research's 2025 occupational analysis identified a particularly vulnerable subset. Approximately 3.9 percent of U.S. workers sit at the intersection of high AI exposure and low adaptive capacity. These are workers in routine roles, with limited savings, in labor markets that offer fewer alternative job options.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary mt-8">What Is Being Automated First</h3>
+          <p class="mb-4">The pattern of displacement follows a well-documented logic. Routine, rule-based tasks go first. But the scope of what counts as routine has expanded dramatically with generative AI. Work that previously required human judgment: drafting, summarizing, classifying, responding to structured queries. All of it is now within the automation envelope.</p>
+          <p class="mb-4">Data entry roles face projected losses of 7.5 million positions by 2027. Retail cashiers face a 65 percent automation risk from self-checkout and computer vision systems. Walmart's self-checkout rollout alone is projected to replace up to 8,000 positions. Sam's Club AI verification systems could eliminate 12,000 cashier roles.</p>
+          <p class="mb-4">Agentic AI changes the calculus further. A 2026 analysis applying the Agentic Task Exposure framework to 236 occupational codes found that 93.2 percent of analyzed roles across financial, legal, healthcare, administrative, and sales sectors cross a moderate automation-risk threshold in major tech regions by 2030.</p>
+          <p class="mb-4">Labor force participation rates for prime-age workers without a college degree have declined from 88.6 percent in 1990 to 82.3 percent in 2024. A sustained structural withdrawal that predates the current AI wave and will accelerate with it.</p>
+          <p class="mb-4">Automation disproportionately impacts workers in routine occupations, which are held at higher rates by Black and Latino or Hispanic workers. Research published in Labor History in 2025 documented higher unemployment rates and economic instability in industries where AI and automation adoption surged fastest. That displacement was not demographically neutral.</p>
+          <div class="callout">"The entry-level job that was supposed to teach someone the next skill is disappearing before they get there. That is not augmentation. That is the Pipeline Collapse."</div>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">The Agentic Shift</h3>
+          <p class="mb-4">2026 has been identified across multiple investor and enterprise surveys as the inflection year when AI moves from augmentation to displacement in measurable form. Enterprise investors specifically named 2026 as the year agents move from making workers more productive to doing the work itself.</p>
+          <p class="mb-4">Agentic systems do not replace a single task. They replace workflows. The assumption underlying most prior automation research was that automation picks off one subtask and the occupation survives as a coordination shell around the remaining human work. That assumption does not hold for agentic AI. An agent does not hand control back after completing one step. It manages the process end to end.</p>
+          <p>The workforce readiness implication is significant. Programs designed to retrain workers for mid-level administrative or clerical work are pointing people toward occupations that are themselves on the automation trajectory. The target credential needs to be moving. Most curricula are not.</p>
+        </section>
+
+        <!-- Section III -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">III. The Skills Gap: Where Readiness Infrastructure Is Failing</h2>
+          <p class="mb-4">The skills gap is a term that has been used so broadly it risks losing meaning. What the data shows in 2026 is not a single gap. It is a stack of compounding failures. In what workers know, in what employers need, and in the institutional capacity to connect the two. Each layer makes the others worse.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">What Employers Are Saying</h3>
+          <p class="mb-4">The World Economic Forum's Future of Jobs Report 2025 surveyed over 1,000 employers representing 14 million workers across 55 countries. The skills gap is the single largest barrier to business transformation: cited by 63 percent of employers. It ranked above capital availability, regulatory environment, and supply chain constraints.</p>
+          <p class="mb-4">85 percent of employers plan to prioritize upskilling their workforce by 2030. 77 percent plan to provide AI training. Those same employers also report that 40 percent plan to reduce staff as skills become less relevant and 50 percent plan to transition workers from declining to growing roles. The organizations planning to reskill are often simultaneously planning to cut the workers who need reskilling.</p>
+          <p class="mb-4">The SHRM State of AI in HR 2026 Report found that 92 percent of CHROs anticipate further AI integration into the workforce this year. Yet 57 percent of HR professionals in states with workforce-related AI regulations are not aware of those regulations. The people responsible for workforce transitions are operating without visibility into the policy framework governing those transitions.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary mt-8">Employer Intent vs. Action: The Gap</h3>
+          <p class="text-xs text-textMuted font-mono mb-4">What employers say they plan to do vs. what they are currently doing. Sources: WEF FoJ 2025, SHRM 2026.</p>
+          <div class="bg-surface border border-border rounded-lg p-6 space-y-4 mb-8">
+            <div>
+              <div class="flex justify-between text-xs font-mono text-textMuted mb-1">
+                <span>Provide AI training</span>
+                <span>Plan: <strong class="text-primary">77%</strong> &nbsp;|&nbsp; Action: <strong class="text-warning">17%</strong></span>
+              </div>
+              <div class="flex gap-1 h-6">
+                <div class="bg-primary rounded-l" style="width:77%"></div>
+                <div class="bg-warning rounded-r flex-shrink-0 flex items-center justify-center" style="width:17%"><span class="text-white text-xs font-mono font-bold">17%</span></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-mono text-textMuted mb-1">
+                <span>Prioritize upskilling</span>
+                <span>Plan: <strong class="text-primary">85%</strong> &nbsp;|&nbsp; Action: <strong class="text-warning">39%</strong></span>
+              </div>
+              <div class="flex gap-1 h-6">
+                <div class="bg-primary rounded-l" style="width:85%"></div>
+                <div class="bg-warning rounded-r flex-shrink-0 flex items-center justify-center" style="width:39%"><span class="text-white text-xs font-mono font-bold">39%</span></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-mono text-textMuted mb-1">
+                <span>Reduce headcount</span>
+                <span>Plan: <strong class="text-primary">40%</strong> &nbsp;|&nbsp; Action: <strong class="text-warning">7%</strong></span>
+              </div>
+              <div class="flex gap-1 h-6">
+                <div class="bg-primary rounded-l" style="width:40%"></div>
+                <div class="bg-warning rounded-r" style="width:7%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-mono text-textMuted mb-1">
+                <span>Create new AI roles</span>
+                <span>Plan: <strong class="text-primary">24%</strong> &nbsp;|&nbsp; Action: <strong class="text-warning">10%</strong></span>
+              </div>
+              <div class="flex gap-1 h-6">
+                <div class="bg-primary rounded-l" style="width:24%"></div>
+                <div class="bg-warning rounded-r" style="width:10%"></div>
+              </div>
+            </div>
+            <div class="flex gap-6 pt-2 text-xs font-mono">
+              <span class="text-primary">&#9646; Plan / Intent</span>
+              <span class="text-warning">&#9646; Current action</span>
+            </div>
+          </div>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">The Adoption Gap</h3>
+          <p class="mb-4">A 2026 Gallup workforce survey of more than 22,000 employees found that only 12 percent of workers use AI daily despite widespread enterprise deployment. That gap between tool availability and actual adoption is not a technology problem. It is a readiness problem.</p>
+          <p class="mb-4">42 percent of employees expect their role to change significantly due to AI within the next year. Only 17 percent use AI frequently today. 34 percent feel unprepared for AI-driven changes. And 42 percent say their employer expects them to learn AI on their own, without structured support, curriculum, or dedicated time.</p>
+          <p class="mb-4">When employers provide AI training, adoption jumps to 76 percent compared to just 25 percent without support. Three times the adoption from a single institutional intervention. The problem is not worker motivation or capacity. Most employers are not providing that intervention.</p>
+          <div class="callout">"When employers invest in AI training, adoption triples. The gap is not in workers. It is in institutional support."</div>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">The Digital Literacy Floor</h3>
+          <p class="mb-4">The National Skills Coalition's analysis of 43 million U.S. job postings found that 92 percent of jobs require digital literacy skills. Nearly a third of the current U.S. workforce has little to no digital literacy.</p>
+          <p class="mb-4">Digital literacy is the floor, not the ceiling. Workers who lack digital literacy cannot begin to develop AI literacy. The stack of deficits is sequential. Without basic device competency and software navigation skills, advanced AI workflow training is inaccessible. Workforce readiness programs that skip to AI training without assessing digital literacy gaps are building on a foundation that does not exist for a significant portion of their target population.</p>
+          <p class="mb-4">IMF analysis found that employment levels in AI-vulnerable occupations are 3.6 percent lower after five years in regions with high AI skill demand than in regions with lower demand. The workers with AI skills are doing better. The workers without them are being squeezed out of the labor markets where AI is most embedded.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">Credential Misalignment</h3>
+          <p class="mb-4">Traditional degree programs were built for occupational stability. Four years of preparation for a 30-year career. That model assumes skills have a long half-life. They do not anymore. The mismatch is not a flaw in the degree model. It is a structural incompatibility with the current pace of change.</p>
+          <p class="mb-4">WEF research found that nearly 40 percent of workers' core skills are expected to change by 2030. Prior WEF data from 2023 found that the average skill half-life in fast-changing sectors had dropped to approximately 2.5 years. A four-year degree program is graduating students into a skill environment that changed while they were enrolled.</p>
+          <p class="mb-4">One in ten job postings in advanced economies now requires at least one new skill, defined as a skill that did not appear in postings for that occupation five years prior. The credential infrastructure is not generating those new skill certifications at the pace the labor market is demanding them.</p>
+          <p>Stackable credentials and microcredentials have grown as an alternative pathway. But they are unevenly distributed geographically and institutionally. The organizations best positioned to deliver them are often the same community colleges and technical schools that lack the resources to maintain AI-current curriculum. The supply side of the credentials market is failing in exactly the places where demand is highest.</p>
+        </section>
+
+        <!-- Section IV -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">IV. The Pipeline: K-12 and the Coming Readiness Deficit</h2>
+          <p class="mb-4">Workforce readiness discussions usually start at job entry. But the readiness problem starts earlier. The K-12 system is where future workers form their foundational skills, their relationship with technology, and their understanding of what the labor market will ask of them. That system is currently failing to prepare them for what is coming.</p>
+          <p class="mb-4">As of late 2024, 58 percent of teachers reported receiving no professional development related to AI. Of districts providing AI training, most are taking a do-it-yourself approach without coordinated curriculum, standardized frameworks, or ongoing support. The readiness gap that teachers face will reproduce itself in the students they teach.</p>
+          <p class="mb-4">Schools are responding to AI inconsistently and at widely varying speeds. Some are integrating AI into curricula with thoughtful instruction. Others are banning it entirely. Still others are doing nothing. Student access to AI tools at home varies sharply by socioeconomic status, creating a new digital divide that will compound as those students enter the workforce.</p>
+          <p class="mb-4">70 percent of CEOs surveyed in 2026 say AI will significantly change how their companies create, deliver, and capture value within the next three years. 45 percent believe their companies will not be viable in ten years on their current path. The workers those companies will need in ten years are in high school right now.</p>
+          <p class="mb-4">Career and Technical Education programs represent the most direct K-12 pathway to workforce alignment. CTE programs span nearly every major industry and are increasingly seen as the on-ramp connecting K-12, postsecondary, and workforce development. But CTE program quality, availability, and AI-curriculum integration vary enormously by state, district, and geography. Rural districts face the sharpest constraints.</p>
+          <p class="mb-4">AI literacy should be embedded across content areas, not limited to computer science, and introduced at elementary grades. Most districts are nowhere near that standard. Rural and under-resourced districts are furthest behind.</p>
+          <div class="callout">"The workers the 2030 labor market needs are in classrooms right now. The teachers in those classrooms have not been prepared to reach them."</div>
+          <p class="mb-4">The pipeline problem compounds. If the K-12 system does not produce workers with foundational AI literacy, the burden falls entirely on post-secondary institutions and employer-based training. Both are already under-resourced and over-subscribed. The further upstream the failure, the more expensive and difficult the remediation.</p>
+          <p>There is a specific risk worth naming. Entry-level jobs have historically served as an informal second education system. Workers who left school underprepared could learn on the job. That mechanism is being eliminated by the same automation wave that is creating the readiness demand in the first place. The safety net beneath K-12 failure is disappearing at the same time the failure rate is increasing.</p>
+        </section>
+
+        <!-- Section V -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">V. The Access Divide: Geography, Connectivity, and Who Gets Left Out</h2>
+          <p class="mb-4">Workforce readiness is not only a skills problem. It is an access problem. The infrastructure required to develop and maintain AI literacy: reliable broadband, devices, training programs, institutions, employers who invest. That infrastructure is not evenly distributed. The gaps are sharpest in rural areas, and they compound every other dimension of the readiness crisis.</p>
+          <p class="mb-4"><strong class="text-textPrimary">The Rural Amplification Effect.</strong> Every dimension of the readiness crisis hits harder in rural communities. Lower device ownership, less broadband, fewer training facilities, and less investment compound into a structural disadvantage that is multiplicative, not merely additive. A rural worker facing routine-task displacement does not face the same problem as an urban worker facing the same displacement. They face a harder version of it, with fewer resources to respond.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">Rural Amplification Effect: The Evidence</h3>
+          <p class="mb-4">Rural residents are nearly twice as likely as non-rural peers to lack a computer or tablet. The device divide is not an inconvenience. It is a prerequisite barrier to any technology skills training program.</p>
+          <p class="mb-4">Rural communities represent 20 percent of the U.S. population but receive only 7 percent of workforce-related philanthropic funding. That funding gap has compounded over decades into a structural deficit in workforce development infrastructure: fewer training facilities, fewer credentialing programs, fewer employer-sponsored training initiatives.</p>
+          <p class="mb-4">Geographic isolation creates workforce development deserts. Communities where no accessible reskilling option exists within commutable range. A community college may be the nearest training option and may be 60 to 90 miles away. That distance is the daily reality of workforce development across the Great Plains, the Mountain West, and Appalachia.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary mt-8">Rural vs. Urban Access: A Structural Comparison</h3>
+          <p class="text-xs text-textMuted font-mono mb-4">Percentage of population with access to key workforce readiness infrastructure. Sources: CORI 2025, JFF 2024, Pew Research 2024, FCC 2024.</p>
+          <div class="bg-surface border border-border rounded-lg p-6 space-y-4 mb-8">
+            <div class="grid grid-cols-3 gap-2 text-xs font-mono text-textMuted mb-2">
+              <span></span><span class="text-center text-primary font-bold">Urban/Suburban</span><span class="text-center text-amber-700 font-bold">Rural</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 items-center">
+              <span class="text-xs font-mono text-textMuted">Device ownership</span>
+              <div class="bg-primary rounded h-8 flex items-center justify-center"><span class="text-white text-sm font-bold font-mono">89%</span></div>
+              <div class="bg-amber-600 rounded h-8 flex items-center justify-center"><span class="text-white text-sm font-bold font-mono">62%</span></div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 items-center">
+              <span class="text-xs font-mono text-textMuted">Broadband access</span>
+              <div class="bg-primary rounded h-8 flex items-center justify-center"><span class="text-white text-sm font-bold font-mono">84%</span></div>
+              <div class="bg-amber-600 rounded h-8 flex items-center justify-center"><span class="text-white text-sm font-bold font-mono">57%</span></div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 items-center">
+              <span class="text-xs font-mono text-textMuted">Training within 30 miles</span>
+              <div class="bg-primary rounded h-8 flex items-center justify-center"><span class="text-white text-sm font-bold font-mono">91%</span></div>
+              <div class="bg-amber-600 rounded h-8 flex items-center justify-center"><span class="text-white text-sm font-bold font-mono">38%</span></div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 items-center">
+              <span class="text-xs font-mono text-textMuted">Employer AI training</span>
+              <div class="bg-primary rounded h-8 flex items-center justify-center"><span class="text-white text-sm font-bold font-mono">48%</span></div>
+              <div class="bg-amber-600 rounded h-8 flex items-center justify-center"><span class="text-white text-sm font-bold font-mono">19%</span></div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 items-center">
+              <span class="text-xs font-mono text-textMuted">Workforce grant funding</span>
+              <div class="bg-primary rounded h-8 flex items-center justify-center"><span class="text-white text-sm font-bold font-mono">93%</span></div>
+              <div class="bg-red-600 rounded h-8 flex items-center justify-center"><span class="text-white text-sm font-bold font-mono">7%</span></div>
+            </div>
+            <p class="text-xs text-textMuted font-mono pt-2">Sources: CORI Oct 2025; JFF Aug 2024; Pew Research 2024; FCC broadband maps.</p>
+          </div>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">Broadband and Connectivity</h3>
+          <p class="mb-4">Broadband infrastructure is the precondition for digital and AI literacy training in dispersed rural communities. Without reliable connectivity, remote and online training is inaccessible. Online delivery is often the only scalable mechanism for rural populations.</p>
+          <p class="mb-4">The federal Affordable Connectivity Program, which had provided monthly broadband discounts for income-eligible and tribal-land consumers, ended in 2024 following Congressional inaction on funding renewal. For households that depended on ACP subsidies to maintain broadband access, the end of the program represents a concrete regression in connectivity and therefore in access to digital and AI skills training.</p>
+          <p class="mb-4">The BEAD program and USDA ReConnect grants have directed federal investment toward rural broadband infrastructure expansion. But infrastructure deployment and household adoption are different problems. A community can have fiber run past every house and still have significant populations who lack devices, digital literacy, or the financial means to subscribe. The infrastructure layer and the readiness layer require separate, simultaneous investment.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">The Demographic Concentration of Risk</h3>
+          <p class="mb-4">Automation disproportionately impacts workers in routine occupations. Those occupations are held at higher rates by workers without post-secondary credentials, workers of color, older workers, and workers in rural and small-town labor markets. Automation is not demographically neutral, and neither are its labor market effects.</p>
+          <p>For rural communities, this demographic concentration compounds with geographic isolation. Workers facing routine-task displacement in rural areas have fewer alternative employment options within commutable range, less access to retraining infrastructure, and fewer institutional supports to facilitate transitions. The same displacement event has a more severe outcome in a rural context than in an urban one. Policy that treats this as a single national problem will systematically underserve the places where the problem is worst.</p>
+        </section>
+
+        <!-- Section VI -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">VI. The Response Landscape: What Employers and Policy Are Doing</h2>
+          <p class="mb-4">Documenting the problem without examining the response landscape produces incomplete analysis. Workforce readiness is not only about worker deficits. It is about the system of institutions: employers, educational institutions, policy frameworks, and funding streams. Those institutions either enable or fail workers seeking to remain viable in a changing labor market.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">Employer Responses</h3>
+          <p class="mb-4">25 percent of U.S. firms reported AI integration in core processes in 2024, up from 5 percent in 2015. But the internal workforce development response has not kept pace with the technology adoption rate. SHRM data shows that HR functions are rarely the primary drivers of AI implementation. Those decisions flow from IT, legal, and cross-functional teams. Workforce planning often follows technology deployment rather than leading it.</p>
+          <p class="mb-4">The employer-sponsored training model has well-documented limitations for rural and lower-wage workers. Employer training investment is disproportionately concentrated in higher-wage, higher-skill workers. Workers most vulnerable to displacement receive the least employer-sponsored training. The market does not self-correct this distribution. It reinforces it.</p>
+          <p class="mb-4">AI implementation has led to shifts in workers' job responsibilities, reported by 39 percent of SHRM respondents. Frequent upskilling or reskilling opportunities were reported by 57 percent. Slight job displacement by 7 percent. New job or role creation by 24 percent. The modal outcome of enterprise AI adoption right now is job reshaping, not replacement. But that reshaping requires readiness infrastructure that many workers do not have access to.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">Policy Frameworks</h3>
+          <p class="mb-4">America's AI Action Plan, released in 2025, calls for investment in AI R&amp;D, deregulation to accelerate innovation, and workforce programs that empower workers in the age of AI. It proposes creation of an AI Workforce Research Hub at the U.S. Department of Labor to monitor labor market impacts, as well as rapid retraining initiatives through state and intermediary partners.</p>
+          <p class="mb-4">Jobs for the Future's AI for Economic Opportunity and Advancement argues that national success will hinge on the strength of state and local workforce institutions. Their ability to integrate data, scale digital-skills training, and form durable public-private partnerships. Bipartisan consensus exists that AI readiness is required state readiness. The gap between that consensus and funded, operational programs is significant.</p>
+          <p class="mb-4">The WIOA framework, the primary federal workforce development funding mechanism, was designed for a different labor market. It is built around occupational training for specific job placements, not continuous skill development for a labor market where skill demands change faster than credential programs can respond. Adapting WIOA implementation to the current environment is an active challenge for state workforce boards across the country.</p>
+          <p>Future-ready state initiatives in Michigan, Georgia, and California have begun integrating AI literacy into statewide workforce plans. These programs are nascent, unevenly resourced, and not yet replicated at scale. But they represent policy infrastructure beginning to catch up with the technology curve.</p>
+        </section>
+
+        <!-- Section VII -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">VII. What the Meta-Analysis Shows Works</h2>
+          <p class="mb-6">A meta-analysis is not just a literature review. It is a synthesis that asks: across all of this evidence, what patterns hold? What interventions actually move the needle? What conditions predict success or failure? This section summarizes those patterns. The evidence base for workforce readiness interventions is uneven. Some program models have strong outcome data. Others are widely replicated despite thin evidence. The following reflects what the reviewed literature treats as supported by consistent findings across multiple contexts.</p>
+
+          <h3 class="text-lg font-bold mb-4 text-textPrimary">Employer-Led Training Works Better Than Curriculum-Led Training</h3>
+          <p class="mb-4">The most consistent finding across employer surveys, community college outcomes research, and workforce development program evaluations is that training tied to real job tasks and actual employer need outperforms generic credential programs. Workers who train in contexts connected to an employer commitment show better placement rates, better wage outcomes, and better retention.</p>
+          <div class="space-y-3 mb-6">
+            <div class="finding-box">
+              <p class="text-sm"><strong class="text-secondary">Sector-based apprenticeships:</strong> Completion rates 30–40% higher than standalone certificate programs when tied to employer commitments. Wage outcomes 18–22% above sector median at 12 months. <em class="text-textMuted">(JFF, 2024)</em></p>
+            </div>
+            <div class="finding-box">
+              <p class="text-sm"><strong class="text-secondary">AI adoption with employer training:</strong> Adoption rate 76% vs 25% without employer support. Three-times multiplier from a single institutional intervention. <em class="text-textMuted">(Bright Horizons EdIndex, 2025)</em></p>
+            </div>
+            <div class="finding-box">
+              <p class="text-sm"><strong class="text-secondary">Registered apprenticeship completion:</strong> 87% employment placement at wages above program entry; 70% still employed in field at 24 months. <em class="text-textMuted">(DOL Bureau of Apprenticeship and Training, 2024)</em></p>
+            </div>
+          </div>
+
+          <h3 class="text-lg font-bold mb-4 text-textPrimary">Short-Form, Modular Credentials Outperform Degree Timelines in Retraining Contexts</h3>
+          <p class="mb-4">For mid-career workers and workers displaced from routine-task roles, the evidence consistently supports shorter, more modular training over degree timelines. Workers facing acute displacement cannot wait two to four years for a credential that may or may not align with what employers need when they graduate.</p>
+          <div class="space-y-3 mb-6">
+            <div class="finding-box">
+              <p class="text-sm"><strong class="text-secondary">Bootcamp-style AI literacy programs:</strong> 6 to 12-week programs with employer partnerships show 65–70% job placement in technology-adjacent roles for workers without prior technical background. <em class="text-textMuted">(CompTIA / workforce development evaluations, 2024-2025)</em></p>
+            </div>
+            <div class="finding-box">
+              <p class="text-sm"><strong class="text-secondary">Stackable credential pathways:</strong> Workers completing stackable credential sequences show 23% higher wage growth over three years compared to workers with equivalent time in single-credential programs. <em class="text-textMuted">(National Skills Coalition, 2025)</em></p>
+            </div>
+          </div>
+          <p class="mb-6">The caveat is quality control. The short-form credential market has significant variance in outcomes. Programs without employer partnerships, industry alignment, or job placement support show outcomes far closer to zero than the best performers. Short-form does not automatically mean effective.</p>
+
+          <h3 class="text-lg font-bold mb-4 text-textPrimary">Hybrid Delivery Expands Rural Access Without Sacrificing Outcomes</h3>
+          <p class="mb-4">For rural populations specifically, hybrid delivery combining online instruction with local in-person support shows comparable outcomes to fully in-person delivery, at significantly greater geographic reach.</p>
+          <div class="space-y-3 mb-6">
+            <div class="finding-box">
+              <p class="text-sm"><strong class="text-secondary">Rural hybrid workforce programs:</strong> Programs with online content and local cohort support show 78% completion rates vs 54% for fully online delivery without local anchoring. <em class="text-textMuted">(CORI Practitioner Guide, 2025)</em></p>
+            </div>
+            <div class="finding-box">
+              <p class="text-sm"><strong class="text-secondary">Broadband-enabled rural training:</strong> Communities with broadband access show 2.4x higher workforce training enrollment rates than comparable communities without reliable connectivity. <em class="text-textMuted">(USDA ReConnect Program evaluations, 2024)</em></p>
+            </div>
+          </div>
+          <p class="mb-6">The implication for rural workforce strategy is direct. Broadband investment and workforce training investment need to be coordinated, not sequential. Training programs that assume connectivity will be built before they arrive will wait indefinitely. The most effective rural programs build connectivity access into the program model itself.</p>
+
+          <h3 class="text-lg font-bold mb-4 text-textPrimary">Wrap-Around Supports Predict Completion More Than Program Content</h3>
+          <p class="mb-4">The single strongest predictor of workforce training completion for lower-income and rural participants across the reviewed literature is not the quality of the curriculum. It is whether the participant has access to support services: childcare, transportation, income support during training, and connection to a peer cohort.</p>
+          <p class="mb-4">Programs with comprehensive wrap-around supports show completion rates 35 to 45 percentage points higher than equivalent programs without those supports, controlling for participant demographics and program type. The curriculum matters. The conditions under which someone can complete it matter more.</p>
+          <div class="callout">"The curriculum matters. The conditions under which someone can complete it matter more."</div>
+          <p class="mb-6">This finding is consistent across multiple evaluations and geographies. It is also the finding most consistently underinvested in policy design. Training budgets focus on instruction. The supports that determine whether instruction reaches anyone often fall between funding categories.</p>
+
+          <h3 class="text-lg font-bold mb-4 text-textPrimary">K-12 Pathways That Connect to Real Employers Outperform Generic Programs</h3>
+          <p class="mb-4">Career and Technical Education programs with active employer partnerships, industry-recognized credential alignment, and work-based learning components show stronger post-secondary employment outcomes than CTE programs without those features.</p>
+          <div class="space-y-3 mb-4">
+            <div class="finding-box">
+              <p class="text-sm"><strong class="text-secondary">Work-based learning in CTE:</strong> Students completing work-based learning components show 28% higher employment placement and 19% higher wages at 12 months post-graduation vs CTE without WBL. <em class="text-textMuted">(ACTE / CTE research consortium, 2024)</em></p>
+            </div>
+            <div class="finding-box">
+              <p class="text-sm"><strong class="text-secondary">Industry-aligned CTE credentials:</strong> CTE completers with industry-recognized credentials show 31% higher wage outcomes than CTE completers with only school-issued credentials in same fields. <em class="text-textMuted">(Credential Engine / NSC analysis, 2025)</em></p>
+            </div>
+          </div>
+          <p>The implication for rural K-12 is that employer partnership, not just curriculum update, is the variable that drives outcomes. Rural districts with fewer local employer partners face a structural disadvantage that curriculum investment alone cannot resolve. Regional employer networks, remote work-based learning, and virtual apprenticeship models represent emerging approaches to this problem.</p>
+        </section>
+
+        <!-- Section IX -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">IX. Implications</h2>
+          <p class="mb-6">This paper does not prescribe programs. But the evidence documented here carries directional weight for three audiences.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">For Funders</h3>
+          <p class="mb-6">The data points to a consistent pattern: programs with employer commitments, wrap-around supports, and hybrid delivery models outperform generic curriculum investment. Funders who continue to prioritize instruction cost over participant support infrastructure are funding the wrong variable. The evidence on wrap-around supports alone — 35 to 45 percentage point completion gains — represents one of the highest-return interventions in the workforce development field. Rural programs are chronically underfunded relative to the population they serve. 20 percent of the population, 7 percent of the funding. Any portfolio that does not correct for that imbalance is generating systematic blind spots.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">For State Workforce Boards</h3>
+          <p class="mb-6">WIOA's job-placement frame was built for a different labor market. States that adapt implementation toward continuous skill development, stackable credentials, and AI literacy integration — rather than one-time placement metrics — are building for the actual labor market, not the one from 2010. Future-ready state initiatives in Michigan, Georgia, and California offer early implementation models. The evidence does not yet support replication at scale, but the directional indicators are there. State boards that wait for perfect evidence will be three cycles behind the technology curve when they act.</p>
+
+          <h3 class="text-lg font-bold mb-3 text-textPrimary">For Rural Districts and Workforce Intermediaries</h3>
+          <p>The two investments with the clearest evidence base for rural contexts are broadband-linked hybrid delivery and employer partnership development. Neither requires waiting for federal policy. Both can be initiated at the local and regional level now. The Rural Amplification Effect means that the same intervention produces a larger relative gain in a rural context than in an urban one — because the baseline access deficit is deeper. For workforce intermediaries operating in workforce development deserts, hybrid delivery is not a compromise. It is the highest-leverage tool available.</p>
+        </section>
+
+        <!-- Section X -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">X. What the Research Agrees On</h2>
+          <p class="mb-6">Across the literature reviewed in this meta-analysis, several findings appear with enough consistency to be treated as settled conclusions rather than contested hypotheses.</p>
+          <div class="space-y-6">
+            <div class="border border-border rounded-lg p-5 bg-surface/50">
+              <h4 class="font-bold text-textPrimary mb-2">1. The skills gap is structural, not cyclical.</h4>
+              <p class="text-sm text-textMuted">Workforce readiness gaps are not a temporary artifact of rapid technological change that will self-correct once the technology stabilizes. Multiple frameworks document that the gap between what workers know and what employers need has been widening for decades and is accelerating with AI. Cyclical framing produces cyclical solutions: training programs timed to recessions, not continuous skill development infrastructure.</p>
+            </div>
+            <div class="border border-border rounded-lg p-5 bg-surface/50">
+              <h4 class="font-bold text-textPrimary mb-2">2. Human skills are not being replaced. They are being elevated.</h4>
+              <p class="text-sm text-textMuted">Every major framework reviewed identifies that the skills AI cannot replace are becoming more valuable, not less. Analytical thinking, creative problem solving, communication, adaptability, emotional intelligence, and human-AI collaboration. Workforce readiness in 2026 is not a choice between technical skills and human skills. It requires both, in combination. Programs that train only for technical skills without developing the adjacent human competencies are producing workers with half the profile the labor market needs.</p>
+            </div>
+            <div class="border border-border rounded-lg p-5 bg-surface/50">
+              <h4 class="font-bold text-textPrimary mb-2">3. Access is the binding constraint. Not worker capability.</h4>
+              <p class="text-sm text-textMuted">The research is consistent. When workers receive structured training and institutional support, AI adoption rates and readiness outcomes improve dramatically. The gap is not in worker motivation or capacity. It is in the institutional infrastructure to deliver training, particularly in rural, lower-income, and geographically isolated communities. Programs that attribute low completion rates to participant deficits without examining access barriers are misreading their own data.</p>
+            </div>
+            <div class="border border-border rounded-lg p-5 bg-surface/50">
+              <h4 class="font-bold text-textPrimary mb-2">4. The pipeline problem starts before the workforce.</h4>
+              <p class="text-sm text-textMuted">K-12 AI readiness gaps will generate workforce readiness gaps for the next decade regardless of what post-secondary and employer-based programs do. Workforce development systems that focus only on current workers are managing a symptom while the underlying condition worsens. Sustainable workforce readiness requires investment in the K-12 pipeline, including professional development for teachers.</p>
+            </div>
+            <div class="border border-border rounded-lg p-5 bg-surface/50">
+              <h4 class="font-bold text-textPrimary mb-2">5. Geographic concentration of risk is a policy problem, not a market problem.</h4>
+              <p class="text-sm text-textMuted">Rural communities face compounding disadvantages: lower device ownership, broadband gaps, fewer training facilities, less philanthropic investment, and fewer alternative employment options when displacement occurs. These disadvantages are not corrected by market forces. They require deliberate policy and investment. Communities that are 20 percent of the population receiving 7 percent of the funding will not close this gap through organic market dynamics.</p>
+            </div>
+          </div>
+          <div class="callout mt-6">"Access is the binding constraint. Worker motivation is not the problem. Institutional support is."</div>
+        </section>
+
+        <!-- Section XI -->
+        <section>
+          <h2 class="text-2xl font-bold mb-6 font-sans text-textPrimary border-b border-border pb-3">XI. The Bottom Line</h2>
+          <p class="mb-4">The disruption is current, not projected. 11.7 percent of U.S. jobs are automatable today. Entry-level hiring is down 29 percent. Youth unemployment is more than double the overall rate. The workers bearing the largest burden of displacement are the workers with the least access to remediation infrastructure.</p>
+          <p class="mb-4">The skills gap is the largest barrier to workforce transformation that employers identify. It is widest in exactly the populations most exposed to displacement risk. The digital literacy floor is missing for a third of the workforce. AI readiness infrastructure barely exists for most of them. What does exist is concentrated in urban and suburban labor markets that already have the advantage.</p>
+          <p class="mb-4">K-12 is not preparing the next cohort. Employer training is not reaching the most vulnerable workers. Policy is beginning to respond but is years behind the technology curve. In rural communities, every one of these challenges is amplified by geography, infrastructure deficits, and chronic underfunding.</p>
+          <p class="mb-4">What the evidence shows works: employer-connected training, modular credentials, hybrid delivery with local support, wrap-around services that make completion possible, and K-12 pathways tied to real employers. These are not theoretical models. They are documented practices with outcome data. The gap between what works and what gets funded is where the policy opportunity lives.</p>
+          <p class="mb-4">Workforce readiness, correctly defined, means workers at every stage have access to the skills, tools, and institutional support they need to participate productively in the current labor market. By that definition, the current national state of workforce readiness is inadequate. The inadequacy is documented, measurable, and correctable. But not without deliberate investment in the communities and populations the market has consistently underserved.</p>
+          <p class="font-semibold text-textPrimary">That correction does not happen from the coasts. It happens from the middle of the country, where most of the gap lives.</p>
+        </section>
+
+        <!-- Citation -->
+        <section class="border-t border-border pt-8">
+          <h2 class="text-lg font-bold mb-4 font-mono text-textPrimary">Citation</h2>
+          <div class="bg-surface border border-border rounded-lg p-4 font-mono text-sm text-textMuted">
+            Observable Compute Foundation. (2026, April). <em>The Skills Gap Is Here: A National Meta-Analysis of Workforce Readiness in the Age of Automation</em> (v5.1). Rapid City, SD: Observable Compute Foundation. observablecompute.org/workforce-readiness/
+          </div>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a href="/assets/papers/workforce-readiness-v5.1.pdf" target="_blank" class="btn-primary py-2 px-4 text-sm flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Download PDF
+            </a>
+            <a href="/research/" class="btn-secondary py-2 px-4 text-sm">All Publications</a>
+            <a href="/contact/" class="btn-secondary py-2 px-4 text-sm">Contact OCF</a>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="bg-surface border-t border-border py-12 mt-16 mt-auto text-sm text-textSecondary">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="md:col-span-1 space-y-4">
+      <div class="flex items-center space-x-2">
+        <img src="/assets/images/favicon.png" alt="OCF Logo" class="h-6 w-6 rounded-full opacity-80">
+        <span class="font-mono font-bold text-textPrimary">Observable Compute</span>
+      </div>
+      <p class="leading-relaxed">A nonprofit artificial intelligence research foundation. Independent research on machine cognition, observable function, and the mechanics of informational pressure.</p>
+      <div class="pt-4 border-t border-border font-mono text-xs text-textMuted">
+        <p>South Dakota Nonprofit NS321548</p>
+        <p>EIN 41-4747049 | 501(c)(3) Pending</p>
+        <p>Incorporated Feb 23, 2026</p>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Research</h3>
+      <ul class="space-y-2">
+        <li><a href="/research/" class="hover:text-primary transition-colors">Publications</a></li>
+        <li><a href="/foundational-paper/" class="hover:text-primary transition-colors">Foundational Paper</a></li>
+        <li><a href="/workforce-readiness/" class="hover:text-primary transition-colors">Workforce Readiness</a></li>
+        <li><a href="/database/" class="hover:text-primary transition-colors">Terminology Database</a></li>
+        <li><a href="/resources/" class="hover:text-primary transition-colors">Open Resources</a></li>
+        <li><a href="/services/" class="hover:text-primary transition-colors">Educational Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Organization</h3>
+      <ul class="space-y-2">
+        <li><a href="/about/" class="hover:text-primary transition-colors">About the Foundation</a></li>
+        <li><a href="/transparency/" class="hover:text-primary transition-colors">Governance &amp; Transparency</a></li>
+        <li><a href="/contact/" class="hover:text-primary transition-colors">Contact Us</a></li>
+        <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+        <li><a href="/terms/" class="hover:text-primary transition-colors">Terms &amp; Conditions</a></li>
+        <li><a href="/disclaimer/" class="hover:text-primary transition-colors">Disclaimer</a></li>
+      </ul>
+    </div>
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Contact</h3>
+        <ul class="space-y-2">
+          <li><a href="mailto:research@observablecompute.org" class="hover:text-primary transition-colors">research@observablecompute.org</a></li>
+          <li><a href="mailto:contact@observablecompute.org" class="hover:text-primary transition-colors">contact@observablecompute.org</a></li>
+          <li class="text-textMuted text-xs pt-2">58 Hillcrest Drive<br>Rapid City, SD 57701</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">External</h3>
+        <ul class="space-y-2">
+          <li><a href="https://ssrn.com/author=6287618" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">SSRN Profile</a></li>
+          <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">arXiv CS.AI</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
+    <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
+    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; April 2026</p>
+  </div>
+</footer>
+
+  <script>
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
+        header.classList.remove('bg-transparent');
+      } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
+        header.classList.add('bg-transparent');
+      }
+    });
+  </script>
+</body>
+</html>

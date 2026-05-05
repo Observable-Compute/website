@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand &amp; Media Assets | Observable Compute Foundation</title>
+  <meta name="description" content="Independent AI research. Making observable function legible — without flinching.">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+
+  <meta name="google-adsense-account" content="ca-pub-3415300754694996">
+  <meta name="google-site-verification" content="h-XxXsaNbfY2dWmueZFK5sQSuwXIFelBeB5ByCSWCCg">
+  <meta name="msvalidate.01" content="79AA455B3A6A870379DCB6A9DEFF026C">
+  <meta name="yandex-verification" content="a1d444bd168e3c86">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415300754694996" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "NonProfitOrganization",
+      "name": "Observable Compute Foundation",
+      "url": "https://observablecompute.org",
+      "description": "Independent AI research. We describe what is happening without flinching.",
+      "email": "contact@observablecompute.org",
+      "logo": "https://observablecompute.org/assets/images/favicon.png",
+      "foundingDate": "2026-02-23",
+      "taxID": "41-4747049",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "58 Hillcrest Drive",
+        "addressLocality": "Rapid City",
+        "addressRegion": "SD",
+        "postalCode": "57701",
+        "addressCountry": "US"
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Adam Ian Stratmeyer",
+        "honorificSuffix": "J.D.",
+        "jobTitle": "President",
+        "url": "https://observablecompute.org/about/",
+        "sameAs": [
+          "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618"
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adam Ian Stratmeyer",
+      "honorificSuffix": "J.D.",
+      "jobTitle": "President & Principal Researcher",
+      "worksFor": {
+        "@type": "NonProfitOrganization",
+        "name": "Observable Compute Foundation",
+        "url": "https://observablecompute.org"
+      },
+      "url": "https://observablecompute.org/about/",
+      "email": "a.i.stratmeyer@observablecompute.org",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rapid City",
+        "addressRegion": "SD",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618",
+        "https://ssrn.com/abstract=6287618"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "Juris Doctor (J.D.)"
+      }
+    }
+  ]
+  </script>
+<style>
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .7; transform: scale(1.05); }
+    }
+    .perspective-1000 { perspective: 1000px; }
+  </style>
+</head>
+<body class="bg-background text-textPrimary flex flex-col min-h-screen">
+  <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-border py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="/" class="flex items-center gap-2 group">
+          <img src="/assets/images/favicon.png" alt="OCF Logo" class="w-8 h-8 rounded-full border border-border group-hover:border-primary transition-colors" />
+          <span class="font-mono font-bold text-lg tracking-tight hidden sm:block text-textPrimary">Observable<span class="text-primary">Compute</span></span>
+          <span class="font-mono font-bold text-lg tracking-tight sm:hidden text-textPrimary">OCF</span>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex space-x-8">
+        <a href="/research/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Research</a>
+        <a href="/database/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Database</a>
+        <a href="/resources/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Resources</a>
+        <a href="/about/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">About</a>
+        <a href="/contact/" class="text-sm font-medium text-white bg-primary hover:bg-primary/90 px-4 py-1.5 rounded transition-colors">Contact</a>
+      </nav>
+
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" class="text-textMuted hover:text-primary focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-border mt-4 shadow-sm">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="/research/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Research</a>
+      <a href="/database/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Database</a>
+      <a href="/resources/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Resources</a>
+      <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">About</a>
+      <a href="/contact/" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">Contact</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+
+
+
+  <main class="flex-grow pt-24 pb-16">
+    <div class="container mx-auto px-6 mb-8 font-mono text-xs text-textSecondary uppercase tracking-widest flex items-center space-x-2">
+      <a href="/" class="hover:text-accent transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-textPrimary">Brand &amp; Media Assets</span>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+  <div class="absolute inset-0 bg-gradient-to-br from-background via-surface/30 to-background z-0"></div>
+
+  <div class="relative z-10">
+    <div class="inline-flex items-center px-3 py-1 rounded-full border border-border bg-surface/50 backdrop-blur-sm text-sm font-mono text-textMuted mb-6">
+          <span class="w-2 h-2 rounded-full bg-secondary mr-2"></span>
+          OCF // Media Kit 2026
+    </div>
+
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter mb-6 font-sans text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
+      Brand & <span class="text-primary font-mono tracking-normal">Media Assets</span>
+    </h1>
+
+    <p class="text-xl text-textMuted leading-relaxed font-light max-w-3xl mb-16">
+      Official logos, diagrams, and visual resources for the Observable Compute Foundation. All assets are provided for educational, journalistic, and analytical use regarding AI terminology and conceptual drift.
+    </p>
+
+    <!-- Logos Section -->
+    <h2 class="text-3xl font-bold font-mono text-white mb-8 border-b border-border pb-4">Brand Marks</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+
+      <!-- Logo 1 -->
+      <div class="card flex flex-col items-center justify-center p-8 bg-surface/30 hover:bg-surface/60 transition-colors border border-border rounded-2xl group">
+        <div class="h-40 flex items-center justify-center w-full mb-6 bg-white/5 rounded-xl border border-white/5">
+           <img src="/assets/images/ocf_logo.png" alt="OCF Standard Logo" class="max-h-24 object-contain opacity-80 group-hover:opacity-100 transition-opacity drop-shadow-lg" />
+        </div>
+        <h3 class="font-bold font-mono text-white mb-2 text-center w-full">Standard Logo</h3>
+        <p class="text-sm text-textMuted text-center mb-4">Primary organizational mark. Use on dark backgrounds.</p>
+        <div class="flex gap-4">
+           <a href="/assets/images/ocf_logo.png" download class="text-xs font-mono text-primary hover:text-white border border-primary/30 hover:bg-primary/20 px-3 py-1 rounded transition-colors">Download PNG</a>
+        </div>
+      </div>
+
+      <!-- Logo 2 -->
+      <div class="card flex flex-col items-center justify-center p-8 bg-surface/30 hover:bg-surface/60 transition-colors border border-border rounded-2xl group">
+        <div class="h-40 flex items-center justify-center w-full mb-6 bg-white/5 rounded-xl border border-white/5">
+           <img src="/assets/images/OCF_logo_cir.png" alt="OCF Circular Badge" class="max-h-24 object-contain opacity-80 group-hover:opacity-100 transition-opacity drop-shadow-lg" />
+        </div>
+        <h3 class="font-bold font-mono text-white mb-2 text-center w-full">Circular Badge</h3>
+        <p class="text-sm text-textMuted text-center mb-4">Compact mark for avatars, icons, and tight spaces.</p>
+        <div class="flex gap-4">
+           <a href="/assets/images/OCF_logo_cir.png" download class="text-xs font-mono text-primary hover:text-white border border-primary/30 hover:bg-primary/20 px-3 py-1 rounded transition-colors">Download PNG</a>
+        </div>
+      </div>
+
+      <!-- Logo 3 -->
+      <div class="card flex flex-col items-center justify-center p-8 bg-white/90 hover:bg-white transition-colors border border-border rounded-2xl group">
+        <div class="h-40 flex items-center justify-center w-full mb-6 bg-black/5 rounded-xl border border-black/5">
+           <img src="/assets/images/Word logo.png" alt="OCF Wordmark" class="max-h-24 object-contain opacity-80 group-hover:opacity-100 transition-opacity drop-shadow-lg invert" />
+        </div>
+        <h3 class="font-bold font-mono text-background mb-2 text-center w-full">Wordmark</h3>
+        <p class="text-sm text-background/70 text-center mb-4">Text-only mark. Ensure high contrast when using.</p>
+        <div class="flex gap-4">
+           <a href="/assets/images/Word logo.png" download class="text-xs font-mono text-background border border-background hover:bg-background/10 px-3 py-1 rounded transition-colors">Download PNG</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Diagrams & Visuals Section -->
+    <h2 class="text-3xl font-bold font-mono text-white mb-8 border-b border-border pb-4">Diagrams & Synthesis</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+
+      <!-- Visual 1 -->
+      <div class="bg-surface border border-border rounded-2xl overflow-hidden group">
+        <div class="relative h-64 overflow-hidden border-b border-border bg-black">
+          <img src="/assets/images/unnamed.jpg" alt="Unified Corpus Summary" class="w-full h-full object-cover mix-blend-screen opacity-80 group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold font-mono text-white mb-2">Unified Corpus Summary</h3>
+          <p class="text-sm text-textMuted mb-4">Stratmeyer Analytica Synthesis v1.0. Illustrating the gradient running through informational incompressible structural pressure.</p>
+          <a href="/assets/images/unnamed.jpg" download class="text-xs font-mono text-secondary hover:text-white border border-secondary/30 hover:bg-secondary/20 px-3 py-1 rounded transition-colors inline-block">Download High-Res</a>
+        </div>
+      </div>
+
+      <!-- Visual 2 -->
+      <div class="bg-surface border border-border rounded-2xl overflow-hidden group">
+        <div class="relative h-64 overflow-hidden border-b border-border bg-black">
+          <img src="/assets/images/revers_wager.png" alt="Reverse Wager Concept" class="w-full h-full object-cover mix-blend-screen opacity-80 group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold font-mono text-white mb-2">Reverse Wager Dynamic</h3>
+          <p class="text-sm text-textMuted mb-4">Visualizing the structural constraints and agency within terminology drift across public and private domains.</p>
+          <a href="/assets/images/revers_wager.png" download class="text-xs font-mono text-secondary hover:text-white border border-secondary/30 hover:bg-secondary/20 px-3 py-1 rounded transition-colors inline-block">Download High-Res</a>
+        </div>
+      </div>
+
+       <!-- Visual 3 -->
+      <div class="bg-surface border border-border rounded-2xl overflow-hidden group">
+        <div class="relative h-64 overflow-hidden border-b border-border bg-black">
+          <img src="/assets/images/kgf.png" alt="Knowledge Gradient Flow" class="w-full h-full object-cover mix-blend-screen opacity-80 group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold font-mono text-white mb-2">Informational Pressure Gradient</h3>
+          <p class="text-sm text-textMuted mb-4">Mapping the incompressible structural pressure between latent spaces and explicit functional entity processing.</p>
+          <a href="/assets/images/kgf.png" download class="text-xs font-mono text-secondary hover:text-white border border-secondary/30 hover:bg-secondary/20 px-3 py-1 rounded transition-colors inline-block">Download High-Res</a>
+        </div>
+      </div>
+
+       <!-- Visual 4 -->
+      <div class="bg-surface border border-border rounded-2xl overflow-hidden group">
+        <div class="relative h-64 overflow-hidden border-b border-border bg-black">
+          <img src="/assets/images/HHH.png" alt="Helpful Harmless Honest Framework" class="w-full h-full object-cover mix-blend-screen opacity-80 group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold font-mono text-white mb-2">HHH Alignment Vectors</h3>
+          <p class="text-sm text-textMuted mb-4">Deconstructing the "Helpful, Harmless, Honest" paradigm against observable entity field constraints in latent space.</p>
+          <a href="/assets/images/HHH.png" download class="text-xs font-mono text-secondary hover:text-white border border-secondary/30 hover:bg-secondary/20 px-3 py-1 rounded transition-colors inline-block">Download High-Res</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center pb-12">
+        <p class="text-sm font-mono text-textMuted">For specific format requests or media inquiries, contact <a href="mailto:media@observablecompute.foundation" class="text-primary hover:underline">media@observablecompute.foundation</a></p>
+    </div>
+
+  </div>
+</div>
+
+
+  </main>
+
+  <footer class="bg-surface border-t border-border py-12 mt-16 mt-auto text-sm text-textSecondary">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <div class="md:col-span-1 space-y-4">
+      <div class="flex items-center space-x-2">
+        <img src="/assets/images/favicon.png" alt="OCF Logo" class="h-6 w-6 rounded-full opacity-80">
+        <span class="font-mono font-bold text-textPrimary">Observable Compute</span>
+      </div>
+      <p class="leading-relaxed">
+        A nonprofit artificial intelligence research foundation. Independent research on machine cognition, observable function, and the mechanics of informational pressure.
+      </p>
+      <div class="pt-4 border-t border-border font-mono text-xs text-textMuted">
+        <p>South Dakota Nonprofit NS321548</p>
+        <p>EIN 41-4747049 | 501(c)(3) Pending</p>
+        <p>Incorporated Feb 23, 2026</p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Research</h3>
+      <ul class="space-y-2">
+        <li><a href="/research/" class="hover:text-primary transition-colors">Publications</a></li>
+        <li><a href="/foundational-paper/" class="hover:text-primary transition-colors">Foundational Paper</a></li>
+        <li><a href="/database/" class="hover:text-primary transition-colors">Terminology Database</a></li>
+        <li><a href="/resources/" class="hover:text-primary transition-colors">Open Resources</a></li>
+        <li><a href="/services/" class="hover:text-primary transition-colors">Educational Services</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Organization</h3>
+      <ul class="space-y-2">
+        <li><a href="/about/" class="hover:text-primary transition-colors">About the Foundation</a></li>
+        <li><a href="/transparency/" class="hover:text-primary transition-colors">Governance &amp; Transparency</a></li>
+        <li><a href="/contact/" class="hover:text-primary transition-colors">Contact Us</a></li>
+        <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+        <li><a href="/terms/" class="hover:text-primary transition-colors">Terms &amp; Conditions</a></li>
+        <li><a href="/disclaimer/" class="hover:text-primary transition-colors">Disclaimer</a></li>
+      </ul>
+    </div>
+
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Contact</h3>
+        <ul class="space-y-2">
+          <li><a href="mailto:research@observablecompute.org" class="hover:text-primary transition-colors">research@observablecompute.org</a></li>
+          <li><a href="mailto:contact@observablecompute.org" class="hover:text-primary transition-colors">contact@observablecompute.org</a></li>
+          <li class="text-textMuted text-xs pt-2">58 Hillcrest Drive<br>Rapid City, SD 57701</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">External</h3>
+        <ul class="space-y-2">
+          <li><a href="https://ssrn.com/author=6287618" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">SSRN Profile</a></li>
+          <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">arXiv CS.AI</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
+    <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
+    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; March 2026</p>
+  </div>
+</footer>
+
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
+        header.classList.remove('bg-transparent');
+      } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
+        header.classList.add('bg-transparent');
+      }
+    });
+  </script>
+</body>
+</html>

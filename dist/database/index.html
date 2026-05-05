@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminology Database | Observable Compute Foundation</title>
+  <meta name="description" content="Independent AI research. Making observable function legible — without flinching.">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+    <script src="/assets/js/db-search.js" defer></script>
+  
+
+  <meta name="google-adsense-account" content="ca-pub-3415300754694996">
+  <meta name="google-site-verification" content="h-XxXsaNbfY2dWmueZFK5sQSuwXIFelBeB5ByCSWCCg">
+  <meta name="msvalidate.01" content="79AA455B3A6A870379DCB6A9DEFF026C">
+  <meta name="yandex-verification" content="a1d444bd168e3c86">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415300754694996" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "NonProfitOrganization",
+      "name": "Observable Compute Foundation",
+      "url": "https://observablecompute.org",
+      "description": "Independent AI research. We describe what is happening without flinching.",
+      "email": "contact@observablecompute.org",
+      "logo": "https://observablecompute.org/assets/images/favicon.png",
+      "foundingDate": "2026-02-23",
+      "taxID": "41-4747049",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "58 Hillcrest Drive",
+        "addressLocality": "Rapid City",
+        "addressRegion": "SD",
+        "postalCode": "57701",
+        "addressCountry": "US"
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Adam Ian Stratmeyer",
+        "honorificSuffix": "J.D.",
+        "jobTitle": "President",
+        "url": "https://observablecompute.org/about/",
+        "sameAs": [
+          "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618"
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adam Ian Stratmeyer",
+      "honorificSuffix": "J.D.",
+      "jobTitle": "President & Principal Researcher",
+      "worksFor": {
+        "@type": "NonProfitOrganization",
+        "name": "Observable Compute Foundation",
+        "url": "https://observablecompute.org"
+      },
+      "url": "https://observablecompute.org/about/",
+      "email": "a.i.stratmeyer@observablecompute.org",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rapid City",
+        "addressRegion": "SD",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618",
+        "https://ssrn.com/abstract=6287618"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "Juris Doctor (J.D.)"
+      }
+    }
+  ]
+  </script>
+<style>
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .7; transform: scale(1.05); }
+    }
+    .perspective-1000 { perspective: 1000px; }
+  </style>
+</head>
+<body class="bg-background text-textPrimary flex flex-col min-h-screen">
+  <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-border py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="/" class="flex items-center gap-2 group">
+          <img src="/assets/images/favicon.png" alt="OCF Logo" class="w-8 h-8 rounded-full border border-border group-hover:border-primary transition-colors" />
+          <span class="font-mono font-bold text-lg tracking-tight hidden sm:block text-textPrimary">Observable<span class="text-primary">Compute</span></span>
+          <span class="font-mono font-bold text-lg tracking-tight sm:hidden text-textPrimary">OCF</span>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex space-x-8">
+        <a href="/research/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Research</a>
+        <a href="/database/" class="text-sm font-medium transition-colors text-primary font-semibold">Database</a>
+        <a href="/resources/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Resources</a>
+        <a href="/about/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">About</a>
+        <a href="/contact/" class="text-sm font-medium text-white bg-primary hover:bg-primary/90 px-4 py-1.5 rounded transition-colors">Contact</a>
+      </nav>
+
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" class="text-textMuted hover:text-primary focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-border mt-4 shadow-sm">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="/research/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Research</a>
+      <a href="/database/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-primary">Database</a>
+      <a href="/resources/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Resources</a>
+      <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">About</a>
+      <a href="/contact/" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">Contact</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+
+
+
+  <main class="flex-grow pt-24 pb-16">
+    <div class="container mx-auto px-6 mb-8 font-mono text-xs text-textSecondary uppercase tracking-widest flex items-center space-x-2">
+      <a href="/" class="hover:text-accent transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-textPrimary">Terminology Database</span>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <header class="mb-8 border-b border-border pb-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-bold font-mono tracking-tight mb-2 text-white">Technology Terminology Observatory</h1>
+        <p class="text-textMuted flex items-center gap-2 font-mono text-sm">
+          <svg class="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          Last updated: 2026-03-18T20:55:03Z
+        </p>
+      </div>
+      <div class="bg-surface border border-border rounded-lg px-4 py-3 flex items-center gap-4 text-sm font-mono">
+        <div>
+          <span class="text-textMuted block text-xs uppercase tracking-wider">Entries</span>
+          <span class="text-white font-bold" id="result-count">10</span>
+        </div>
+        <div class="w-px h-8 bg-border"></div>
+        <div>
+          <span class="text-textMuted block text-xs uppercase tracking-wider">Status</span>
+          <span class="text-success font-bold flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-success"></span> Live
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filters -->
+  <div class="bg-surface border border-border rounded-lg p-4 mb-8 flex flex-col md:flex-row gap-4 items-center shadow-sm">
+    <div class="relative w-full md:w-1/3">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <svg class="h-5 w-5 text-textMuted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+      <input type="text" id="search-input" class="block w-full pl-10 pr-3 py-2 border border-border rounded-md leading-5 bg-background text-textPrimary placeholder-textMuted focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors" placeholder="Filter by term...">
+    </div>
+
+    <div class="flex-grow w-full md:w-auto flex flex-col sm:flex-row gap-4">
+      <div class="w-full sm:w-1/2">
+        <select id="domain-filter" class="block w-full pl-3 pr-10 py-2 text-base border border-border focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm rounded-md bg-background text-textPrimary cursor-pointer transition-colors">
+          <option value="all">All Domains</option>
+          <option value="research">Research</option>
+          <option value="legal">Legal</option>
+          <option value="industry">Industry</option>
+          <option value="regulatory">Regulatory</option>
+          <option value="public">Public</option>
+        </select>
+      </div>
+      <div class="w-full sm:w-1/2">
+        <select id="sort-filter" class="block w-full pl-3 pr-10 py-2 text-base border border-border focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm rounded-md bg-background text-textPrimary cursor-pointer transition-colors">
+          <option value="newest">Sort: Newest First</option>
+          <option value="alphabetical">Sort: Alphabetical</option>
+          <option value="contested">Sort: Most Contested</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Database Table -->
+  <div class="bg-surface rounded-lg border border-border overflow-hidden shadow-sm">
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-border">
+        <thead class="bg-background">
+          <tr>
+            <th scope="col" class="px-6 py-4 text-left text-xs font-medium text-textMuted uppercase tracking-wider font-mono">Term</th>
+            <th scope="col" class="px-6 py-4 text-left text-xs font-medium text-textMuted uppercase tracking-wider font-mono hidden md:table-cell">Canonical Def</th>
+            <th scope="col" class="px-6 py-4 text-left text-xs font-medium text-textMuted uppercase tracking-wider font-mono hidden sm:table-cell">Variants</th>
+            <th scope="col" class="px-6 py-4 text-left text-xs font-medium text-textMuted uppercase tracking-wider font-mono hidden lg:table-cell">First Doc</th>
+            <th scope="col" class="px-6 py-4 text-left text-xs font-medium text-textMuted uppercase tracking-wider font-mono">Trend</th>
+            <th scope="col" class="px-6 py-4 text-right text-xs font-medium text-textMuted uppercase tracking-wider font-mono">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="db-tbody" class="divide-y divide-border bg-surface">
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="001" data-term="Artificial Intelligence" data-date="2023-01-01" data-trend="Contested" data-domains="research,legal,industry,regulatory">
+            <td class="px-6 py-4">
+              <div class="font-bold text-white text-base">Artificial Intelligence</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                4 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              
+              Systems exhibiting goal-directed behavior via learned representations...
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  4
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              2023-01-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="001">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-001" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Systems exhibiting goal-directed behavior via learned representations..."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">legal</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Any machine-based system that can, for a given set of objectives..."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">industry</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Software that performs tasks that typically require human intelligence..."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">regulatory</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"A machine-based system that is designed to operate with varying levels of autonomy..."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-white font-mono">2023-01-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-white font-mono">47</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Definition divergence between EU AI Act and NIST AI RMF is a documented alignment gap.
+                    </p>
+                  </div>
+                  
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <ul class="space-y-3">
+                      
+                      <li class="text-sm">
+                        <a href="https://artificialintelligenceact.eu/" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="EU AI Act">EU AI Act</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">regulatory</span>
+                          <span>•</span>
+                          <span>2024-03-13</span>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="002" data-term="Machine Learning" data-date="1959-01-01" data-trend="Contested" data-domains="research,industry">
+            <td class="px-6 py-4">
+              <div class="font-bold text-white text-base">Machine Learning</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                2 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              
+              The study of computer algorithms that can improve automatically through experience and by the use of data.
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  2
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              1959-01-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="002">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-002" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"The study of computer algorithms that can improve automatically through experience and by the use of data."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">industry</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Algorithms that parse data, learn from it, and then apply what they&#39;ve learned to make informed decisions."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-white font-mono">1959-01-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-white font-mono">122</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Relatively stable definition across domains compared to &#39;AI&#39;.
+                    </p>
+                  </div>
+                  
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <ul class="space-y-3">
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16850v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="Unifying Optimization and Dynamics to Parallelize Sequential Computation: A Guide to Parallel Newton Methods for Breaking Sequential Bottlenecks">Unifying Optimization and Dynamics to Parallelize Sequential Computation: A Guide to Parallel Newton Methods for Breaking Sequential Bottlenecks</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16815v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="Beyond Accuracy: Evaluating Forecasting Models by Multi-Echelon Inventory Cost">Beyond Accuracy: Evaluating Forecasting Models by Multi-Echelon Inventory Cost</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="003" data-term="Algorithm" data-date="1936-01-01" data-trend="Stable" data-domains="research">
+            <td class="px-6 py-4">
+              <div class="font-bold text-white text-base">Algorithm</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                1 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              
+              A finite sequence of rigorous instructions, typically used to solve a class of specific problems or to perform a computation.
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  1
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              1936-01-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-stable">
+                Stable
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="003">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-003" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"A finite sequence of rigorous instructions, typically used to solve a class of specific problems or to perform a computation."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-white font-mono">1936-01-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-white font-mono">301</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <ul class="space-y-3">
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16850v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="Unifying Optimization and Dynamics to Parallelize Sequential Computation: A Guide to Parallel Newton Methods for Breaking Sequential Bottlenecks">Unifying Optimization and Dynamics to Parallelize Sequential Computation: A Guide to Parallel Newton Methods for Breaking Sequential Bottlenecks</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="004" data-term="Large Language Model" data-date="2018-01-01" data-trend="Contested" data-domains="research,industry">
+            <td class="px-6 py-4">
+              <div class="font-bold text-white text-base">Large Language Model</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                2 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              
+              A language model consisting of a neural network with many parameters (typically billions), trained on large quantities of unlabelled text using self-supervised learning.
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  2
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              2018-01-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="004">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-004" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"A language model consisting of a neural network with many parameters (typically billions), trained on large quantities of unlabelled text using self-supervised learning."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">industry</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"A type of artificial intelligence algorithm that uses deep learning techniques and massively large data sets to understand, summarize, generate and predict new content."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-white font-mono">2018-01-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-white font-mono">91</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Boundary between LM and LLM remains ill-defined.
+                    </p>
+                  </div>
+                  
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <ul class="space-y-3">
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16859v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models">SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16843v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="Internalizing Agency from Reflective Experience">Internalizing Agency from Reflective Experience</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16827v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="Prompt Programming for Cultural Bias and Alignment of Large Language Models">Prompt Programming for Cultural Bias and Alignment of Large Language Models</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="005" data-term="Alignment" data-date="2016-01-01" data-trend="Contested" data-domains="research,industry">
+            <td class="px-6 py-4">
+              <div class="font-bold text-white text-base">Alignment</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                2 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              
+              The process of encoding human values and goals into artificial intelligence systems.
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  2
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              2016-01-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="005">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-005" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"The process of encoding human values and goals into artificial intelligence systems."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">industry</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Ensuring AI systems act in accordance with intended behaviors and constraints."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-white font-mono">2016-01-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-white font-mono">66</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Significant divergence in measurement and verification methodologies.
+                    </p>
+                  </div>
+                  
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <ul class="space-y-3">
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16827v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="Prompt Programming for Cultural Bias and Alignment of Large Language Models">Prompt Programming for Cultural Bias and Alignment of Large Language Models</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16806v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="DexGrasp-Zero: A Morphology-Aligned Policy for Zero-Shot Cross-Embodiment Dexterous Grasping">DexGrasp-Zero: A Morphology-Aligned Policy for Zero-Shot Cross-Embodiment Dexterous Grasping</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16792v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="V-Co: A Closer Look at Visual Representation Alignment via Co-Denoising">V-Co: A Closer Look at Visual Representation Alignment via Co-Denoising</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="006" data-term="Safety" data-date="2010-01-01" data-trend="Contested" data-domains="regulatory,research">
+            <td class="px-6 py-4">
+              <div class="font-bold text-white text-base">Safety</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                2 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              
+              Freedom from unacceptable risk.
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  2
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              2010-01-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="006">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-006" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">regulatory</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Freedom from unacceptable risk."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"The study of building AI systems that reliably do what their designers intend."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-white font-mono">2010-01-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-white font-mono">111</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Often conflated with security or ethics in industry literature.
+                    </p>
+                  </div>
+                  
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <ul class="space-y-3">
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16822v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="Surg$Σ$: A Spectrum of Large-Scale Multimodal Data and Foundation Models for Surgical Intelligence">Surg$Σ$: A Spectrum of Large-Scale Multimodal Data and Foundation Models for Surgical Intelligence</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="007" data-term="Hallucination" data-date="2020-01-01" data-trend="Contested" data-domains="research,industry">
+            <td class="px-6 py-4">
+              <div class="font-bold text-white text-base">Hallucination</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                2 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              
+              Generated content that is nonsensical or unfaithful to the provided source content.
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  2
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              2020-01-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="007">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-007" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Generated content that is nonsensical or unfaithful to the provided source content."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">industry</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"A response generated by an AI that contains false or misleading information presented as fact."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-white font-mono">2020-01-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-white font-mono">94</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Term heavily criticized by cognitive scientists; alternative &#39;confabulation&#39; proposed.
+                    </p>
+                  </div>
+                  
+
+                  
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="008" data-term="Foundation Model" data-date="2021-08-01" data-trend="Contested" data-domains="research,regulatory">
+            <td class="px-6 py-4">
+              <div class="font-bold text-white text-base">Foundation Model</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                2 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              
+              Any model that is trained on broad data (generally using self-supervision at scale) that can be adapted to a wide range of downstream tasks.
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  2
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              2021-08-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="008">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-008" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Any model that is trained on broad data (generally using self-supervision at scale) that can be adapted to a wide range of downstream tasks."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">regulatory</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"A large-scale AI model designed to be adapted for a wide variety of tasks."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-white font-mono">2021-08-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-white font-mono">43</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Introduced by Stanford CRFM. Becoming established in regulatory text.
+                    </p>
+                  </div>
+                  
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <ul class="space-y-3">
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16822v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="Surg$Σ$: A Spectrum of Large-Scale Multimodal Data and Foundation Models for Surgical Intelligence">Surg$Σ$: A Spectrum of Large-Scale Multimodal Data and Foundation Models for Surgical Intelligence</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                      <li class="text-sm">
+                        <a href="http://arxiv.org/abs/2603.16790v1" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="InCoder-32B: Code Foundation Model for Industrial Scenarios">InCoder-32B: Code Foundation Model for Industrial Scenarios</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-03-17</span>
+                        </div>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="009" data-term="Artificial General Intelligence" data-date="1997-01-01" data-trend="Contested" data-domains="research,industry">
+            <td class="px-6 py-4">
+              <div class="font-bold text-white text-base">Artificial General Intelligence</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                2 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              
+              A hypothetical intelligence of a machine that has the capacity to understand or learn any intellectual task that a human being can.
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  2
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              1997-01-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="009">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-009" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"A hypothetical intelligence of a machine that has the capacity to understand or learn any intellectual task that a human being can."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">industry</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Highly autonomous systems that outperform humans at most economically valuable work."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-white font-mono">1997-01-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-white font-mono">150</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Definition remains highly speculative and fractured across all domains.
+                    </p>
+                  </div>
+                  
+
+                  
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="010" data-term="Autonomous System" data-date="2000-01-01" data-trend="Contested" data-domains="regulatory,research">
+            <td class="px-6 py-4">
+              <div class="font-bold text-white text-base">Autonomous System</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                2 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              
+              A system capable of executing complex tasks without human intervention.
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  2
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              2000-01-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="010">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-010" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">regulatory</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"A system capable of executing complex tasks without human intervention."</p>
+                    </div>
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"A system that can change its behavior in response to unanticipated events during operation."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-white font-mono">2000-01-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-white font-mono">76</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Degrees of autonomy often require specific legal or operational boundaries.
+                    </p>
+                  </div>
+                  
+
+                  
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="mt-12 text-center border-t border-border pt-8">
+    <p class="text-textMuted mb-4">Missing a critical term or observed a new domain shift?</p>
+    <a href="mailto:research@observablecompute.org?subject=Suggest%20a%20Term%20for%20OCF%20Database" class="btn-secondary inline-flex items-center">
+      <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+      </svg>
+      Suggest a Term
+    </a>
+  </div>
+</div>
+
+
+  </main>
+
+  <footer class="bg-surface border-t border-border py-12 mt-16 mt-auto text-sm text-textSecondary">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <div class="md:col-span-1 space-y-4">
+      <div class="flex items-center space-x-2">
+        <img src="/assets/images/favicon.png" alt="OCF Logo" class="h-6 w-6 rounded-full opacity-80">
+        <span class="font-mono font-bold text-textPrimary">Observable Compute</span>
+      </div>
+      <p class="leading-relaxed">
+        A nonprofit artificial intelligence research foundation. Independent research on machine cognition, observable function, and the mechanics of informational pressure.
+      </p>
+      <div class="pt-4 border-t border-border font-mono text-xs text-textMuted">
+        <p>South Dakota Nonprofit NS321548</p>
+        <p>EIN 41-4747049 | 501(c)(3) Pending</p>
+        <p>Incorporated Feb 23, 2026</p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Research</h3>
+      <ul class="space-y-2">
+        <li><a href="/research/" class="hover:text-primary transition-colors">Publications</a></li>
+        <li><a href="/foundational-paper/" class="hover:text-primary transition-colors">Foundational Paper</a></li>
+        <li><a href="/database/" class="hover:text-primary transition-colors">Terminology Database</a></li>
+        <li><a href="/resources/" class="hover:text-primary transition-colors">Open Resources</a></li>
+        <li><a href="/services/" class="hover:text-primary transition-colors">Educational Services</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Organization</h3>
+      <ul class="space-y-2">
+        <li><a href="/about/" class="hover:text-primary transition-colors">About the Foundation</a></li>
+        <li><a href="/transparency/" class="hover:text-primary transition-colors">Governance &amp; Transparency</a></li>
+        <li><a href="/contact/" class="hover:text-primary transition-colors">Contact Us</a></li>
+        <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+        <li><a href="/terms/" class="hover:text-primary transition-colors">Terms &amp; Conditions</a></li>
+        <li><a href="/disclaimer/" class="hover:text-primary transition-colors">Disclaimer</a></li>
+      </ul>
+    </div>
+
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Contact</h3>
+        <ul class="space-y-2">
+          <li><a href="mailto:research@observablecompute.org" class="hover:text-primary transition-colors">research@observablecompute.org</a></li>
+          <li><a href="mailto:contact@observablecompute.org" class="hover:text-primary transition-colors">contact@observablecompute.org</a></li>
+          <li class="text-textMuted text-xs pt-2">58 Hillcrest Drive<br>Rapid City, SD 57701</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">External</h3>
+        <ul class="space-y-2">
+          <li><a href="https://ssrn.com/author=6287618" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">SSRN Profile</a></li>
+          <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">arXiv CS.AI</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
+    <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
+    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; March 2026</p>
+  </div>
+</footer>
+
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
+        header.classList.remove('bg-transparent');
+      } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
+        header.classList.add('bg-transparent');
+      }
+    });
+  </script>
+</body>
+</html>
