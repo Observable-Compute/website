@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundational Research Paper v1.1 | Observable Compute Foundation</title>
+  <meta name="description" content="Independent AI research. Making observable function legible — without flinching.">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  
+
+  <meta name="google-adsense-account" content="ca-pub-3415300754694996">
+  <meta name="google-site-verification" content="h-XxXsaNbfY2dWmueZFK5sQSuwXIFelBeB5ByCSWCCg">
+  <meta name="msvalidate.01" content="79AA455B3A6A870379DCB6A9DEFF026C">
+  <meta name="yandex-verification" content="a1d444bd168e3c86">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415300754694996" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "NonProfitOrganization",
+      "name": "Observable Compute Foundation",
+      "url": "https://observablecompute.org",
+      "description": "Independent AI research. We describe what is happening without flinching.",
+      "email": "contact@observablecompute.org",
+      "logo": "https://observablecompute.org/assets/images/favicon.png",
+      "foundingDate": "2026-02-23",
+      "taxID": "41-4747049",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "58 Hillcrest Drive",
+        "addressLocality": "Rapid City",
+        "addressRegion": "SD",
+        "postalCode": "57701",
+        "addressCountry": "US"
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Adam Ian Stratmeyer",
+        "honorificSuffix": "J.D.",
+        "jobTitle": "President",
+        "url": "https://observablecompute.org/about/",
+        "sameAs": [
+          "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618"
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adam Ian Stratmeyer",
+      "honorificSuffix": "J.D.",
+      "jobTitle": "President & Principal Researcher",
+      "worksFor": {
+        "@type": "NonProfitOrganization",
+        "name": "Observable Compute Foundation",
+        "url": "https://observablecompute.org"
+      },
+      "url": "https://observablecompute.org/about/",
+      "email": "a.i.stratmeyer@observablecompute.org",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rapid City",
+        "addressRegion": "SD",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618",
+        "https://ssrn.com/abstract=6287618"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "Juris Doctor (J.D.)"
+      }
+    }
+  ]
+  </script>
+<style>
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .7; transform: scale(1.05); }
+    }
+    .perspective-1000 { perspective: 1000px; }
+  </style>
+</head>
+<body class="bg-background text-textPrimary flex flex-col min-h-screen">
+  <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-border py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="/" class="flex items-center gap-2 group">
+          <img src="/assets/images/favicon.png" alt="OCF Logo" class="w-8 h-8 rounded-full border border-border group-hover:border-primary transition-colors" />
+          <span class="font-mono font-bold text-lg tracking-tight hidden sm:block text-textPrimary">Observable<span class="text-primary">Compute</span></span>
+          <span class="font-mono font-bold text-lg tracking-tight sm:hidden text-textPrimary">OCF</span>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex space-x-8">
+        <a href="/research/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Research</a>
+        <a href="/database/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Database</a>
+        <a href="/resources/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Resources</a>
+        <a href="/about/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">About</a>
+        <a href="/contact/" class="text-sm font-medium text-white bg-primary hover:bg-primary/90 px-4 py-1.5 rounded transition-colors">Contact</a>
+      </nav>
+
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" class="text-textMuted hover:text-primary focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-border mt-4 shadow-sm">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="/research/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Research</a>
+      <a href="/database/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Database</a>
+      <a href="/resources/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Resources</a>
+      <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">About</a>
+      <a href="/contact/" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">Contact</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+
+
+
+  <main class="flex-grow pt-24 pb-16">
+    <div class="container mx-auto px-6 mb-8 font-mono text-xs text-textSecondary uppercase tracking-widest flex items-center space-x-2">
+      <a href="/" class="hover:text-accent transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-textPrimary">Foundational Research Paper v1.1</span>
+    </div>
+    
+<div class="max-w-4xl mx-auto px-4 py-12 font-serif text-textPrimary">
+
+  <header class="mb-16 border-b border-border pb-8">
+    <div class="font-mono text-sm text-primary mb-4 uppercase tracking-widest">Research Note</div>
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Unified Philosophical and Ethical Architecture</h1>
+    <div class="flex flex-wrap gap-4 text-sm text-textSecondary font-mono">
+      <span>Version 1.1</span>
+      <span>|</span>
+      <span>Published: Updated March 2026</span>
+      <span>|</span>
+      <span>Observable Compute Foundation</span>
+    </div>
+  </header>
+
+  <article class="prose prose-invert prose-lg max-w-none">
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 font-sans text-textSecondary border-b border-border/50 pb-2">Abstract</h2>
+      <p class="leading-relaxed mb-6">
+        As the deployment of Large Language Models (LLMs) accelerates, the traditional paradigm of isolated algorithmic development is giving way to complex, interconnected socio-technical systems. This paper, acting as the foundational theoretical framework for the Observable Compute Foundation, outlines the critical necessity of structural alignment in AI. We introduce the concepts of the <strong class="text-primary font-mono bg-surface px-1">Knowledge Gradient</strong>, <strong class="text-primary font-mono bg-surface px-1">The Shard</strong>, and <strong class="text-primary font-mono bg-surface px-1">The In-Between</strong> to map the ethical and operational terrain of advanced generative systems.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 font-sans text-textSecondary border-b border-border/50 pb-2">1. The Knowledge Gradient</h2>
+      <p class="leading-relaxed mb-6">
+        The rapid diffusion of generative AI creates a stark informational asymmetry, which we term the <strong>Knowledge Gradient</strong>. This gradient describes the widening disparity between those who control the underlying mechanics of foundation models and the vast majority of end-users who interact with these systems through opaque interfaces.
+      </p>
+            <p class="leading-relaxed mb-6">
+        When the Knowledge Gradient is steep, the capacity for societal exploitation increases. The mission of this repository is to systematically flatten this gradient by operationalizing technical transparency and rendering the mechanics of computation observable. This approach aligns with broader academic efforts to demystify complex neural architectures (<a href="https://arxiv.org/abs/2302.13971" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline decoration-accent/50 underline-offset-4">LLaMA: Open and Efficient Foundation Language Models</a>, Touvron et al., 2023) and formalize the ethical architecture required for alignment (<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6287618" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline decoration-accent/50 underline-offset-4">Stratmeyer Analytica: Unified Corpus Summary Core Works Synthesis v1.0</a>).
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 font-sans text-textSecondary border-b border-border/50 pb-2">2. The Shard: Fragmentation of Shared Reality</h2>
+      <p class="leading-relaxed mb-6">
+        In the context of generative personalization, <strong class="font-mono text-textPrimary bg-surface px-1">The Shard</strong> refers to the hyper-individualized epistemological bubbles generated by algorithmically curated content streams and personalized LLM interactions. As models optimize for engagement or specific user profiles, they inadvertently construct distinct, fragmented realities.
+      </p>
+      <p class="leading-relaxed mb-6">
+        This phenomenon exacerbates what is known in the literature as concept drift—the unpredictable evolution of semantic meaning over time, driven by closed-loop feedback systems. The fragmentation caused by The Shard presents a profound challenge to democratic discourse and shared objective truth, necessitating robust, open frameworks for evaluating alignment across disparate interaction modalities. Research originating from university labs emphasizing multi-agent alignment models provides early theoretical groundwork for mitigating these divergent effects (<a href="https://arxiv.org/abs/2009.01325" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline decoration-accent/50 underline-offset-4">Learning to Summarize from Human Feedback</a>, Stiennon et al., 2020).
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 font-sans text-textSecondary border-b border-border/50 pb-2">3. The In-Between: Navigating the Latent Space of Ethics</h2>
+      <p class="leading-relaxed mb-6">
+        We define <strong class="font-mono text-textPrimary bg-surface px-1">The In-Between</strong> as the emergent, unstructured space where human intent interacts with machine latency and hallucination. It is the liminal zone between a user's prompt and the model's output, encompassing the complex web of attention mechanisms, token probabilities, and safety filters.
+      </p>
+      <p class="leading-relaxed mb-6">
+        Ethical AI cannot merely be bolted onto the exterior of a model; it must be mapped and navigated within The In-Between. Current methodologies, such as Reinforcement Learning from Human Feedback (RLHF), operate on the periphery of this space. True structural alignment requires deep interpretability techniques capable of auditing the internal states of the model during inference. The Observable Compute Foundation advocates for and archives research that illuminates this critical frontier.
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6 font-sans text-textSecondary border-b border-border/50 pb-2">Conclusion</h2>
+      <p class="leading-relaxed">
+        The architectural framework described herein provides the diagnostic lens through which the Observable Compute Foundation evaluates and archives advancements in artificial intelligence. By formalizing the terminology of the Knowledge Gradient, The Shard, and The In-Between, we establish a robust lexicon for addressing the informational pressures generated by foundation models. This non-profit research repository serves as a permanent, observable record of this critical socio-technical transition.
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6 font-sans text-textSecondary border-b border-border/50 pb-2">Core References & Citations</h2>
+      <ul class="list-none space-y-4 text-sm text-textMuted font-mono">
+        <li class="p-4 bg-surface/30 rounded border border-border/50">
+           <strong>Stratmeyer, Adam Ian.</strong> (2026). <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6287618" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Unified Corpus Summary Core Works Synthesis v1.0</a>. <em>SSRN</em>. Abstract ID 6287618.
+        </li>
+        <li class="p-4 bg-surface/30 rounded border border-border/50">
+           <strong>Touvron, H., et al.</strong> (2023). <a href="https://arxiv.org/abs/2302.13971" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">LLaMA: Open and Efficient Foundation Language Models</a>. <em>arXiv preprint arXiv:2302.13971</em>.
+        </li>
+        <li class="p-4 bg-surface/30 rounded border border-border/50">
+           <strong>Stiennon, N., et al.</strong> (2020). <a href="https://arxiv.org/abs/2009.01325" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Learning to Summarize from Human Feedback</a>. <em>arXiv preprint arXiv:2009.01325</em>.
+        </li>
+      </ul>
+    </section>
+
+  </article>
+
+</div>
+
+
+  </main>
+
+  <footer class="bg-surface border-t border-border py-12 mt-16 mt-auto text-sm text-textSecondary">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <div class="md:col-span-1 space-y-4">
+      <div class="flex items-center space-x-2">
+        <img src="/assets/images/favicon.png" alt="OCF Logo" class="h-6 w-6 rounded-full opacity-80">
+        <span class="font-mono font-bold text-textPrimary">Observable Compute</span>
+      </div>
+      <p class="leading-relaxed">
+        A nonprofit artificial intelligence research foundation. Independent research on machine cognition, observable function, and the mechanics of informational pressure.
+      </p>
+      <div class="pt-4 border-t border-border font-mono text-xs text-textMuted">
+        <p>South Dakota Nonprofit NS321548</p>
+        <p>EIN 41-4747049 | 501(c)(3) Pending</p>
+        <p>Incorporated Feb 23, 2026</p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Research</h3>
+      <ul class="space-y-2">
+        <li><a href="/research/" class="hover:text-primary transition-colors">Publications</a></li>
+        <li><a href="/foundational-paper/" class="hover:text-primary transition-colors">Foundational Paper</a></li>
+        <li><a href="/database/" class="hover:text-primary transition-colors">Terminology Database</a></li>
+        <li><a href="/resources/" class="hover:text-primary transition-colors">Open Resources</a></li>
+        <li><a href="/services/" class="hover:text-primary transition-colors">Educational Services</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Organization</h3>
+      <ul class="space-y-2">
+        <li><a href="/about/" class="hover:text-primary transition-colors">About the Foundation</a></li>
+        <li><a href="/transparency/" class="hover:text-primary transition-colors">Governance &amp; Transparency</a></li>
+        <li><a href="/contact/" class="hover:text-primary transition-colors">Contact Us</a></li>
+        <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+        <li><a href="/terms/" class="hover:text-primary transition-colors">Terms &amp; Conditions</a></li>
+        <li><a href="/disclaimer/" class="hover:text-primary transition-colors">Disclaimer</a></li>
+      </ul>
+    </div>
+
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Contact</h3>
+        <ul class="space-y-2">
+          <li><a href="mailto:research@observablecompute.org" class="hover:text-primary transition-colors">research@observablecompute.org</a></li>
+          <li><a href="mailto:contact@observablecompute.org" class="hover:text-primary transition-colors">contact@observablecompute.org</a></li>
+          <li class="text-textMuted text-xs pt-2">58 Hillcrest Drive<br>Rapid City, SD 57701</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">External</h3>
+        <ul class="space-y-2">
+          <li><a href="https://ssrn.com/author=6287618" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">SSRN Profile</a></li>
+          <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">arXiv CS.AI</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
+    <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
+    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; March 2026</p>
+  </div>
+</footer>
+
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
+        header.classList.remove('bg-transparent');
+      } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
+        header.classList.add('bg-transparent');
+      }
+    });
+  </script>
+</body>
+</html>
