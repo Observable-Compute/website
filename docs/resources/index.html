@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Resources | Observable Compute Foundation</title>
-  <meta name="description" content="Independent AI research. Making observable function legible — without flinching.">
+  <meta name="description" content="Free AI tools, learning resources, and an LLM basics primer from the Observable Compute Foundation. Open access to help individuals and organizations navigate AI.">
 
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
@@ -12,8 +12,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-
-  
 
   <meta name="google-adsense-account" content="ca-pub-3415300754694996">
   <meta name="google-site-verification" content="h-XxXsaNbfY2dWmueZFK5sQSuwXIFelBeB5ByCSWCCg">
@@ -40,58 +38,44 @@
         "addressRegion": "SD",
         "postalCode": "57701",
         "addressCountry": "US"
-      },
-      "employee": {
-        "@type": "Person",
-        "name": "Adam Ian Stratmeyer",
-        "honorificSuffix": "J.D.",
-        "jobTitle": "President",
-        "url": "https://observablecompute.org/about/",
-        "sameAs": [
-          "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618"
-        ]
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Adam Ian Stratmeyer",
-      "honorificSuffix": "J.D.",
-      "jobTitle": "President & Principal Researcher",
-      "worksFor": {
-        "@type": "NonProfitOrganization",
-        "name": "Observable Compute Foundation",
-        "url": "https://observablecompute.org"
-      },
-      "url": "https://observablecompute.org/about/",
-      "email": "a.i.stratmeyer@observablecompute.org",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Rapid City",
-        "addressRegion": "SD",
-        "addressCountry": "US"
-      },
-      "sameAs": [
-        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618",
-        "https://ssrn.com/abstract=6287618"
-      ],
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "degree",
-        "name": "Juris Doctor (J.D.)"
       }
     }
   ]
   </script>
-<style>
-    @keyframes pulse-slow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: .7; transform: scale(1.05); }
+
+  <style>
+    .tool-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
-    .perspective-1000 { perspective: 1000px; }
+    .badge-free { background: #d1fae5; color: #065f46; }
+    .badge-no-account { background: #dbeafe; color: #1e40af; }
+    .badge-local { background: #ede9fe; color: #5b21b6; }
+    .badge-web { background: #fef3c7; color: #92400e; }
+    .primer-step {
+      counter-increment: primer-steps;
+    }
+    .primer-step::before {
+      content: counter(primer-steps, decimal-leading-zero);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: #1E5A78;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+    .primer-steps-counter { counter-reset: primer-steps; }
   </style>
 </head>
-<body class="bg-background text-textPrimary flex flex-col min-h-screen">
+
+<body class="bg-background text-textPrimary flex flex-col min-h-screen font-sans">
+
   <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-border py-4">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center">
@@ -139,92 +123,414 @@
   });
 </script>
 
-
-
   <main class="flex-grow pt-24 pb-16">
+
+    <!-- Breadcrumb -->
     <div class="container mx-auto px-6 mb-8 font-mono text-xs text-textSecondary uppercase tracking-widest flex items-center space-x-2">
-      <a href="/" class="hover:text-accent transition-colors">Home</a>
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
       <span>/</span>
-      <span class="text-textPrimary">Free Resources</span>
-    </div>
-    
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <div class="mb-12">
-    <h1 class="text-4xl font-bold font-mono text-textPrimary mb-4">Free Resources</h1>
-    <p class="text-lg text-textSecondary max-w-3xl">
-      We believe in open access to artificial intelligence tools and education. Below, you will find free downloads, tool guides, and resources designed to help individuals and organizations leverage modern technology.
-    </p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-    <!-- Gemini CLI Resource -->
-    <div class="bg-surface border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-      <h2 class="text-2xl font-bold text-textPrimary mb-2">Gemini CLI Setup</h2>
-      <p class="text-textSecondary mb-4">
-        A command-line interface for Google's Gemini LLM. If you have a Google account, you can interact with Gemini directly from your terminal. This is a lightweight, free alternative to expensive subscription interfaces.
-      </p>
-
-      <h3 class="font-mono text-sm uppercase tracking-wider text-textMuted mb-2">Prerequisites:</h3>
-      <ul class="list-disc list-inside text-sm text-textSecondary mb-4 space-y-1">
-        <li>A Google Account</li>
-        <li>Node.js installed on your machine</li>
-      </ul>
-
-      <h3 class="font-mono text-sm uppercase tracking-wider text-textMuted mb-2">Instructions:</h3>
-      <ol class="list-decimal list-inside text-sm text-textSecondary mb-6 space-y-2">
-        <li>Go to Google AI Studio and create a free API key.</li>
-        <li>Open your terminal and install the CLI globally via npm: <code class="bg-background px-1 py-0.5 rounded text-secondary">npm install -g @google/generative-ai-cli</code></li>
-        <li>Configure the CLI with your key: <code class="bg-background px-1 py-0.5 rounded text-secondary">gemini-cli configure --api-key="YOUR_KEY_HERE"</code></li>
-        <li>Start chatting: <code class="bg-background px-1 py-0.5 rounded text-secondary">gemini-cli chat</code></li>
-      </ol>
-
-      <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-secondary hover:text-primary transition-colors font-mono text-sm border-b border-secondary/30 hover:border-primary">
-        Get Gemini API Key &rarr;
-      </a>
+      <span class="text-textPrimary">Resources</span>
     </div>
 
-    <!-- Additional Free Tools Template -->
-    <div class="bg-surface border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-      <h2 class="text-2xl font-bold text-textPrimary mb-2">Local LLM Runner (Ollama)</h2>
-      <p class="text-textSecondary mb-4">
-        Run powerful large language models locally on your own hardware without paying for API calls or sharing your data.
-      </p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <h3 class="font-mono text-sm uppercase tracking-wider text-textMuted mb-2">Instructions:</h3>
-      <ol class="list-decimal list-inside text-sm text-textSecondary mb-6 space-y-2">
-        <li>Download Ollama from the official website.</li>
-        <li>Install the application for your operating system (Windows, macOS, Linux).</li>
-        <li>Open your terminal and run a model, for example: <code class="bg-background px-1 py-0.5 rounded text-secondary">ollama run llama3</code></li>
-        <li>The model will download (can take a few minutes) and start an interactive chat session.</li>
-      </ol>
+      <!-- Page Header -->
+      <div class="mb-14">
+        <h1 class="text-4xl font-bold font-mono text-textPrimary mb-4">Free Resources</h1>
+        <p class="text-lg text-textSecondary max-w-3xl leading-relaxed">
+          OCF is committed to open access. This page provides practical tools, direct links, and foundational education to help anyone — regardless of technical background — engage meaningfully with AI systems. No paywalls. No gatekeeping.
+        </p>
+      </div>
 
-      <a href="https://ollama.com/download" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-secondary hover:text-primary transition-colors font-mono text-sm border-b border-secondary/30 hover:border-primary">
-        Download Ollama &rarr;
-      </a>
+      <!-- ══════════════════════════════════════════
+           SECTION 1: FREE AI TOOLS
+           ══════════════════════════════════════════ -->
+      <section id="free-tools" class="mb-20">
+        <div class="flex items-center gap-4 mb-2">
+          <h2 class="text-2xl font-bold font-mono text-textPrimary">Free AI Tools</h2>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <p class="text-textSecondary mb-8 max-w-2xl">Vetted, genuinely free tools. Where something has a free tier, that is noted. No referral links.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+          <!-- Claude.ai -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">Claude (Anthropic)</h3>
+              <span class="tool-badge badge-free">Free Tier</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow">
+              Anthropic's conversational AI. Strong at nuanced reasoning, document analysis, and longer-context tasks. The free tier is generous and requires only an email address. Well-suited for writing, research summarization, and structured thinking.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between">
+              <span class="font-mono text-xs text-textMuted">claude.ai</span>
+              <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-primary hover:text-primary/80 transition-colors">Open &rarr;</a>
+            </div>
+          </div>
+
+          <!-- ChatGPT -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">ChatGPT (OpenAI)</h3>
+              <span class="tool-badge badge-free">Free Tier</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow">
+              The most widely deployed LLM interface. Free access to GPT-4o (limited). Good for general Q&amp;A, coding assistance, brainstorming, and image generation (DALL·E). The most tested model for everyday tasks.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between">
+              <span class="font-mono text-xs text-textMuted">chat.openai.com</span>
+              <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-primary hover:text-primary/80 transition-colors">Open &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Gemini -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">Gemini (Google)</h3>
+              <span class="tool-badge badge-free">Free Tier</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow">
+              Google's flagship model. Integrates with Google Workspace, Gmail, and Docs. Particularly strong at search-augmented tasks and long-document analysis. Accessible with any Google account — no credit card required.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between">
+              <span class="font-mono text-xs text-textMuted">gemini.google.com</span>
+              <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-primary hover:text-primary/80 transition-colors">Open &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Perplexity -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">Perplexity AI</h3>
+              <span class="tool-badge badge-free">Free Tier</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow">
+              An AI-powered search engine that cites its sources. Particularly useful for research tasks where you need to verify claims. The free plan provides real-time web search with citations — a major improvement over hallucination-prone plain LLMs for factual queries.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between">
+              <span class="font-mono text-xs text-textMuted">perplexity.ai</span>
+              <a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-primary hover:text-primary/80 transition-colors">Open &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Ollama -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">Ollama — Local LLMs</h3>
+              <span class="tool-badge badge-local">Runs Locally</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow">
+              Run open-source models (Llama 3, Mistral, Gemma, Phi) directly on your own hardware. No API calls, no data leaving your machine. Free, private, and powerful. Requires a reasonably modern computer (8GB+ RAM recommended). Install, then run <code class="bg-background px-1 py-0.5 rounded text-xs font-mono">ollama run llama3</code> in your terminal.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between">
+              <span class="font-mono text-xs text-textMuted">ollama.com</span>
+              <a href="https://ollama.com/download" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-primary hover:text-primary/80 transition-colors">Download &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Google AI Studio -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">Google AI Studio</h3>
+              <span class="tool-badge badge-free">Free API</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow">
+              A free developer interface to Gemini models. Useful for prompt testing, building simple automations, and accessing Gemini via API key at no cost (within rate limits). No billing setup required to get started. Good for educators and researchers who want API access without expense.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between">
+              <span class="font-mono text-xs text-textMuted">aistudio.google.com</span>
+              <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-primary hover:text-primary/80 transition-colors">Open &rarr;</a>
+            </div>
+          </div>
+
+          <!-- HuggingFace -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">Hugging Face Spaces</h3>
+              <span class="tool-badge badge-web">Web — Free</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow">
+              A vast repository of open-source AI models, datasets, and runnable demos. You can test thousands of models directly in your browser for free. Particularly useful for specialized tasks: image classification, text translation, audio transcription, and more — without any setup.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between">
+              <span class="font-mono text-xs text-textMuted">huggingface.co/spaces</span>
+              <a href="https://huggingface.co/spaces" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-primary hover:text-primary/80 transition-colors">Browse &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Mistral Le Chat -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">Le Chat (Mistral)</h3>
+              <span class="tool-badge badge-free">Free</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow">
+              Mistral AI's free chat interface. European-developed, strong at multilingual tasks and code. A good alternative when you want a capable model without using Google or US-headquartered providers. The free tier is uncapped on standard usage.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between">
+              <span class="font-mono text-xs text-textMuted">chat.mistral.ai</span>
+              <a href="https://chat.mistral.ai" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-primary hover:text-primary/80 transition-colors">Open &rarr;</a>
+            </div>
+          </div>
+
+          <!-- NotebookLM -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">NotebookLM (Google)</h3>
+              <span class="tool-badge badge-free">Free</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow">
+              Upload documents, PDFs, and research papers and have an AI reason exclusively from those sources — reducing hallucination risk significantly. Generates audio summaries, Q&amp;A, and study guides grounded in your uploaded material. Excellent for workers processing dense policy or technical documents.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between">
+              <span class="font-mono text-xs text-textMuted">notebooklm.google.com</span>
+              <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-primary hover:text-primary/80 transition-colors">Open &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 2: LLM BASICS PRIMER
+           ══════════════════════════════════════════ -->
+      <section id="llm-primer" class="mb-20">
+        <div class="flex items-center gap-4 mb-2">
+          <h2 class="text-2xl font-bold font-mono text-textPrimary">LLM Basics Primer</h2>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <p class="text-textSecondary mb-10 max-w-2xl">A plain-language introduction to large language models — what they are, how they work, and what actually matters when you use one. No math required.</p>
+
+        <!-- Module list with anchor nav -->
+        <div class="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-10">
+          <p class="font-mono text-xs uppercase tracking-widest text-primary mb-3">Contents</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 font-mono text-sm text-textSecondary">
+            <a href="#llm-what" class="hover:text-primary transition-colors">01 — What is an LLM?</a>
+            <a href="#llm-how" class="hover:text-primary transition-colors">02 — How does it produce output?</a>
+            <a href="#llm-hallucination" class="hover:text-primary transition-colors">03 — Hallucination and why it happens</a>
+            <a href="#llm-prompting" class="hover:text-primary transition-colors">04 — Prompting basics</a>
+            <a href="#llm-limits" class="hover:text-primary transition-colors">05 — Knowing the limits</a>
+            <a href="#llm-workforce" class="hover:text-primary transition-colors">06 — AI and your work</a>
+          </div>
+        </div>
+
+        <!-- Module 01 -->
+        <div id="llm-what" class="mb-12 scroll-mt-28">
+          <div class="flex items-baseline gap-4 mb-4">
+            <span class="font-mono font-bold text-primary text-xl">01</span>
+            <h3 class="text-xl font-bold text-textPrimary">What is a Large Language Model?</h3>
+          </div>
+          <div class="pl-10 space-y-4 text-textSecondary leading-relaxed">
+            <p>A large language model (LLM) is a statistical system trained to predict what text comes next given what came before. It has processed enormous quantities of human-written text — books, articles, code, websites — and learned patterns about how words, sentences, and ideas relate to each other.</p>
+            <p>It is not a database. It is not a search engine. It does not look things up when you ask a question. It generates a response based on learned patterns about what a plausible answer to your question looks like. This distinction matters enormously in practice.</p>
+            <p>The "large" in LLM refers to the number of parameters — internal numerical weights — that the model contains. Modern frontier models have hundreds of billions of parameters. More parameters generally (though not always) means more capability and more nuanced understanding of context.</p>
+            <div class="bg-surface border border-border rounded-lg p-4 font-mono text-xs text-textMuted">
+              <span class="text-primary font-bold">OCF NOTE — </span>The term "intelligence" as applied to these systems is contested. OCF uses the more precise term <em>observable function</em>: what the system demonstrably does, independent of claims about what it understands.
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 02 -->
+        <div id="llm-how" class="mb-12 scroll-mt-28">
+          <div class="flex items-baseline gap-4 mb-4">
+            <span class="font-mono font-bold text-primary text-xl">02</span>
+            <h3 class="text-xl font-bold text-textPrimary">How Does It Produce Output?</h3>
+          </div>
+          <div class="pl-10 space-y-4 text-textSecondary leading-relaxed">
+            <p>LLMs generate text one token at a time. A token is roughly a word or word-fragment. At each step, the model calculates a probability distribution over its entire vocabulary — every possible next token — and selects one, then repeats the process. This is called <strong class="text-textPrimary">autoregressive generation</strong>.</p>
+            <p>The selection isn't always the single highest-probability token. A parameter called <strong class="text-textPrimary">temperature</strong> controls randomness: low temperature makes the model more deterministic and predictable; high temperature introduces more variety and creativity (and sometimes more errors).</p>
+            <p>The model processes your entire conversation — every message — as one combined input called the <strong class="text-textPrimary">context window</strong>. This is why LLMs can reference earlier parts of a conversation. Context windows have a maximum length. Once exceeded, earlier content is no longer "visible" to the model.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+              <div class="bg-surface border border-border rounded-lg p-4 text-center">
+                <p class="font-mono text-xs text-primary uppercase tracking-wider mb-1">Token</p>
+                <p class="text-sm text-textSecondary">~¾ of a word on average. "tokenization" = 3 tokens.</p>
+              </div>
+              <div class="bg-surface border border-border rounded-lg p-4 text-center">
+                <p class="font-mono text-xs text-primary uppercase tracking-wider mb-1">Temperature</p>
+                <p class="text-sm text-textSecondary">0 = deterministic. 1+ = creative/unpredictable.</p>
+              </div>
+              <div class="bg-surface border border-border rounded-lg p-4 text-center">
+                <p class="font-mono text-xs text-primary uppercase tracking-wider mb-1">Context Window</p>
+                <p class="text-sm text-textSecondary">The model's "working memory" for a conversation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 03 -->
+        <div id="llm-hallucination" class="mb-12 scroll-mt-28">
+          <div class="flex items-baseline gap-4 mb-4">
+            <span class="font-mono font-bold text-primary text-xl">03</span>
+            <h3 class="text-xl font-bold text-textPrimary">Hallucination — And Why It Happens</h3>
+          </div>
+          <div class="pl-10 space-y-4 text-textSecondary leading-relaxed">
+            <p><strong class="text-textPrimary">Hallucination</strong> is when an LLM states something false with apparent confidence. It might invent a citation, misquote a statistic, or describe a law that does not exist. This is not a bug that will be fully eliminated — it is a structural consequence of how these systems work.</p>
+            <p>Because an LLM generates text based on learned patterns rather than verified facts, it has no internal mechanism for distinguishing "I know this is true" from "this sounds like something that would be true here." The model produces fluent, plausible text — fluency and accuracy are not the same thing.</p>
+            <p>Hallucination risk increases when you ask about: very specific facts (exact dates, names, numbers), recent events past the model's training cutoff, niche or specialized topics, and citations or sources. It decreases when you provide source material and ask the model to reason from it rather than from memory.</p>
+
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-5 mt-4">
+              <p class="font-mono text-xs text-amber-700 uppercase tracking-wider font-bold mb-2">Practical Rule</p>
+              <p class="text-sm text-amber-900">Treat every factual claim from an LLM as a starting point for verification, not a final answer. This is especially true for legal, medical, financial, and policy questions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 04 -->
+        <div id="llm-prompting" class="mb-12 scroll-mt-28">
+          <div class="flex items-baseline gap-4 mb-4">
+            <span class="font-mono font-bold text-primary text-xl">04</span>
+            <h3 class="text-xl font-bold text-textPrimary">Prompting Basics</h3>
+          </div>
+          <div class="pl-10 space-y-4 text-textSecondary leading-relaxed">
+            <p>How you phrase your request significantly affects what you get. This is called <strong class="text-textPrimary">prompt engineering</strong> — a somewhat inflated term for what is largely careful writing. Key principles:</p>
+
+            <div class="space-y-4 mt-2">
+              <div class="bg-surface border-l-4 border-primary rounded-r-lg p-4">
+                <p class="font-mono text-xs text-primary uppercase tracking-wider mb-1 font-bold">Be Specific</p>
+                <p class="text-sm">Vague questions produce vague answers. Instead of "tell me about AI," ask "explain how LLMs are trained, in plain language, for an audience without a technical background."</p>
+              </div>
+              <div class="bg-surface border-l-4 border-primary rounded-r-lg p-4">
+                <p class="font-mono text-xs text-primary uppercase tracking-wider mb-1 font-bold">Assign a Role</p>
+                <p class="text-sm">Starting with "You are an experienced [X]" shapes the model's style and approach. "You are a careful editor reviewing for clarity" produces different output than the same request without that framing.</p>
+              </div>
+              <div class="bg-surface border-l-4 border-primary rounded-r-lg p-4">
+                <p class="font-mono text-xs text-primary uppercase tracking-wider mb-1 font-bold">Provide Context</p>
+                <p class="text-sm">Paste in the relevant document, email, or data. Ask the model to work from that material rather than from general knowledge. This dramatically reduces hallucination on specific tasks.</p>
+              </div>
+              <div class="bg-surface border-l-4 border-primary rounded-r-lg p-4">
+                <p class="font-mono text-xs text-primary uppercase tracking-wider mb-1 font-bold">Specify Format</p>
+                <p class="text-sm">Ask for bullet points, a table, a numbered list, or a paragraph — whatever you actually need. "Give me a three-sentence summary" is more useful than "summarize this."</p>
+              </div>
+              <div class="bg-surface border-l-4 border-primary rounded-r-lg p-4">
+                <p class="font-mono text-xs text-primary uppercase tracking-wider mb-1 font-bold">Iterate, Don't Restart</p>
+                <p class="text-sm">If the output isn't right, follow up in the same conversation: "That's too long — cut it by half" or "Focus more on the second point." LLMs handle correction well within a conversation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 05 -->
+        <div id="llm-limits" class="mb-12 scroll-mt-28">
+          <div class="flex items-baseline gap-4 mb-4">
+            <span class="font-mono font-bold text-primary text-xl">05</span>
+            <h3 class="text-xl font-bold text-textPrimary">Knowing the Limits</h3>
+          </div>
+          <div class="pl-10 space-y-4 text-textSecondary leading-relaxed">
+            <p>LLMs have a <strong class="text-textPrimary">training cutoff</strong> — a date past which their knowledge was not updated. Events, laws, and data after that date are unknown to the model unless you tell it. Ask a model what its knowledge cutoff is before relying on it for recent information.</p>
+            <p>LLMs cannot take actions in the real world by themselves (unless connected to external tools, which you will typically know about). They cannot check your email, access your files, browse the web (unless explicitly enabled), or make purchases. They respond to text and produce text.</p>
+            <p>LLMs reflect patterns in their training data, which means they can reproduce biases, outdated perspectives, and culturally specific assumptions present in that data. This is worth being aware of, particularly when using them for decisions affecting people.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+              <div class="bg-surface border border-border rounded-lg p-4">
+                <p class="font-mono text-xs text-primary mb-2 font-bold uppercase tracking-wider">LLMs are useful for</p>
+                <ul class="text-sm text-textSecondary space-y-1 list-disc list-inside">
+                  <li>Drafting and editing text</li>
+                  <li>Summarizing documents you provide</li>
+                  <li>Brainstorming and ideation</li>
+                  <li>Explaining concepts</li>
+                  <li>Writing and reviewing code</li>
+                  <li>Translating languages</li>
+                </ul>
+              </div>
+              <div class="bg-surface border border-border rounded-lg p-4">
+                <p class="font-mono text-xs text-amber-600 mb-2 font-bold uppercase tracking-wider">Verify before relying on</p>
+                <ul class="text-sm text-textSecondary space-y-1 list-disc list-inside">
+                  <li>Specific statistics and numbers</li>
+                  <li>Legal or medical claims</li>
+                  <li>Events after training cutoff</li>
+                  <li>Citations and sources</li>
+                  <li>Niche or specialized facts</li>
+                  <li>Information about real people</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 06 -->
+        <div id="llm-workforce" class="mb-4 scroll-mt-28">
+          <div class="flex items-baseline gap-4 mb-4">
+            <span class="font-mono font-bold text-primary text-xl">06</span>
+            <h3 class="text-xl font-bold text-textPrimary">AI and Your Work</h3>
+          </div>
+          <div class="pl-10 space-y-4 text-textSecondary leading-relaxed">
+            <p>OCF's research focuses specifically on how AI displacement is affecting workers — particularly in rural and economically vulnerable communities. This is not abstract. LLMs are already being deployed in roles that involve writing, customer service, data entry, paralegal work, and administrative tasks.</p>
+            <p>Understanding how these tools work is, increasingly, a form of workforce readiness. Not because everyone needs to become a developer, but because workers and institutions who understand what these systems can and cannot do are better positioned to advocate for themselves, adapt, and contribute to decisions about how AI is used.</p>
+            <p>OCF's Workforce Readiness research series is available free on our <a href="/research/" class="text-primary hover:text-primary/80 underline underline-offset-2">Research page</a>. The papers examine these dynamics through an access-centered, evidence-based lens.</p>
+
+            <div class="rounded-xl border-2 border-primary/30 bg-primary/5 p-6 mt-6">
+              <p class="font-mono text-xs text-primary uppercase tracking-wider font-bold mb-3">From OCF Research</p>
+              <p class="text-sm text-textSecondary italic leading-relaxed">"Access is not merely an enabling condition — it is a binding constraint. Where it is absent, readiness is irrelevant."</p>
+              <p class="font-mono text-xs text-textMuted mt-3">— OCF Workforce Readiness v5.1, 2026</p>
+              <a href="/research/" class="inline-flex items-center mt-4 font-mono text-sm text-primary hover:text-primary/80 transition-colors">Read the research &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 3: QUICK REFERENCE CARD
+           ══════════════════════════════════════════ -->
+      <section id="quick-reference" class="mb-20">
+        <div class="flex items-center gap-4 mb-8">
+          <h2 class="text-2xl font-bold font-mono text-textPrimary">Quick Reference</h2>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+
+        <div class="bg-surface border border-border rounded-xl p-8">
+          <p class="font-mono text-xs text-primary uppercase tracking-widest mb-6 font-bold">Key Terms at a Glance</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-5">
+            <div>
+              <p class="font-mono text-sm font-bold text-textPrimary mb-1">LLM</p>
+              <p class="text-sm text-textSecondary">Large Language Model. A statistical text prediction system trained on large datasets.</p>
+            </div>
+            <div>
+              <p class="font-mono text-sm font-bold text-textPrimary mb-1">Token</p>
+              <p class="text-sm text-textSecondary">The unit of text the model processes. Roughly ¾ of a word. Used to measure input/output length.</p>
+            </div>
+            <div>
+              <p class="font-mono text-sm font-bold text-textPrimary mb-1">Context Window</p>
+              <p class="text-sm text-textSecondary">The maximum amount of text a model can "see" at once. Content beyond this limit is invisible to it.</p>
+            </div>
+            <div>
+              <p class="font-mono text-sm font-bold text-textPrimary mb-1">Hallucination</p>
+              <p class="text-sm text-textSecondary">When a model states something false with confidence. A structural feature, not a fixable bug.</p>
+            </div>
+            <div>
+              <p class="font-mono text-sm font-bold text-textPrimary mb-1">Temperature</p>
+              <p class="text-sm text-textSecondary">Controls output randomness. Lower = more predictable. Higher = more varied (and error-prone).</p>
+            </div>
+            <div>
+              <p class="font-mono text-sm font-bold text-textPrimary mb-1">Training Cutoff</p>
+              <p class="text-sm text-textSecondary">The date after which the model has no knowledge. Events after this date are unknown to it.</p>
+            </div>
+            <div>
+              <p class="font-mono text-sm font-bold text-textPrimary mb-1">Prompt</p>
+              <p class="text-sm text-textSecondary">The text input you give a model. Prompt quality significantly affects output quality.</p>
+            </div>
+            <div>
+              <p class="font-mono text-sm font-bold text-textPrimary mb-1">RAG</p>
+              <p class="text-sm text-textSecondary">Retrieval-Augmented Generation. The model pulls from a document database at query time — reduces hallucination.</p>
+            </div>
+            <div>
+              <p class="font-mono text-sm font-bold text-textPrimary mb-1">Fine-tuning</p>
+              <p class="text-sm text-textSecondary">Additional training on domain-specific data to specialize a base model for particular tasks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div class="rounded-2xl border-2 border-primary/30 bg-primary/5 p-10 text-center">
+        <p class="font-mono text-xs text-primary uppercase tracking-widest font-bold mb-3">Observable Compute Foundation</p>
+        <h2 class="text-2xl font-bold text-textPrimary mb-4">Questions? Reach us directly.</h2>
+        <p class="text-textSecondary max-w-xl mx-auto mb-6">We are a small nonprofit doing independent research. If you have questions about these tools, our research, or AI readiness resources for your community or organization, we want to hear from you.</p>
+        <a href="/contact/" class="inline-flex items-center px-6 py-3 bg-primary text-white font-mono text-sm font-bold rounded-lg hover:bg-primary/90 transition-colors">Contact OCF &rarr;</a>
+      </div>
+
     </div>
-
-     <div class="bg-surface border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-      <h2 class="text-2xl font-bold text-textPrimary mb-2">Prompt Engineering Guide</h2>
-      <p class="text-textSecondary mb-4">
-        A foundational PDF guide created by the OCF team detailing best practices for structuring prompts to get reliable, factual, and unbiased responses from various AI models.
-      </p>
-
-      <h3 class="font-mono text-sm uppercase tracking-wider text-textMuted mb-2">Instructions:</h3>
-      <ol class="list-decimal list-inside text-sm text-textSecondary mb-6 space-y-2">
-        <li>Click the download link below.</li>
-        <li>Review the frameworks for Zero-shot, Few-shot, and Chain-of-Thought prompting.</li>
-        <li>Apply the templates to your daily AI interactions to minimize hallucinations.</li>
-      </ol>
-
-      <a href="#" class="inline-flex items-center text-secondary hover:text-primary transition-colors font-mono text-sm border-b border-secondary/30 hover:border-primary">
-        Download PDF Guide (Coming Soon) &rarr;
-      </a>
-    </div>
-
-  </div>
-</div>
-
-
   </main>
 
   <footer class="bg-surface border-t border-border py-12 mt-16 mt-auto text-sm text-textSecondary">
@@ -290,23 +596,9 @@
 
   <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
     <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
-    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; March 2026</p>
+    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; May 2026</p>
   </div>
 </footer>
 
-
-  <script>
-    // Header scroll effect
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
-        header.classList.remove('bg-transparent');
-      } else {
-        header.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'border-b', 'border-border');
-        header.classList.add('bg-transparent');
-      }
-    });
-  </script>
 </body>
 </html>
