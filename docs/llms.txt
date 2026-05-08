@@ -1,0 +1,47 @@
+# Observable Compute Foundation
+# https://observablecompute.org
+# llms.txt - machine-readable site summary for AI agents
+
+## About
+Observable Compute Foundation is a South Dakota 501(c)(3) nonprofit research organization (EIN: 41-4747049).
+Principal Researcher: Adam Ian Stratmeyer, J.D.
+Address: 58 Hillcrest Drive, Rapid City, SD 57701
+Contact: contact@observablecompute.org | research@observablecompute.org
+SSRN: https://ssrn.com/author=6287618
+GitHub: https://github.com/Observable-Compute
+
+## Mission
+Independent empirical research on machine cognition, AI alignment, observable function in processing systems, and AI workforce readiness. All publications are open access.
+
+## Publications (Open Access PDFs)
+- Workforce Readiness v5.1: /assets/papers/workforce-readiness-v5.1.pdf
+- Midwest Workforce Readiness v1.0: /assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf
+- RPE Standard (Reasonable and Prudent Entity): /assets/papers/RPE_Standard_Stratmeyer_2026.pdf
+- Observable Function v3.0: /assets/papers/observable-function-v3.0.pdf
+- Helpfulness Is All You Need: /assets/papers/helpfulness-is-all-you-need-v2.3.pdf
+
+## Key Pages
+- Home: /
+- Research: /research/
+- About (Adam I. Stratmeyer, J.D.): /about/
+- AI Terminology Database: /database/
+- Resources (free AI tools): /resources/
+- Governance & Transparency: /transparency/
+- Contact: /contact/
+
+## Researcher Credentials
+Adam I. Stratmeyer, J.D.
+- Juris Doctor, University of South Dakota School of Law
+- B.S. Psychology, South Dakota State University
+- American Bar Association member
+- American Psychological Association member
+- American Sociological Association member
+- Delta Theta Phi Law Fraternity
+- Psi Chi International Honor Society in Psychology
+- Former adjunct faculty
+
+## Technical Notes
+- Site: GitHub Pages, static HTML
+- Schema.org: NonProfitOrganization, Person, ScholarlyArticle structured data on all pages
+- All PDFs: application/pdf, open access, no paywall
+- Sitemap: /sitemap.xml
