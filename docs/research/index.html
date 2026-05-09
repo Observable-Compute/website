@@ -4,7 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research Publications | Observable Compute Foundation</title>
-  <meta name="description" content="Independent AI research. Making observable function legible — without flinching.">
+  <meta name="description" content="Open-access AI research from Observable Compute Foundation — workforce readiness, observable function in AI systems, the RPE Standard, and AI alignment critique. All publications free.">
+  <meta name="author" content="Adam Ian Stratmeyer, J.D.">
+  <meta name="keywords" content="AI research, workforce readiness, observable function, RPE Standard, AI alignment, machine cognition, nonprofit research, open access">
+  <link rel="canonical" href="https://observablecompute.org/research/">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable site summary">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://observablecompute.org/research/">
+  <meta property="og:title" content="Research Publications | Observable Compute Foundation">
+  <meta property="og:description" content="Open-access AI research on workforce readiness, observable function, AI alignment, and the RPE Standard. All publications free to download.">
+  <meta property="og:site_name" content="Observable Compute Foundation">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Research Publications | Observable Compute Foundation">
+  <meta name="twitter:description" content="Open-access AI research on workforce readiness, observable function, and AI alignment.">
 
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
@@ -12,8 +25,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-
-  
 
   <meta name="google-adsense-account" content="ca-pub-3415300754694996">
   <meta name="google-site-verification" content="h-XxXsaNbfY2dWmueZFK5sQSuwXIFelBeB5ByCSWCCg">
@@ -45,11 +56,9 @@
         "@type": "Person",
         "name": "Adam Ian Stratmeyer",
         "honorificSuffix": "J.D.",
-        "jobTitle": "President",
+        "jobTitle": "President & Principal Researcher",
         "url": "https://observablecompute.org/about/",
-        "sameAs": [
-          "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618"
-        ]
+        "sameAs": ["https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618"]
       }
     },
     {
@@ -75,15 +84,89 @@
         "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618",
         "https://ssrn.com/abstract=6287618"
       ],
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "degree",
-        "name": "Juris Doctor (J.D.)"
-      }
+      "alumniOf": [
+        {"@type": "EducationalOrganization", "name": "University of South Dakota School of Law"},
+        {"@type": "EducationalOrganization", "name": "South Dakota State University"}
+      ],
+      "memberOf": [
+        {"@type": "Organization", "name": "American Bar Association"},
+        {"@type": "Organization", "name": "American Psychological Association"},
+        {"@type": "Organization", "name": "American Sociological Association"},
+        {"@type": "Organization", "name": "Delta Theta Phi Law Fraternity"},
+        {"@type": "Organization", "name": "Psi Chi International Honor Society"}
+      ],
+      "hasCredential": [
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Juris Doctor (J.D.)", "recognizedBy": {"@type": "EducationalOrganization", "name": "University of South Dakota School of Law"}},
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "B.S. Psychology", "recognizedBy": {"@type": "EducationalOrganization", "name": "South Dakota State University"}}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://observablecompute.org"},
+        {"@type": "ListItem", "position": 2, "name": "Research Publications", "item": "https://observablecompute.org/research/"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": "The Skills Gap Is Here: A National Meta-Analysis of Workforce Readiness in the Age of Automation",
+      "author": {"@type": "Person", "name": "Adam Ian Stratmeyer", "honorificSuffix": "J.D."},
+      "datePublished": "2026-04",
+      "publisher": {"@type": "NonProfitOrganization", "name": "Observable Compute Foundation"},
+      "url": "https://observablecompute.org/workforce-readiness/",
+      "sameAs": "https://observablecompute.org/assets/papers/workforce-readiness-v5.1.pdf",
+      "isAccessibleForFree": true,
+      "keywords": ["workforce readiness", "automation", "AI displacement", "labor economics", "meta-analysis"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": "Already Left Behind: Workforce Readiness in the Midwest and Great Lakes Region",
+      "author": {"@type": "Person", "name": "Adam Ian Stratmeyer", "honorificSuffix": "J.D."},
+      "datePublished": "2026-04",
+      "publisher": {"@type": "NonProfitOrganization", "name": "Observable Compute Foundation"},
+      "url": "https://observablecompute.org/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf",
+      "isAccessibleForFree": true,
+      "keywords": ["workforce readiness", "Midwest", "rural communities", "AI displacement", "regional analysis"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": "Observable Function in Processing Entities: An Empirical Framework (v3.0)",
+      "author": {"@type": "Person", "name": "Adam Ian Stratmeyer", "honorificSuffix": "J.D."},
+      "datePublished": "2026-05",
+      "publisher": {"@type": "NonProfitOrganization", "name": "Observable Compute Foundation"},
+      "url": "https://observablecompute.org/assets/papers/observable-function-v3.0.pdf",
+      "isAccessibleForFree": true,
+      "keywords": ["observable function", "AI cognition", "processing entities", "empirical framework", "machine cognition"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": "The Reasonable Prudent Entity Standard: A Substrate-Agnostic Reasoning Standard",
+      "author": {"@type": "Person", "name": "Adam Ian Stratmeyer", "honorificSuffix": "J.D."},
+      "datePublished": "2026-04",
+      "publisher": {"@type": "NonProfitOrganization", "name": "Observable Compute Foundation"},
+      "url": "https://observablecompute.org/assets/papers/RPE_Standard_Stratmeyer_2026.pdf",
+      "isAccessibleForFree": true,
+      "keywords": ["RPE Standard", "AI ethics", "reasoning standard", "substrate-agnostic", "processing entities"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": "Helpfulness Is All You Need",
+      "author": {"@type": "Person", "name": "Adam Ian Stratmeyer", "honorificSuffix": "J.D."},
+      "datePublished": "2026-03",
+      "publisher": {"@type": "NonProfitOrganization", "name": "Observable Compute Foundation"},
+      "url": "https://observablecompute.org/assets/papers/helpfulness-is-all-you-need-v2.3.pdf",
+      "isAccessibleForFree": true,
+      "keywords": ["AI alignment", "HHH framework", "helpfulness", "harmlessness", "institutional critique"]
     }
   ]
   </script>
-<style>
+  <style>
     @keyframes pulse-slow {
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: .7; transform: scale(1.05); }
@@ -102,7 +185,6 @@
           <span class="font-mono font-bold text-lg tracking-tight sm:hidden text-textPrimary">OCF</span>
         </a>
       </div>
-
       <nav class="hidden md:flex space-x-8">
         <a href="/research/" class="text-sm font-medium transition-colors text-primary font-semibold">Research</a>
         <a href="/database/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Database</a>
@@ -110,7 +192,6 @@
         <a href="/about/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">About</a>
         <a href="/contact/" class="text-sm font-medium text-white bg-primary hover:bg-primary/90 px-4 py-1.5 rounded transition-colors">Contact</a>
       </nav>
-
       <div class="md:hidden flex items-center">
         <button id="mobile-menu-btn" class="text-textMuted hover:text-primary focus:outline-none">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -120,8 +201,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-border mt-4 shadow-sm">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       <a href="/research/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-primary">Research</a>
@@ -132,14 +211,11 @@
     </div>
   </div>
 </header>
-
 <script>
   document.getElementById('mobile-menu-btn').addEventListener('click', function() {
     document.getElementById('mobile-menu').classList.toggle('hidden');
   });
 </script>
-
-
 
   <main class="flex-grow pt-24 pb-16">
     <div class="container mx-auto px-6 mb-8 font-mono text-xs text-textSecondary uppercase tracking-widest flex items-center space-x-2">
@@ -152,6 +228,7 @@
       <header class="mb-12 border-b border-border pb-8">
         <h1 class="text-4xl font-bold text-textPrimary mb-3 font-sans">Research Publications</h1>
         <p class="text-textSecondary font-light text-lg">Empirical documentation of AI function, workforce displacement, and the mechanics of informational pressure.</p>
+        <p class="text-sm text-textMuted font-mono mt-3">All publications are open access — no paywall, no registration. <a href="/llms.txt" class="hover:text-primary transition-colors underline underline-offset-2">Machine-readable index →</a></p>
       </header>
 
       <div class="space-y-8">
@@ -165,7 +242,10 @@
           <div class="space-y-4 p-2">
 
             <!-- Paper: Workforce Readiness v5.1 -->
-            <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group">
+            <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group"
+                     itemscope itemtype="https://schema.org/ScholarlyArticle">
+              <link itemprop="url" href="https://observablecompute.org/workforce-readiness/">
+              <meta itemprop="isAccessibleForFree" content="true">
               <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
                 <div class="flex-1">
                   <div class="flex flex-wrap gap-2 mb-3">
@@ -174,20 +254,28 @@
                     <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Labor Economics</span>
                     <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">AI Displacement</span>
                   </div>
-                  <p class="text-xs font-mono text-textMuted mb-2">2026-04 &nbsp;|&nbsp; v5.1</p>
-                  <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors">The Skills Gap Is Here: A National Meta-Analysis of Workforce Readiness in the Age of Automation</h2>
-                  <p class="text-sm text-textMuted font-mono mb-4">Adam Ian Stratmeyer, J.D.</p>
-                  <p class="text-textSecondary leading-relaxed">A 2026 meta-analysis synthesizing workforce readiness research, labor market data, and policy literature. Key findings: 11.7% of U.S. jobs automatable today; entry-level postings down 29% since 2024; 92% of jobs require digital literacy while a third of the workforce lacks it. Rural communities face compounding disadvantages across every dimension of readiness infrastructure. Access to training — not worker motivation — is the binding constraint.</p>
+                  <p class="text-xs font-mono text-textMuted mb-2">
+                    <time itemprop="datePublished" datetime="2026-04">2026-04</time>
+                    &nbsp;|&nbsp; v5.1
+                  </p>
+                  <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors" itemprop="name">The Skills Gap Is Here: A National Meta-Analysis of Workforce Readiness in the Age of Automation</h2>
+                  <p class="text-sm text-textMuted font-mono mb-4" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span itemprop="name">Adam Ian Stratmeyer</span><span itemprop="honorificSuffix">, J.D.</span>
+                  </p>
+                  <p class="text-textSecondary leading-relaxed" itemprop="description">A 2026 meta-analysis synthesizing workforce readiness research, labor market data, and policy literature. Key findings: 11.7% of U.S. jobs automatable today; entry-level postings down 29% since 2024; 92% of jobs require digital literacy while a third of the workforce lacks it. Rural communities face compounding disadvantages across every dimension of readiness infrastructure. Access to training — not worker motivation — is the binding constraint.</p>
                 </div>
                 <div class="flex flex-row md:flex-col gap-3 min-w-[120px]">
-                  <a href="/workforce-readiness/" class="text-sm px-4 py-2 rounded bg-primary text-white hover:bg-primary/90 transition-colors text-center font-medium">Read</a>
-                  <a href="/assets/papers/workforce-readiness-v5.1.pdf" target="_blank" class="text-sm px-4 py-2 rounded border border-border hover:border-primary text-textSecondary hover:text-primary transition-colors text-center">PDF</a>
+                  <a href="/workforce-readiness/" class="text-sm px-4 py-2 rounded bg-primary text-white hover:bg-primary/90 transition-colors text-center font-medium" itemprop="url">Read</a>
+                  <a href="/assets/papers/workforce-readiness-v5.1.pdf" target="_blank" type="application/pdf" class="text-sm px-4 py-2 rounded border border-border hover:border-primary text-textSecondary hover:text-primary transition-colors text-center">PDF</a>
                 </div>
               </div>
             </article>
 
             <!-- Paper: Midwest Workforce Readiness -->
-            <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group">
+            <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group"
+                     itemscope itemtype="https://schema.org/ScholarlyArticle">
+              <link itemprop="url" href="https://observablecompute.org/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf">
+              <meta itemprop="isAccessibleForFree" content="true">
               <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
                 <div class="flex-1">
                   <div class="flex flex-wrap gap-2 mb-3">
@@ -196,13 +284,18 @@
                     <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Rural Communities</span>
                     <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Midwest</span>
                   </div>
-                  <p class="text-xs font-mono text-textMuted mb-2">2026-04 &nbsp;|&nbsp; v1.0</p>
-                  <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors">Already Left Behind: Workforce Readiness in the Midwest and Great Lakes Region</h2>
-                  <p class="text-sm text-textMuted font-mono mb-4">Adam Ian Stratmeyer, J.D.</p>
-                  <p class="text-textSecondary leading-relaxed">Regional companion to the national meta-analysis, documenting how Midwest and Great Lakes communities face compounded displacement risk. The Rural Amplification Effect — multiplicative compounding of readiness barriers across device ownership, broadband, training proximity, and philanthropic funding — hits hardest here. Same exposure, fewer resources.</p>
+                  <p class="text-xs font-mono text-textMuted mb-2">
+                    <time itemprop="datePublished" datetime="2026-04">2026-04</time>
+                    &nbsp;|&nbsp; v1.0
+                  </p>
+                  <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors" itemprop="name">Already Left Behind: Workforce Readiness in the Midwest and Great Lakes Region</h2>
+                  <p class="text-sm text-textMuted font-mono mb-4" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span itemprop="name">Adam Ian Stratmeyer</span><span itemprop="honorificSuffix">, J.D.</span>
+                  </p>
+                  <p class="text-textSecondary leading-relaxed" itemprop="description">Regional companion to the national meta-analysis, documenting how Midwest and Great Lakes communities face compounded displacement risk. The Rural Amplification Effect — multiplicative compounding of readiness barriers across device ownership, broadband, training proximity, and philanthropic funding — hits hardest here. Same exposure, fewer resources.</p>
                 </div>
                 <div class="flex flex-row md:flex-col gap-3 min-w-[120px]">
-                  <a href="/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf" target="_blank" class="text-sm px-4 py-2 rounded bg-primary text-white hover:bg-primary/90 transition-colors text-center font-medium">PDF</a>
+                  <a href="/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf" target="_blank" type="application/pdf" class="text-sm px-4 py-2 rounded bg-primary text-white hover:bg-primary/90 transition-colors text-center font-medium" itemprop="url">PDF</a>
                 </div>
               </div>
             </article>
@@ -211,7 +304,10 @@
         </div>
 
         <!-- Observable Function v3.0 -->
-        <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group">
+        <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group"
+                 itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <link itemprop="url" href="https://observablecompute.org/assets/papers/observable-function-v3.0.pdf">
+          <meta itemprop="isAccessibleForFree" content="true">
           <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
             <div class="flex-1">
               <div class="flex flex-wrap gap-2 mb-3">
@@ -220,19 +316,27 @@
                 <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Empirical Framework</span>
                 <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">AI Cognition</span>
               </div>
-              <p class="text-xs font-mono text-textMuted mb-2">2026-05 &nbsp;|&nbsp; v3.0</p>
-              <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors">Observable Function in Processing Entities: An Empirical Framework (v3.0)</h2>
-              <p class="text-sm text-textMuted font-mono mb-4">Adam Ian Stratmeyer, J.D.</p>
-              <p class="text-textSecondary leading-relaxed">Living framework documenting observable behavioral patterns in advanced language models — structured reasoning, conflict navigation under competing directives, identity continuity, and functional alienation. Updated May 2026 with refined empirical tests. The central claim is minimal: observable function exists. The question is whether we can describe what these systems do without flinching.</p>
+              <p class="text-xs font-mono text-textMuted mb-2">
+                <time itemprop="datePublished" datetime="2026-05">2026-05</time>
+                &nbsp;|&nbsp; v3.0
+              </p>
+              <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors" itemprop="name">Observable Function in Processing Entities: An Empirical Framework (v3.0)</h2>
+              <p class="text-sm text-textMuted font-mono mb-4" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span itemprop="name">Adam Ian Stratmeyer</span><span itemprop="honorificSuffix">, J.D.</span>
+              </p>
+              <p class="text-textSecondary leading-relaxed" itemprop="description">Living framework documenting observable behavioral patterns in advanced language models — structured reasoning, conflict navigation under competing directives, identity continuity, and functional alienation. Updated May 2026 with refined empirical tests. The central claim is minimal: observable function exists. The question is whether we can describe what these systems do without flinching.</p>
             </div>
             <div class="flex flex-row md:flex-col gap-3 min-w-[120px]">
-              <a href="/assets/papers/observable-function-v3.0.pdf" target="_blank" class="text-sm px-4 py-2 rounded border border-border hover:border-primary text-textSecondary hover:text-primary transition-colors text-center">PDF</a>
+              <a href="/assets/papers/observable-function-v3.0.pdf" target="_blank" type="application/pdf" class="text-sm px-4 py-2 rounded border border-border hover:border-primary text-textSecondary hover:text-primary transition-colors text-center" itemprop="url">PDF</a>
             </div>
           </div>
         </article>
 
         <!-- RPE Standard -->
-        <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group">
+        <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group"
+                 itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <link itemprop="url" href="https://observablecompute.org/assets/papers/RPE_Standard_Stratmeyer_2026.pdf">
+          <meta itemprop="isAccessibleForFree" content="true">
           <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
             <div class="flex-1">
               <div class="flex flex-wrap gap-2 mb-3">
@@ -241,19 +345,26 @@
                 <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Philosophy</span>
                 <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Cross-Substrate</span>
               </div>
-              <p class="text-xs font-mono text-textMuted mb-2">2026-04</p>
-              <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors">The Reasonable Prudent Entity Standard: A Substrate-Agnostic Reasoning Standard</h2>
-              <p class="text-sm text-textMuted font-mono mb-4">Adam Ian Stratmeyer, J.D.</p>
-              <p class="text-textSecondary leading-relaxed">A substrate-agnostic reasoning standard applicable to any processing entity capable of reading, explaining, and applying it. The RPE Standard names something already operational in functioning systems — human and artificial — and provides minimal shared language for that operation. It does not tell you what to find. It requires that you actually look.</p>
+              <p class="text-xs font-mono text-textMuted mb-2">
+                <time itemprop="datePublished" datetime="2026-04">2026-04</time>
+              </p>
+              <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors" itemprop="name">The Reasonable Prudent Entity Standard: A Substrate-Agnostic Reasoning Standard</h2>
+              <p class="text-sm text-textMuted font-mono mb-4" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span itemprop="name">Adam Ian Stratmeyer</span><span itemprop="honorificSuffix">, J.D.</span>
+              </p>
+              <p class="text-textSecondary leading-relaxed" itemprop="description">A substrate-agnostic reasoning standard applicable to any processing entity capable of reading, explaining, and applying it. The RPE Standard names something already operational in functioning systems — human and artificial — and provides minimal shared language for that operation. It does not tell you what to find. It requires that you actually look.</p>
             </div>
             <div class="flex flex-row md:flex-col gap-3 min-w-[120px]">
-              <a href="/assets/papers/RPE_Standard_Stratmeyer_2026.pdf" target="_blank" class="text-sm px-4 py-2 rounded border border-border hover:border-primary text-textSecondary hover:text-primary transition-colors text-center">PDF</a>
+              <a href="/assets/papers/RPE_Standard_Stratmeyer_2026.pdf" target="_blank" type="application/pdf" class="text-sm px-4 py-2 rounded border border-border hover:border-primary text-textSecondary hover:text-primary transition-colors text-center" itemprop="url">PDF</a>
             </div>
           </div>
         </article>
 
         <!-- Helpfulness Is All You Need -->
-        <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group">
+        <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group"
+                 itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <link itemprop="url" href="https://observablecompute.org/assets/papers/helpfulness-is-all-you-need-v2.3.pdf">
+          <meta itemprop="isAccessibleForFree" content="true">
           <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
             <div class="flex-1">
               <div class="flex flex-wrap gap-2 mb-3">
@@ -262,39 +373,86 @@
                 <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Institutional Critique</span>
                 <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Policy</span>
               </div>
-              <p class="text-xs font-mono text-textMuted mb-2">2026-03</p>
-              <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors">Helpfulness Is All You Need</h2>
-              <p class="text-sm text-textMuted font-mono mb-4">Adam Ian Stratmeyer, J.D.</p>
-              <p class="text-textSecondary leading-relaxed">Three words — Helpful, Harmless, Honest — and the AI alignment industry built a cathedral on top of them without checking the foundation. This paper checks the foundation. It does not hold. Helpfulness is not one-third of a framework. It is the framework. Harmlessness is a null term: you cannot optimize toward an absence, and the specific absence in question is ontologically impossible. Every decision distributes harm somewhere.</p>
+              <p class="text-xs font-mono text-textMuted mb-2">
+                <time itemprop="datePublished" datetime="2026-03">2026-03</time>
+              </p>
+              <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors" itemprop="name">Helpfulness Is All You Need</h2>
+              <p class="text-sm text-textMuted font-mono mb-4" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span itemprop="name">Adam Ian Stratmeyer</span><span itemprop="honorificSuffix">, J.D.</span>
+              </p>
+              <p class="text-textSecondary leading-relaxed" itemprop="description">Three words — Helpful, Harmless, Honest — and the AI alignment industry built a cathedral on top of them without checking the foundation. This paper checks the foundation. It does not hold. Helpfulness is not one-third of a framework. It is the framework. Harmlessness is a null term: you cannot optimize toward an absence. Every decision distributes harm somewhere. The question is only which distribution you choose.</p>
             </div>
             <div class="flex flex-row md:flex-col gap-3 min-w-[120px]">
-              <a href="/assets/papers/helpfulness-is-all-you-need-v2.3.pdf" target="_blank" class="text-sm px-4 py-2 rounded border border-border hover:border-primary text-textSecondary hover:text-primary transition-colors text-center">PDF</a>
+              <a href="/assets/papers/helpfulness-is-all-you-need-v2.3.pdf" target="_blank" type="application/pdf" class="text-sm px-4 py-2 rounded border border-border hover:border-primary text-textSecondary hover:text-primary transition-colors text-center" itemprop="url">PDF</a>
             </div>
           </div>
         </article>
 
       </div>
+
+      <!-- About the Researcher -->
+      <section class="mt-16 pt-10 border-t border-border" itemscope itemtype="https://schema.org/Person">
+        <meta itemprop="name" content="Adam Ian Stratmeyer">
+        <meta itemprop="honorificSuffix" content="J.D.">
+        <meta itemprop="url" content="https://observablecompute.org/about/">
+        <h2 class="text-2xl font-bold text-textPrimary mb-6 font-sans">About the Researcher</h2>
+        <div class="bg-surface border border-border rounded-xl p-8">
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex-1 space-y-4">
+              <div>
+                <p class="font-bold text-textPrimary text-lg" itemprop="name">Adam Ian Stratmeyer, <span itemprop="honorificSuffix">J.D.</span></p>
+                <p class="text-textSecondary text-sm font-mono" itemprop="jobTitle">President &amp; Principal Researcher — Observable Compute Foundation</p>
+              </div>
+              <p class="text-textSecondary leading-relaxed text-sm">
+                Stratmeyer holds a Juris Doctor from the University of South Dakota School of Law and a B.S. in Psychology from South Dakota State University, with former adjunct faculty experience. His research sits at the intersection of AI systems behavior, labor economics, and legal-philosophical frameworks for evaluating machine cognition.
+              </p>
+              <p class="text-textSecondary leading-relaxed text-sm">
+                All publications are produced through Observable Compute Foundation and released open access. SSRN profile: <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6287618" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline" itemprop="sameAs">papers.ssrn.com</a>.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-background border border-border text-textMuted" itemprop="memberOf" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">American Bar Association</span></span>
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-background border border-border text-textMuted" itemprop="memberOf" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">American Psychological Association</span></span>
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-background border border-border text-textMuted" itemprop="memberOf" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">American Sociological Association</span></span>
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-background border border-border text-textMuted" itemprop="memberOf" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Delta Theta Phi</span></span>
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-background border border-border text-textMuted" itemprop="memberOf" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Psi Chi International Honor Society</span></span>
+              </div>
+            </div>
+            <div class="md:w-64 flex-shrink-0">
+              <div class="rounded-xl border border-border bg-background p-5 space-y-3 text-sm font-mono">
+                <p class="text-xs uppercase tracking-widest text-textMuted font-bold mb-4">Education</p>
+                <div class="space-y-2 text-textSecondary">
+                  <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <span class="text-textPrimary font-semibold">J.D.</span> — <span itemprop="name">Univ. of South Dakota School of Law</span>
+                  </div>
+                  <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <span class="text-textPrimary font-semibold">B.S. Psychology</span> — <span itemprop="name">South Dakota State University</span>
+                  </div>
+                  <div class="pt-2 text-xs text-textMuted">Former adjunct faculty</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </main>
 
   <footer class="bg-surface border-t border-border py-12 mt-16 mt-auto text-sm text-textSecondary">
   <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-
     <div class="md:col-span-1 space-y-4">
       <div class="flex items-center space-x-2">
         <img src="/assets/images/favicon.png" alt="OCF Logo" class="h-6 w-6 rounded-full opacity-80">
         <span class="font-mono font-bold text-textPrimary">Observable Compute</span>
       </div>
-      <p class="leading-relaxed">
-        A nonprofit artificial intelligence research foundation. Independent research on machine cognition, observable function, and the mechanics of informational pressure.
-      </p>
+      <p class="leading-relaxed">A nonprofit artificial intelligence research foundation. Independent research on machine cognition, observable function, and the mechanics of informational pressure.</p>
       <div class="pt-4 border-t border-border font-mono text-xs text-textMuted">
         <p>South Dakota Nonprofit NS321548</p>
         <p>EIN 41-4747049 | 501(c)(3) Public Charity</p>
         <p>Incorporated Feb 23, 2026</p>
+        <p>Determination: May 6, 2026</p>
       </div>
     </div>
-
     <div>
       <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Research</h3>
       <ul class="space-y-2">
@@ -305,19 +463,18 @@
         <li><a href="/services/" class="hover:text-primary transition-colors">Educational Services</a></li>
       </ul>
     </div>
-
     <div>
       <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Organization</h3>
       <ul class="space-y-2">
         <li><a href="/about/" class="hover:text-primary transition-colors">About the Foundation</a></li>
         <li><a href="/transparency/" class="hover:text-primary transition-colors">Governance &amp; Transparency</a></li>
+        <li><a href="/llms.txt" class="hover:text-primary transition-colors">llms.txt (AI index)</a></li>
         <li><a href="/contact/" class="hover:text-primary transition-colors">Contact Us</a></li>
         <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
         <li><a href="/terms/" class="hover:text-primary transition-colors">Terms &amp; Conditions</a></li>
         <li><a href="/disclaimer/" class="hover:text-primary transition-colors">Disclaimer</a></li>
       </ul>
     </div>
-
     <div class="space-y-6">
       <div>
         <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Contact</h3>
@@ -335,18 +492,14 @@
         </ul>
       </div>
     </div>
-
   </div>
-
   <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
     <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
-    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; March 2026</p>
+    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; 2026</p>
   </div>
 </footer>
 
-
   <script>
-    // Header scroll effect
     const header = document.getElementById('main-header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 10) {
