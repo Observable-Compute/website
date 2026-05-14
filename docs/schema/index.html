@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCF Research Schema v1 | Observable Compute Foundation</title>
+  <meta name="description" content="ocf_schema_v1 — the machine-readable JSON Schema standard for Observable Compute Foundation research paper appendices. Designed for AI-assisted analysis, RAG retrieval, and downstream synthesis. Draft-07 compliant.">
+  <meta name="author" content="Observable Compute Foundation">
+  <meta name="keywords" content="OCF schema, research data standard, JSON Schema, machine-readable research, AI research retrieval, RAG research, ocf_schema_v1, workforce readiness data, open research standard">
+  <link rel="canonical" href="https://observablecompute.org/schema/">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable site summary">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://observablecompute.org/schema/">
+  <meta property="og:title" content="OCF Research Schema v1 | Machine-Readable Research Standard">
+  <meta property="og:description" content="The JSON Schema standard governing Observable Compute Foundation research appendices. Permanently hosted at observablecompute.org/schema/v1.json.">
+  <meta property="og:image" content="https://observablecompute.org/assets/images/28ceb743ecde47dd8f214ad4fa82095f.png">
+  <meta property="og:site_name" content="Observable Compute Foundation">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@the_observable">
+  <meta name="twitter:title" content="OCF Research Schema v1">
+  <meta name="twitter:description" content="Machine-readable JSON Schema standard for OCF research paper appendices. Draft-07. Open license.">
+  <meta name="twitter:image" content="https://observablecompute.org/assets/images/28ceb743ecde47dd8f214ad4fa82095f.png">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <meta name="google-adsense-account" content="ca-pub-3415300754694996">
+  <meta name="google-site-verification" content="h-XxXsaNbfY2dWmueZFK5sQSuwXIFelBeB5ByCSWCCg">
+  <meta name="msvalidate.01" content="79AA455B3A6A870379DCB6A9DEFF026C">
+  <meta name="yandex-verification" content="a1d444bd168e3c86">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415300754694996" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "name": "OCF Research Schema v1 (ocf_schema_v1)",
+      "description": "JSON Schema draft-07 standard defining the required shape of the Model Reference Appendix in every Observable Compute Foundation research paper. Designed for AI-assisted analysis, RAG retrieval, and downstream synthesis.",
+      "url": "https://observablecompute.org/schema/",
+      "author": {
+        "@type": "NonProfitOrganization",
+        "name": "Observable Compute Foundation",
+        "url": "https://observablecompute.org"
+      },
+      "datePublished": "2026-05",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "NonProfitOrganization",
+      "name": "Observable Compute Foundation",
+      "alternateName": "OCF",
+      "url": "https://observablecompute.org",
+      "sameAs": ["https://x.com/the_observable", "https://www.linkedin.com/company/observable-compute-foundation"]
+    }
+  ]
+  </script>
+
+  <style>
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .7; transform: scale(1.05); }
+    }
+    .animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+
+    /* Schema hero — deep blue-dark */
+    .schema-hero {
+      background: #050f1f;
+      position: relative;
+      overflow: hidden;
+    }
+    .schema-hero .hero-text { position: relative; z-index: 10; }
+
+    /* Subtle grid */
+    .code-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(42,143,110,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(42,143,110,0.07) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    /* Code blocks */
+    .code-block {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      line-height: 1.7;
+      background: #0a1628;
+      border: 1px solid rgba(42,143,110,0.25);
+      border-radius: 0.75rem;
+      overflow-x: auto;
+    }
+    .code-block .line-num {
+      user-select: none;
+      color: rgba(255,255,255,0.2);
+      padding-right: 1.25rem;
+      text-align: right;
+      min-width: 2rem;
+      display: inline-block;
+    }
+    .tok-key { color: #7dd3a8; }
+    .tok-str { color: #f9a85d; }
+    .tok-bool { color: #79c0ff; }
+    .tok-num { color: #79c0ff; }
+    .tok-null { color: #8b949e; }
+    .tok-comment { color: #586069; font-style: italic; }
+
+    /* Field table */
+    .field-table td, .field-table th {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--color-border, #e5e7eb);
+      vertical-align: top;
+      font-size: 0.82rem;
+    }
+    .field-table th {
+      font-weight: 600;
+      background: var(--color-surface, #f8f9fa);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .field-table tr:last-child td { border-bottom: none; }
+    .field-table code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      background: rgba(42,143,110,0.08);
+      padding: 0.1rem 0.35rem;
+      border-radius: 0.25rem;
+      color: #1a6b50;
+    }
+    .badge-req {
+      display: inline-block;
+      padding: 0.1rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.04em;
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+    }
+    .badge-opt {
+      display: inline-block;
+      padding: 0.1rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.04em;
+      background: #f3f4f6;
+      color: #6b7280;
+      border: 1px solid #d1d5db;
+    }
+
+    /* Construct cards */
+    .construct-card {
+      border-left: 3px solid var(--color-primary, #2a8f6e);
+      padding: 1rem 1.25rem;
+      background: var(--color-surface, #f8f9fa);
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    /* Copy button */
+    .copy-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 0.375rem;
+      border: 1px solid rgba(42,143,110,0.4);
+      color: #7dd3a8;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .copy-btn:hover {
+      background: rgba(42,143,110,0.1);
+      border-color: rgba(42,143,110,0.7);
+    }
+
+    /* Scope enum pills */
+    .scope-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.25rem;
+      background: #f3f4f6;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+      display: inline-block;
+      margin: 0.15rem;
+    }
+  </style>
+</head>
+<body class="bg-background text-textPrimary flex flex-col min-h-screen">
+
+  <!-- ===== HEADER ===== -->
+  <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-border py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <a href="/" class="flex items-center gap-2 group">
+          <img src="/assets/images/favicon.png" alt="OCF Logo" class="w-8 h-8 rounded-full border border-border group-hover:border-primary transition-colors" />
+          <span class="font-mono font-bold text-lg tracking-tight hidden sm:block text-textPrimary">Observable<span class="text-primary">Compute</span></span>
+          <span class="font-mono font-bold text-lg tracking-tight sm:hidden text-textPrimary">OCF</span>
+        </a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="/research/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Research</a>
+          <a href="/database/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">Database</a>
+          <a href="/schema/" class="text-sm font-medium transition-colors text-primary font-semibold">Schema</a>
+          <a href="/irbgpt/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">IRBGPT</a>
+          <a href="/about/" class="text-sm font-medium transition-colors text-textSecondary hover:text-primary">About</a>
+          <a href="/contact/" class="text-sm font-medium text-white bg-primary hover:bg-primary/90 px-4 py-1.5 rounded transition-colors">Contact</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="mobile-menu-btn" class="text-textMuted hover:text-primary focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-border mt-4 shadow-sm">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="/research/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Research</a>
+        <a href="/database/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">Database</a>
+        <a href="/schema/" class="block px-3 py-2 rounded-md text-base font-medium text-primary font-semibold hover:bg-surface">Schema</a>
+        <a href="/irbgpt/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">IRBGPT</a>
+        <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface text-textSecondary">About</a>
+        <a href="/contact/" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">Contact</a>
+      </div>
+    </div>
+  </header>
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('shadow-sm', window.scrollY > 10);
+    });
+  </script>
+
+  <main class="flex-grow">
+
+    <!-- ===== HERO ===== -->
+    <section class="schema-hero" style="min-height: clamp(420px, 55vh, 560px);">
+      <div class="code-grid"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%, rgba(42,143,110,0.12) 0%, transparent 60%);"></div>
+
+      <div class="hero-text max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+           style="padding-top: clamp(6rem, 14vh, 9rem); padding-bottom: clamp(3rem, 8vh, 5rem);">
+        <div class="max-w-3xl space-y-5">
+          <div class="inline-flex items-center px-3 py-1 rounded-full border border-white/20 bg-white/10 text-white/80 text-xs font-mono tracking-wider backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse-slow"></span>
+            JSON Schema draft-07 &mdash; Permanently hosted &mdash; Open license
+          </div>
+          <h1 class="font-mono font-bold text-white" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1;">
+            ocf_<span class="text-green-300">schema</span>_v1
+          </h1>
+          <p class="text-white/70 font-mono text-sm tracking-widest uppercase">
+            OCF Research Paper Appendix Standard
+          </p>
+          <p class="text-white/80 leading-relaxed" style="max-width: 36rem; font-size: clamp(0.95rem, 1.6vw, 1.1rem);">
+            Every OCF research publication ends with a Model Reference Appendix: structured JSON encoding the paper's key findings, causal chains, and named constructs — parseable by AI systems without reading the full prose document. This schema defines its required shape.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href="/schema/v1.json" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors text-sm">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+              schema/v1.json
+            </a>
+            <a href="/assets/papers/ocf_schema_v1.pdf" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 px-5 py-2.5 border border-white/30 text-white/85 font-medium rounded-lg hover:border-white/70 hover:text-white transition-colors text-sm">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              Full specification (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CANONICAL URL CALLOUT ===== -->
+    <section class="bg-primary/5 border-b border-primary/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs text-textMuted font-mono uppercase tracking-wider">Canonical Schema URL — use this in validators and tooling</p>
+              <p class="font-mono text-sm font-semibold text-textPrimary mt-0.5">https://observablecompute.org/schema/v1.json</p>
+            </div>
+          </div>
+          <button onclick="navigator.clipboard.writeText('https://observablecompute.org/schema/v1.json').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy URL'},1500)})"
+                  class="flex-shrink-0 text-xs font-mono px-4 py-2 rounded-lg border border-border hover:border-primary text-textMuted hover:text-primary transition-colors">
+            Copy URL
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHAT & WHY ===== -->
+    <section class="py-20 bg-background">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div class="space-y-6">
+            <span class="font-mono text-xs text-primary uppercase tracking-widest">What the Schema Is</span>
+            <h2 class="text-2xl font-bold">Research that machines can actually use.</h2>
+            <p class="text-textSecondary leading-relaxed">
+              Most research papers are written for humans. PDFs with prose, citations, and conclusions buried in body text. An LLM can parse them — but inconsistently, with variable confidence, and with no shared vocabulary to compare across papers.
+            </p>
+            <p class="text-textSecondary leading-relaxed">
+              The OCF Model Reference Appendix standardizes how findings are encoded. Every appendix has the same shape: structured key findings with confidence scores, named causal chains, settled conclusions from the literature, and OCF's four named analytical constructs — all in a form that validators can check and that AI systems can retrieve without guessing.
+            </p>
+            <p class="text-textSecondary leading-relaxed">
+              The schema is the contract. If a paper's appendix validates against <code class="font-mono text-sm bg-surface px-1 py-0.5 rounded">ocf_schema_v1</code>, you know exactly what fields are present, what the confidence scores mean, and how to map the findings to the OCF construct framework.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <p class="text-xs font-mono text-textMuted uppercase tracking-widest">Three audiences</p>
+              <div class="space-y-2">
+                <div class="flex gap-3 items-start">
+                  <div class="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p class="font-medium text-sm">AI systems doing retrieval, synthesis, or cross-paper comparison</p>
+                    <p class="text-textMuted text-xs mt-0.5">Consistent field shapes eliminate parser edge cases. The <code class="font-mono">document_summary</code> field is optimized for RAG triage.</p>
+                  </div>
+                </div>
+                <div class="flex gap-3 items-start">
+                  <div class="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p class="font-medium text-sm">Researchers building on OCF findings</p>
+                    <p class="text-textMuted text-xs mt-0.5">Structured data without parsing prose. Finding IDs, confidence scores, and causal chains are directly importable.</p>
+                  </div>
+                </div>
+                <div class="flex gap-3 items-start">
+                  <div class="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p class="font-medium text-sm">Funders and policy tools that ingest research programmatically</p>
+                    <p class="text-textMuted text-xs mt-0.5">The <code class="font-mono">geographic_scope_enum</code> field enables corpus filtering without text parsing. The EIN field anchors provenance.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: minimal example code block -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <p class="text-xs font-mono text-textMuted uppercase tracking-widest">Minimal valid appendix</p>
+              <button onclick="
+                const code = document.getElementById('minimal-example').innerText;
+                navigator.clipboard.writeText(code).then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy'},1500)})
+              " class="copy-btn">Copy</button>
+            </div>
+            <div class="code-block p-5" id="minimal-example">
+              <pre class="text-green-300/90 whitespace-pre-wrap">{
+  <span class="tok-key">"paper_metadata"</span>: {
+    <span class="tok-key">"schema"</span>: <span class="tok-str">"ocf_schema_v1"</span>,
+    <span class="tok-key">"title"</span>: <span class="tok-str">"Paper Title Here"</span>,
+    <span class="tok-key">"publisher"</span>: <span class="tok-str">"Observable Compute Foundation"</span>,
+    <span class="tok-key">"principal_contributors"</span>: [<span class="tok-str">"Name, J.D."</span>],
+    <span class="tok-key">"ein"</span>: <span class="tok-str">"41-4747049"</span>,
+    <span class="tok-key">"publication_date"</span>: <span class="tok-str">"2026-05"</span>,
+    <span class="tok-key">"version"</span>: <span class="tok-str">"1.0"</span>,
+    <span class="tok-key">"website"</span>: <span class="tok-str">"observablecompute.org"</span>,
+    <span class="tok-key">"location"</span>: <span class="tok-str">"Rapid City, South Dakota"</span>,
+    <span class="tok-key">"geographic_scope"</span>: <span class="tok-str">"National U.S."</span>,
+    <span class="tok-key">"geographic_scope_enum"</span>: <span class="tok-str">"us_national"</span>,
+    <span class="tok-key">"license"</span>: <span class="tok-str">"open"</span>
+  },
+  <span class="tok-key">"document_summary"</span>: <span class="tok-str">"One paragraph. Max 500 chars. Self-contained."</span>,
+  <span class="tok-key">"ocf_named_constructs"</span>: {
+    <span class="tok-key">"readiness_stack"</span>: <span class="tok-str">"Definition as applied here."</span>,
+    <span class="tok-key">"pipeline_collapse"</span>: <span class="tok-str">"Definition as applied here."</span>,
+    <span class="tok-key">"rural_amplification_effect"</span>: <span class="tok-str">"Definition as applied here."</span>,
+    <span class="tok-key">"access_as_binding_constraint"</span>: <span class="tok-str">"Definition as applied here."</span>
+  },
+  <span class="tok-key">"key_findings"</span>: [{
+    <span class="tok-key">"id"</span>: <span class="tok-str">"F001"</span>,
+    <span class="tok-key">"claim"</span>: <span class="tok-str">"Direct claim. No hedging."</span>,
+    <span class="tok-key">"source"</span>: <span class="tok-str">"BLS_2025"</span>,
+    <span class="tok-key">"confidence"</span>: <span class="tok-num">0.90</span>,
+    <span class="tok-key">"population"</span>: <span class="tok-str">"us_workforce"</span>,
+    <span class="tok-key">"timeframe"</span>: <span class="tok-str">"2026"</span>
+  }],
+  <span class="tok-key">"what_frameworks_agree_on"</span>: [
+    <span class="tok-str">"Settled conclusion from reviewed literature."</span>
+  ],
+  <span class="tok-key">"causal_chains"</span>: {
+    <span class="tok-key">"chain_name"</span>: [
+      <span class="tok-str">"Step one."</span>,
+      <span class="tok-str">"Step two."</span>,
+      <span class="tok-str">"Outcome: result."</span>
+    ]
+  }
+}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REQUIRED FIELDS ===== -->
+    <section class="py-16 bg-surface border-y border-border">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <span class="font-mono text-xs text-primary uppercase tracking-widest">Schema Reference</span>
+          <h2 class="text-2xl font-bold mt-3 mb-2">Top-level fields</h2>
+          <p class="text-textSecondary text-sm">Six required, four optional. Use <code class="font-mono text-xs bg-background px-1 py-0.5 rounded border border-border">null</code> for inapplicable fields rather than omitting them — inconsistent shapes break iterative parsers.</p>
+        </div>
+        <div class="bg-background rounded-xl border border-border overflow-hidden">
+          <table class="field-table w-full">
+            <thead>
+              <tr>
+                <th class="text-left">Field</th>
+                <th class="text-left">Type</th>
+                <th class="text-left">Status</th>
+                <th class="text-left">Description</th>
+              </tr>
+            </thead>
+            <tbody class="text-textSecondary">
+              <tr>
+                <td><code>paper_metadata</code></td>
+                <td class="font-mono text-xs text-textMuted">object</td>
+                <td><span class="badge-req">REQUIRED</span></td>
+                <td>Bibliographic and provenance metadata. Contains title, contributors, EIN, date, version, scope, and license.</td>
+              </tr>
+              <tr>
+                <td><code>document_summary</code></td>
+                <td class="font-mono text-xs text-textMuted">string</td>
+                <td><span class="badge-req">REQUIRED</span></td>
+                <td>Single paragraph. Max 500 characters. Self-contained. Optimized for triage and RAG retrieval. No hedging language.</td>
+              </tr>
+              <tr>
+                <td><code>ocf_named_constructs</code></td>
+                <td class="font-mono text-xs text-textMuted">object</td>
+                <td><span class="badge-req">REQUIRED</span></td>
+                <td>All four registered OCF constructs, defined as applied in this paper. Additional constructs permitted with a <code>note</code> field.</td>
+              </tr>
+              <tr>
+                <td><code>key_findings</code></td>
+                <td class="font-mono text-xs text-textMuted">array</td>
+                <td><span class="badge-req">REQUIRED</span></td>
+                <td>Array of finding objects. Min 1 item. Every finding must have the same six-field shape: <code>id</code>, <code>claim</code>, <code>source</code>, <code>confidence</code>, <code>population</code>, <code>timeframe</code>.</td>
+              </tr>
+              <tr>
+                <td><code>what_frameworks_agree_on</code></td>
+                <td class="font-mono text-xs text-textMuted">array&lt;string&gt;</td>
+                <td><span class="badge-req">REQUIRED</span></td>
+                <td>Settled conclusions consistent across reviewed literature. Strings only. No contested findings in this array.</td>
+              </tr>
+              <tr>
+                <td><code>causal_chains</code></td>
+                <td class="font-mono text-xs text-textMuted">object</td>
+                <td><span class="badge-req">REQUIRED</span></td>
+                <td>Named causal pathways as ordered string arrays. Last item in each chain must begin with <code>"Outcome:"</code>.</td>
+              </tr>
+              <tr>
+                <td><code>what_works</code></td>
+                <td class="font-mono text-xs text-textMuted">array</td>
+                <td><span class="badge-opt">OPTIONAL</span></td>
+                <td>Evidence-based interventions. Present in meta-analysis papers. Each item: <code>intervention</code>, <code>evidence_level</code>, <code>notes</code>.</td>
+              </tr>
+              <tr>
+                <td><code>taxonomies</code></td>
+                <td class="font-mono text-xs text-textMuted">object</td>
+                <td><span class="badge-opt">OPTIONAL</span></td>
+                <td>Categorical taxonomies used in the paper. Each key maps to an array of string values.</td>
+              </tr>
+              <tr>
+                <td><code>series_context</code></td>
+                <td class="font-mono text-xs text-textMuted">object</td>
+                <td><span class="badge-opt">OPTIONAL</span></td>
+                <td>Present when the paper is part of a series. Keys are paper identifiers, values are scope descriptions.</td>
+              </tr>
+              <tr>
+                <td><code>policy_implications</code></td>
+                <td class="font-mono text-xs text-textMuted">array</td>
+                <td><span class="badge-opt">OPTIONAL</span></td>
+                <td>Actionable policy implications derived from findings. Each item: <code>implication</code>, <code>urgency</code>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Geographic scope enum -->
+        <div class="mt-8">
+          <p class="text-sm font-semibold text-textPrimary mb-2">Geographic scope enum values</p>
+          <p class="text-textMuted text-xs mb-3">The <code class="font-mono text-xs">geographic_scope_enum</code> field must use one of these values. Enables corpus filtering without parsing prose.</p>
+          <div>
+            <span class="scope-pill">global</span>
+            <span class="scope-pill">us_national</span>
+            <span class="scope-pill">us_national_with_global_context</span>
+            <span class="scope-pill">us_midwest</span>
+            <span class="scope-pill">us_south_dakota</span>
+            <span class="scope-pill">us_rural</span>
+            <span class="scope-pill">us_rural_midwest</span>
+            <span class="scope-pill">other</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NAMED CONSTRUCTS ===== -->
+    <section class="py-20 bg-background">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <span class="font-mono text-xs text-primary uppercase tracking-widest">Registered Constructs</span>
+          <h2 class="text-2xl font-bold mt-3 mb-2">OCF Named Analytical Constructs</h2>
+          <p class="text-textSecondary text-sm max-w-2xl">Four constructs are registered as of <code class="font-mono text-xs bg-surface px-1 py-0.5 rounded border border-border">ocf_schema_v1</code>. These are citable framework elements, not phrases. All four are required in every compliant appendix. New constructs require OCF president approval before inclusion in publications.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="construct-card">
+            <p class="font-mono font-bold text-sm text-primary">readiness_stack</p>
+            <p class="text-textSecondary text-sm mt-2 leading-relaxed">Three-tier OCF model: <strong>Tier 1</strong> Foundational Readiness (literacy, numeracy, communication), <strong>Tier 2</strong> Digital Readiness (device competency, software navigation, data literacy), <strong>Tier 3</strong> AI Readiness (working alongside, directing, and critically evaluating AI systems). Each tier is a prerequisite for the next.</p>
+          </div>
+          <div class="construct-card">
+            <p class="font-mono font-bold text-sm text-primary">pipeline_collapse</p>
+            <p class="text-textSecondary text-sm mt-2 leading-relaxed">The elimination of entry-level positions that historically served as the informal second education system for underprepared workers. The traditional on-ramp from K-12 to workforce skill development is being eliminated by the same automation wave creating the readiness demand.</p>
+          </div>
+          <div class="construct-card">
+            <p class="font-mono font-bold text-sm text-primary">rural_amplification_effect</p>
+            <p class="text-textSecondary text-sm mt-2 leading-relaxed">The multiplicative (not merely additive) compounding of readiness barriers in rural contexts: device ownership gaps, broadband infrastructure gaps, geographic distance from training facilities, and chronic philanthropic underfunding. Rural workers face the same displacement exposure with fewer response resources.</p>
+          </div>
+          <div class="construct-card">
+            <p class="font-mono font-bold text-sm text-primary">access_as_binding_constraint</p>
+            <p class="text-textSecondary text-sm mt-2 leading-relaxed">The finding that institutional support infrastructure — not worker motivation or capability — is the primary predictor of workforce readiness outcomes. When workers receive structured training and support, adoption rates improve dramatically. The constraint is access, not capacity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VALIDATION ===== -->
+    <section class="py-16 bg-surface border-y border-border">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <span class="font-mono text-xs text-primary uppercase tracking-widest">Validation</span>
+          <h2 class="text-2xl font-bold mt-3 mb-2">How to validate a paper appendix</h2>
+          <p class="text-textSecondary text-sm">Point any JSON Schema draft-07 validator at the canonical URL. The schema file is always current at <code class="font-mono text-xs">https://observablecompute.org/schema/v1.json</code>.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-3">
+            <p class="text-xs font-mono text-textMuted uppercase tracking-widest">Node.js (AJV)</p>
+            <div class="code-block p-4">
+              <pre class="text-green-300/85 whitespace-pre-wrap text-xs"><span class="tok-comment">// npm install ajv</span>
+<span class="tok-key">const</span> Ajv = require(<span class="tok-str">'ajv'</span>);
+<span class="tok-key">const</span> ajv = <span class="tok-key">new</span> Ajv();
+
+<span class="tok-key">const</span> schema = require(<span class="tok-str">'./ocf_schema_v1.json'</span>);
+<span class="tok-key">const</span> appendix = require(<span class="tok-str">'./appendix.json'</span>);
+
+<span class="tok-key">const</span> validate = ajv.compile(schema);
+<span class="tok-key">const</span> valid = validate(appendix);
+
+<span class="tok-key">if</span> (!valid) console.log(validate.errors);
+<span class="tok-key">else</span> console.log(<span class="tok-str">'Compliant with ocf_schema_v1'</span>);</pre>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <p class="text-xs font-mono text-textMuted uppercase tracking-widest">Python (jsonschema)</p>
+            <div class="code-block p-4">
+              <pre class="text-green-300/85 whitespace-pre-wrap text-xs"><span class="tok-comment"># pip install jsonschema requests</span>
+<span class="tok-key">import</span> json, requests
+<span class="tok-key">from</span> jsonschema <span class="tok-key">import</span> validate
+
+schema = requests.get(
+  <span class="tok-str">'https://observablecompute.org/schema/v1.json'</span>
+).json()
+
+appendix = json.load(
+  open(<span class="tok-str">'your_appendix.json'</span>)
+)
+
+validate(instance=appendix, schema=schema)
+print(<span class="tok-str">'Compliant with ocf_schema_v1'</span>)</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VERSIONING ===== -->
+    <section class="py-16 bg-background">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div class="space-y-4">
+            <span class="font-mono text-xs text-primary uppercase tracking-widest">Versioning Policy</span>
+            <h2 class="text-xl font-bold">Schemas are permanent. Papers are not retroactively non-compliant.</h2>
+            <p class="text-textSecondary text-sm leading-relaxed">
+              When the schema is updated, a new version URL is issued. The previous version remains available at its original URL indefinitely. Papers are not retroactively non-compliant when a new schema version is released.
+            </p>
+            <p class="text-textSecondary text-sm leading-relaxed">
+              The <code class="font-mono text-xs bg-surface px-1 py-0.5 rounded border border-border">paper_metadata.schema</code> field is the permanent record of which schema governed a paper at publication. Do not update this field when a new version is released.
+            </p>
+            <p class="text-textSecondary text-sm leading-relaxed">
+              Schema change proposals: <a href="mailto:hello@observablecompute.org" class="text-primary hover:underline">hello@observablecompute.org</a>
+            </p>
+          </div>
+          <div class="space-y-3">
+            <div class="bg-surface border border-border rounded-xl p-5 space-y-3">
+              <p class="text-xs font-mono text-textMuted uppercase tracking-widest">Current versions</p>
+              <div class="flex items-center justify-between py-2 border-b border-border">
+                <div>
+                  <p class="font-mono text-sm font-semibold text-textPrimary">ocf_schema_v1</p>
+                  <p class="text-xs text-textMuted mt-0.5">Released May 2026 · Active</p>
+                </div>
+                <a href="/schema/v1.json" target="_blank" rel="noopener"
+                   class="text-xs font-mono text-primary hover:underline">v1.json →</a>
+              </div>
+              <div class="pt-1">
+                <p class="text-xs text-textMuted">All OCF papers published under this schema carry <code class="font-mono text-xs">"schema": "ocf_schema_v1"</code> in their appendix <code class="font-mono text-xs">paper_metadata</code> object.</p>
+              </div>
+            </div>
+            <div class="bg-surface border border-border rounded-xl p-5 space-y-2">
+              <p class="text-xs font-mono text-textMuted uppercase tracking-widest">Papers using this schema</p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                  <a href="/assets/papers/workforce-readiness-v5.1.pdf" class="text-textSecondary hover:text-primary transition-colors">Workforce Readiness — National v5.1</a>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                  <a href="/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf" class="text-textSecondary hover:text-primary transition-colors">Midwest Workforce Readiness v1.0</a>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                  <a href="/assets/papers/OCF_SouthDakota_WorkforceReadiness_v3.0.pdf" class="text-textSecondary hover:text-primary transition-colors">South Dakota Workforce Readiness v3.0</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-surface border-t border-border py-12 text-sm text-textSecondary">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="md:col-span-1 space-y-4">
+        <div class="flex items-center space-x-2">
+          <img src="/assets/images/favicon.png" alt="OCF Logo" class="h-6 w-6 rounded-full opacity-80">
+          <span class="font-mono font-bold text-textPrimary">Observable Compute</span>
+        </div>
+        <p class="leading-relaxed">A nonprofit AI research foundation. Independent research on machine cognition, observable function, and the mechanics of informational pressure.</p>
+        <div class="flex gap-3 pt-2">
+          <a href="https://x.com/the_observable" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border hover:border-primary text-textMuted hover:text-primary transition-colors text-xs font-mono">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @the_observable
+          </a>
+          <a href="https://www.linkedin.com/company/observable-compute-foundation" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border hover:border-primary text-textMuted hover:text-primary transition-colors text-xs font-mono">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="pt-2 border-t border-border font-mono text-xs text-textMuted space-y-1">
+          <p>South Dakota Nonprofit NS321548</p>
+          <p>EIN 41-4747049 | 501(c)(3) Public Charity</p>
+          <p>Incorporated Feb 23, 2026</p>
+          <p>Determination: May 6, 2026</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Research</h3>
+        <ul class="space-y-2">
+          <li><a href="/research/" class="hover:text-primary transition-colors">Publications</a></li>
+          <li><a href="/foundational-paper/" class="hover:text-primary transition-colors">Foundational Paper</a></li>
+          <li><a href="/database/" class="hover:text-primary transition-colors">Terminology Database</a></li>
+          <li><a href="/schema/" class="hover:text-primary transition-colors">Schema v1</a></li>
+          <li><a href="/resources/" class="hover:text-primary transition-colors">Open Resources</a></li>
+          <li><a href="/irbgpt/" class="hover:text-primary transition-colors">IRBGPT Tool</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Organization</h3>
+        <ul class="space-y-2">
+          <li><a href="/about/" class="hover:text-primary transition-colors">About the Foundation</a></li>
+          <li><a href="/transparency/" class="hover:text-primary transition-colors">Governance &amp; Transparency</a></li>
+          <li><a href="/llms.txt" class="hover:text-primary transition-colors">llms.txt (AI index)</a></li>
+          <li><a href="/contact/" class="hover:text-primary transition-colors">Contact Us</a></li>
+          <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms/" class="hover:text-primary transition-colors">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Papers (PDF)</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/assets/papers/workforce-readiness-v5.1.pdf" type="application/pdf" class="hover:text-primary transition-colors">Workforce Readiness v5.1</a></li>
+            <li><a href="/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">Midwest Workforce Readiness</a></li>
+            <li><a href="/assets/papers/OCF_SouthDakota_WorkforceReadiness_v3.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">SD Workforce Readiness</a></li>
+            <li><a href="/assets/papers/OCF_RPE_Standard_v4.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">RPE Standard v4.0</a></li>
+            <li><a href="/assets/papers/observable-function-v3.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">Observable Function v3.0</a></li>
+            <li><a href="/assets/papers/ocf_schema_v1.pdf" type="application/pdf" class="hover:text-primary transition-colors">OCF Schema v1 (spec)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Contact</h3>
+          <ul class="space-y-2">
+            <li><a href="mailto:research@observablecompute.org" class="hover:text-primary transition-colors">research@observablecompute.org</a></li>
+            <li><a href="mailto:contact@observablecompute.org" class="hover:text-primary transition-colors">contact@observablecompute.org</a></li>
+            <li class="text-textMuted text-xs pt-1">58 Hillcrest Drive · Rapid City, SD 57701</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
+      <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
+      <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>
