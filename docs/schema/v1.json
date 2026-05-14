@@ -1,0 +1,302 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://observablecompute.org/schema/v1.json",
+  "title": "OCF Research Paper Appendix Schema v1",
+  "description": "Machine-readable standard for Observable Compute Foundation research paper appendices. Defines the required shape of the Model Reference Appendix present in every OCF publication. Designed for AI-assisted analysis, RAG retrieval, and downstream synthesis.",
+  "type": "object",
+  "required": [
+    "paper_metadata",
+    "document_summary",
+    "ocf_named_constructs",
+    "key_findings",
+    "what_frameworks_agree_on",
+    "causal_chains"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "paper_metadata": {
+      "type": "object",
+      "description": "Bibliographic and provenance metadata for the paper.",
+      "required": [
+        "schema",
+        "title",
+        "publisher",
+        "principal_contributors",
+        "ein",
+        "publication_date",
+        "version",
+        "website",
+        "location",
+        "geographic_scope",
+        "geographic_scope_enum",
+        "license"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "type": "string",
+          "const": "ocf_schema_v1",
+          "description": "Schema version identifier. Must be 'ocf_schema_v1' for this version. Do not update when a new schema version is released."
+        },
+        "title": {
+          "type": "string",
+          "description": "Full title of the paper as published."
+        },
+        "publisher": {
+          "type": "string",
+          "const": "Observable Compute Foundation",
+          "description": "Publisher. Always 'Observable Compute Foundation' for OCF papers."
+        },
+        "principal_contributors": {
+          "type": "array",
+          "description": "List of principal contributors in 'Name, Credential' format.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "ein": {
+          "type": "string",
+          "const": "41-4747049",
+          "description": "OCF Employer Identification Number."
+        },
+        "publication_date": {
+          "type": "string",
+          "description": "Publication date. Format: YYYY-MM or YYYY.",
+          "pattern": "^[0-9]{4}(-[0-9]{2})?$"
+        },
+        "version": {
+          "type": "string",
+          "description": "Paper version string (e.g. '1.0', '3.0', '5.1')."
+        },
+        "website": {
+          "type": "string",
+          "const": "observablecompute.org",
+          "description": "OCF canonical website."
+        },
+        "location": {
+          "type": "string",
+          "const": "Rapid City, South Dakota",
+          "description": "Publisher location."
+        },
+        "geographic_scope": {
+          "type": "string",
+          "description": "Human-readable geographic scope of the paper's findings."
+        },
+        "geographic_scope_enum": {
+          "type": "string",
+          "description": "Machine-readable geographic scope. Use this field for filtering across the OCF corpus.",
+          "enum": [
+            "global",
+            "us_national",
+            "us_national_with_global_context",
+            "us_midwest",
+            "us_south_dakota",
+            "us_rural",
+            "us_rural_midwest",
+            "other"
+          ]
+        },
+        "license": {
+          "type": "string",
+          "const": "open",
+          "description": "All OCF publications are open license. Cite with attribution."
+        },
+        "series": {
+          "type": "string",
+          "description": "Optional. Name of the paper series this publication belongs to."
+        },
+        "paper_number": {
+          "type": "integer",
+          "description": "Optional. Position within a series.",
+          "minimum": 1
+        },
+        "ssrn_url": {
+          "type": "string",
+          "description": "Optional. SSRN canonical URL for this paper.",
+          "format": "uri"
+        },
+        "doi": {
+          "type": "string",
+          "description": "Optional. DOI if assigned."
+        }
+      }
+    },
+    "document_summary": {
+      "type": "string",
+      "description": "Single-paragraph summary. Maximum 500 characters. Self-contained — optimized for triage and RAG retrieval. No hedging language.",
+      "maxLength": 500
+    },
+    "ocf_named_constructs": {
+      "type": "object",
+      "description": "Definitions of OCF named analytical constructs as applied in this paper. All four registered constructs are required. Additional constructs permitted with a note field explaining scope.",
+      "required": [
+        "readiness_stack",
+        "pipeline_collapse",
+        "rural_amplification_effect",
+        "access_as_binding_constraint"
+      ],
+      "properties": {
+        "readiness_stack": {
+          "type": "string",
+          "description": "Three-tier OCF model: Tier 1 Foundational Readiness, Tier 2 Digital Readiness, Tier 3 AI Readiness. Each tier is a prerequisite for the next. Provide definition as applied in this paper."
+        },
+        "pipeline_collapse": {
+          "type": "string",
+          "description": "Elimination of entry-level positions that historically served as the informal second education system. Provide definition as applied in this paper."
+        },
+        "rural_amplification_effect": {
+          "type": "string",
+          "description": "Multiplicative (not merely additive) compounding of readiness barriers in rural contexts. Provide definition as applied in this paper."
+        },
+        "access_as_binding_constraint": {
+          "type": "string",
+          "description": "Institutional support infrastructure, not worker motivation or capability, is the primary predictor of workforce readiness outcomes. Provide definition as applied in this paper."
+        }
+      },
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "required": ["definition", "note"],
+            "properties": {
+              "definition": { "type": "string" },
+              "note": {
+                "type": "string",
+                "description": "Explanation of scope for non-registered constructs. Required for any construct not in the four registered constructs."
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "key_findings": {
+      "type": "array",
+      "description": "Array of finding objects. Every finding must have the same shape. Min 1 item. Use null for fields not applicable rather than omitting the field.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "claim", "source", "confidence", "population", "timeframe"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Finding identifier. Format: F + three-digit zero-padded integer. Sequential per paper.",
+            "pattern": "^F[0-9]{3}$"
+          },
+          "claim": {
+            "type": "string",
+            "description": "Direct statement of the finding. No hedging language. Confidence carries the uncertainty."
+          },
+          "source": {
+            "type": "string",
+            "description": "Abbreviated source key. Must match a key in the paper's Sources Cited table."
+          },
+          "confidence": {
+            "type": "number",
+            "description": "Confidence score 0.0–1.0. 0.90+ strong. 0.75–0.89 moderate. Below 0.75 add a note field.",
+            "minimum": 0.0,
+            "maximum": 1.0
+          },
+          "population": {
+            "type": ["string", "null"],
+            "description": "Population identifier in snake_case. e.g. us_workforce, rural_us, k12_teachers. Null if not population-specific."
+          },
+          "timeframe": {
+            "type": ["string", "null"],
+            "description": "Timeframe string. e.g. '2026', '2024-2026', '2024_present' for ongoing. Null if not time-bounded."
+          },
+          "note": {
+            "type": "string",
+            "description": "Optional. Required when confidence < 0.75. Explains the source of uncertainty."
+          }
+        }
+      }
+    },
+    "what_frameworks_agree_on": {
+      "type": "array",
+      "description": "Settled conclusions consistent across reviewed literature. Strings only. No contested findings in this array.",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "causal_chains": {
+      "type": "object",
+      "description": "Named causal pathways as ordered string arrays. Last item in each chain begins with 'Outcome:'. Keys are snake_case chain names.",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 2
+      }
+    },
+    "what_works": {
+      "type": "array",
+      "description": "Optional. Evidence-based interventions. Present in meta-analysis papers.",
+      "items": {
+        "type": "object",
+        "required": ["intervention", "evidence_level", "notes"],
+        "properties": {
+          "intervention": { "type": "string" },
+          "evidence_level": {
+            "type": "string",
+            "enum": ["strong", "moderate", "emerging", "theoretical"]
+          },
+          "notes": { "type": "string" },
+          "source": { "type": "string" }
+        }
+      }
+    },
+    "taxonomies": {
+      "type": "object",
+      "description": "Optional. Categorical taxonomies used in the paper. Each key maps to an array of string values.",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "series_context": {
+      "type": "object",
+      "description": "Optional. Present when the paper is part of a series. Keys are paper identifiers, values are scope descriptions.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "policy_implications": {
+      "type": "array",
+      "description": "Optional. Actionable policy implications derived from findings.",
+      "items": {
+        "type": "object",
+        "required": ["implication", "urgency"],
+        "properties": {
+          "implication": { "type": "string" },
+          "urgency": {
+            "type": "string",
+            "enum": ["immediate", "near_term", "long_term"]
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "methodology_notes": {
+      "type": "object",
+      "description": "Optional. Methodology metadata for replication and downstream analysis.",
+      "properties": {
+        "approach": { "type": "string" },
+        "data_sources": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "limitations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "sample_size": { "type": ["integer", "string"] },
+        "date_range": { "type": "string" }
+      }
+    }
+  }
+}
