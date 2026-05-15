@@ -55,7 +55,7 @@ PDFs are stored in `docs/assets/papers/` (production) and synced to `dist/assets
 | RPE Standard | `RPE_Standard_Stratmeyer_2026.pdf` |
 | RPE Standard v4.0 | `OCF_RPE_Standard_v4.0.pdf` |
 | Helpfulness Is All You Need v2.3 | `helpfulness-is-all-you-need-v2.3.pdf` |
-| Knowledge Gradient Framework v2.0 (SSRN) | `ssrn-6287618.pdf` |
+| Knowledge Gradient Framework v2.0 (SSRN) | `ssrn-6285123.pdf` |
 | Knowledge Gradient Framework v2.3 | `KGF_v2.3_Stratmeyer_Analytica (2).pdf` |
 | OCF Schema v1 | `ocf_schema_v1.pdf` |
 | OCF Style Guide v1 | `OCF_StyleGuide_v1.pdf` |
@@ -69,4 +69,4 @@ Content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.
 - **Web:** [observablecompute.org](https://observablecompute.org)
 - **Email:** contact@observablecompute.org
 - **Research:** research@observablecompute.org
-- **SSRN:** [ssrn.com/author=6287618](https://ssrn.com/author=6287618)
+- **SSRN:** [SSRN Author Profile](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6285123)

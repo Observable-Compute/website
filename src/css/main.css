@@ -56,6 +56,33 @@
 
 
 /* ========================================
+   Accessibility
+   ======================================== */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 1000;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  position: fixed;
+  left: var(--spacing-md);
+  top: var(--spacing-md);
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+/* ========================================
    Reset & Base Styles
    ======================================== */
 *, *::before, *::after {

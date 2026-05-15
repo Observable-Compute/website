@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>{% if title %}{{ title }} | {% endif %}Observable Compute Foundation</title>
-    <meta name="description" content="{{ description | default('Empirical Mapping of Technology Language Evolution. Tracking terminology across research, legal, industry, and public domains.') }}">
-    
+    <meta name="description" content="{{ description | default('Independent AI research, workforce readiness, and rural technology access. A South Dakota 501(c)(3) nonprofit.') }}">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://observablecompute.org{{ page.url }}">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/icon.png">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}Observable Compute Foundation">
-    <meta property="og:description" content="{{ description | default('Empirical Mapping of Technology Language Evolution') }}">
+    <meta property="og:description" content="{{ description | default('Independent AI research, workforce readiness, and rural technology access.') }}">
     <meta property="og:image" content="https://observablecompute.org/images/banner.png">
     <meta property="og:url" content="https://observablecompute.org{{ page.url }}">
     <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@the_observable">
+    <meta name="twitter:title" content="{% if title %}{{ title }} | {% endif %}Observable Compute Foundation">
+    <meta name="twitter:description" content="{{ description | default('Independent AI research, workforce readiness, and rural technology access.') }}">
+    <meta name="twitter:image" content="https://observablecompute.org/images/banner.png">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -38,17 +49,36 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "NonProfitOrganization",
       "name": "Observable Compute Foundation",
+      "alternateName": "OCF",
       "url": "https://observablecompute.org",
-      "description": "Nonprofit research institute providing empirical mapping of technology terminology evolution and legal-technical alignment.",
-      "foundingDate": "2026-01",
+      "description": "Independent AI research, workforce readiness, and rural technology access. A South Dakota 501(c)(3) nonprofit.",
+      "foundingDate": "2026-02-23",
+      "taxID": "41-4747049",
+      "nonprofitStatus": "501(c)(3)",
+      "logo": "https://observablecompute.org/images/logo.png",
+      "image": "https://observablecompute.org/images/banner.png",
+      "email": "contact@observablecompute.org",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "58 Hillcrest Drive",
         "addressLocality": "Rapid City",
         "addressRegion": "SD",
+        "postalCode": "57701",
         "addressCountry": "US"
-      }
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Ian Stratmeyer",
+        "jobTitle": "President and Principal Researcher"
+      },
+      "sameAs": [
+        "https://x.com/the_observable",
+        "https://www.linkedin.com/company/observable-compute-foundation",
+        "https://github.com/Observable-Compute",
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6285123"
+      ]
     }
     </script>
     
@@ -60,9 +90,11 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     {% include "header.njk" %}
-    
-    <main>
+
+    <main id="main-content">
         {{ content | safe }}
     </main>
     
