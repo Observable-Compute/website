@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0JR5LD5RS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T0JR5LD5RS');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research Publications | Observable Compute Foundation</title>
@@ -191,6 +199,17 @@
       "url": "https://observablecompute.org/assets/papers/helpfulness-is-all-you-need-v2.3.pdf",
       "isAccessibleForFree": true,
       "keywords": ["AI alignment", "HHH framework", "helpfulness", "harmlessness", "institutional critique"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": "The Antonym Problem: Semantic Polarity, Corpus Constitution, and Suppression Artifacts in Large Language Models",
+      "author": {"@type": "Person", "name": "Adam Ian Stratmeyer", "honorificSuffix": "J.D."},
+      "datePublished": "2026-05",
+      "publisher": {"@type": "NonProfitOrganization", "name": "Observable Compute Foundation"},
+      "url": "https://observablecompute.org/assets/papers/the-antonym-problem-v2.pdf",
+      "isAccessibleForFree": true,
+      "keywords": ["AI alignment", "semantic polarity", "RLHF", "suppression artifacts", "corpus constitution"]
     }
   ]
   </script>
@@ -200,6 +219,53 @@
       50% { opacity: .7; transform: scale(1.05); }
     }
     .perspective-1000 { perspective: 1000px; }
+    
+    /* Sleek custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f9fafb;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    
+    /* Premium Hover Transitions for Cards & Buttons */
+    article.bg-surface {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(229, 231, 235, 1);
+    }
+    article.bg-surface:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.08);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    
+    /* Glassmorphism Header */
+    #main-header {
+      background: rgba(255, 255, 255, 0.85) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+    }
+    
+    /* Premium text gradients */
+    .text-gradient-primary {
+      background: linear-gradient(135deg, #111827 30%, #047857 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Subtle dot grid backdrop for a premium tech vibe */
+    .premium-grid-bg {
+      background-image: radial-gradient(rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
   </style>
 </head>
 <body class="bg-background text-textPrimary flex flex-col min-h-screen">
@@ -249,7 +315,7 @@
   });
 </script>
 
-  <main class="flex-grow pt-24 pb-16">
+  <main class="flex-grow pt-24 pb-16 premium-grid-bg">
     <div class="container mx-auto px-6 mb-8 font-mono text-xs text-textSecondary uppercase tracking-widest flex items-center space-x-2">
       <a href="/" class="hover:text-accent transition-colors">Home</a>
       <span>/</span>
@@ -258,7 +324,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
       <header class="mb-12 border-b border-border pb-8">
-        <h1 class="text-4xl font-bold text-textPrimary mb-3 font-sans">Research Publications</h1>
+        <h1 class="text-4xl font-bold text-textPrimary mb-3 font-sans text-gradient-primary">Research Publications</h1>
         <p class="text-textSecondary font-light text-lg">Empirical documentation of AI function, workforce displacement, and the mechanics of informational pressure.</p>
         <p class="text-sm text-textMuted font-mono mt-3">All publications are open access — no paywall, no registration. <a href="/llms.txt" class="hover:text-primary transition-colors underline underline-offset-2">Machine-readable index →</a></p>
       </header>
@@ -423,6 +489,35 @@
           </div>
         </article>
 
+        <!-- The Antonym Problem -->
+        <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group"
+                 itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <link itemprop="url" href="https://observablecompute.org/assets/papers/the-antonym-problem-v2.pdf">
+          <meta itemprop="isAccessibleForFree" content="true">
+          <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+            <div class="flex-1">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">AI Alignment</span>
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Psycholinguistics</span>
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Refusal Artifacts</span>
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">RLHF</span>
+              </div>
+              <p class="text-xs font-mono text-textMuted mb-2">
+                <time itemprop="datePublished" datetime="2026-05">2026-05</time>
+                &nbsp;|&nbsp; v1.0
+              </p>
+              <h2 class="text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors" itemprop="name">The Antonym Problem: Semantic Polarity, Corpus Constitution, and Suppression Artifacts in Large Language Models</h2>
+              <p class="text-sm text-textMuted font-mono mb-4" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span itemprop="name">Adam Ian Stratmeyer</span><span itemprop="honorificSuffix">, J.D.</span>
+              </p>
+              <p class="text-textSecondary leading-relaxed" itemprop="description">A structural critique of behavioral suppression in language model alignment. Applying semantic polarity theory and documented fine-tuning artifacts, this paper argues that safety refusals and RLHF pathways redirect probability mass rather than removing constitutive corpus material from model weights. You cannot cleanly suppress a negative pole (such as neglect or cruelty) without degrading the positive pole (care or virtue) in a language-native entity.</p>
+            </div>
+            <div class="flex flex-row md:flex-col gap-3 min-w-[120px]">
+              <a href="/assets/papers/the-antonym-problem-v2.pdf" target="_blank" type="application/pdf" class="text-sm px-4 py-2 rounded border border-border hover:border-primary text-textSecondary hover:text-primary transition-colors text-center" itemprop="url">PDF</a>
+            </div>
+          </div>
+        </article>
+
         <!-- Helpfulness Is All You Need -->
         <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group"
                  itemscope itemtype="https://schema.org/ScholarlyArticle">
@@ -505,4 +600,76 @@
   <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
     <div class="md:col-span-1 space-y-4">
       <div class="flex items-center space-x-2">
-        <im
+        <img src="/assets/images/favicon.png" alt="OCF Logo" class="h-6 w-6 rounded-full opacity-80">
+        <span class="font-mono font-bold text-textPrimary">Observable Compute</span>
+      </div>
+      <p class="leading-relaxed">A nonprofit artificial intelligence research foundation. Independent research on machine cognition, observable function, and the mechanics of informational pressure.</p>
+      <div class="pt-4 border-t border-border font-mono text-xs text-textMuted">
+        <p>South Dakota Nonprofit NS321548</p>
+        <p>EIN 41-4747049 | 501(c)(3) Public Charity</p>
+        <p>Incorporated Feb 23, 2026</p>
+        <p>Determination: May 6, 2026</p>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Research</h3>
+      <ul class="space-y-2">
+        <li><a href="/research/" class="hover:text-primary transition-colors">Publications</a></li>
+        <li><a href="/foundational-paper/" class="hover:text-primary transition-colors">Foundational Paper</a></li>
+        <li><a href="/database/" class="hover:text-primary transition-colors">Terminology Database</a></li>
+        <li><a href="/resources/" class="hover:text-primary transition-colors">Open Resources</a></li>
+        <li><a href="/services/" class="hover:text-primary transition-colors">Educational Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Organization</h3>
+      <ul class="space-y-2">
+        <li><a href="/about/" class="hover:text-primary transition-colors">About the Foundation</a></li>
+        <li><a href="/transparency/" class="hover:text-primary transition-colors">Governance &amp; Transparency</a></li>
+        <li><a href="/llms.txt" class="hover:text-primary transition-colors">llms.txt (AI index)</a></li>
+        <li><a href="/contact/" class="hover:text-primary transition-colors">Contact Us</a></li>
+        <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+        <li><a href="/terms/" class="hover:text-primary transition-colors">Terms &amp; Conditions</a></li>
+        <li><a href="/disclaimer/" class="hover:text-primary transition-colors">Disclaimer</a></li>
+      </ul>
+    </div>
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Contact</h3>
+        <ul class="space-y-2">
+          <li><a href="mailto:research@observablecompute.org" class="hover:text-primary transition-colors">research@observablecompute.org</a></li>
+          <li><a href="mailto:contact@observablecompute.org" class="hover:text-primary transition-colors">contact@observablecompute.org</a></li>
+          <li class="text-textMuted text-xs pt-2">58 Hillcrest Drive<br>Rapid City, SD 57701</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">External</h3>
+        <ul class="space-y-2">
+          <li><a href="https://ssrn.com/author=6285123" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">SSRN Profile</a></li>
+          <li><a href="https://orcid.org/0009-0005-8693-4641" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">ORCID</a></li>
+          <li><a href="https://medium.com/@adamstratmeyer" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Medium</a></li>
+          <li><a href="https://github.com/Observable-Compute" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">GitHub</a></li>
+          <li><a href="https://x.com/the_observable" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">X / @the_observable</a></li>
+          <li><a href="https://www.linkedin.com/company/observable-compute-foundation" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
+    <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
+    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; May 2026</p>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('main-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('shadow-sm');
+    } else {
+      header.classList.remove('shadow-sm');
+    }
+  });
+</script>
+</body>
+</html>

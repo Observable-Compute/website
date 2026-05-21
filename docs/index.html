@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0JR5LD5RS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T0JR5LD5RS');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Observable Compute Foundation | Independent AI Research</title>
@@ -349,7 +357,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div class="stat-card">
-            <p class="text-4xl font-extrabold font-mono">5</p>
+            <p class="text-4xl font-extrabold font-mono">6</p>
             <p class="text-sm text-white/70 mt-1 font-mono uppercase tracking-wide">Open-Access Papers</p>
           </div>
           <div class="stat-card">
@@ -369,12 +377,12 @@
     </section>
 
     <!-- ===== MISSION ===== -->
-    <section class="py-20 bg-background">
+    <section class="py-20 bg-background premium-grid-bg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
             <p class="font-mono text-xs text-primary uppercase tracking-widest">Our Mission</p>
-            <h2 class="text-3xl md:text-4xl font-bold text-textPrimary leading-tight">The communities most exposed to AI disruption are the least represented in AI research.</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-textPrimary leading-tight text-gradient-primary">The communities most exposed to AI disruption are the least represented in AI research.</h2>
             <p class="text-textSecondary leading-relaxed">Observable Compute Foundation exists to close that gap. We conduct independent empirical research on how AI systems actually function, publish everything freely, and bring practical AI literacy directly to rural and underserved communities across South Dakota and the Midwest.</p>
             <p class="text-textSecondary leading-relaxed">Our work spans three interlocking areas: documenting observable AI behavior, measuring the workforce displacement crisis in rural America, and building free public resources so every community can participate in — rather than be left behind by — the AI transition.</p>
             <div class="flex flex-wrap gap-3 pt-2">
@@ -431,12 +439,12 @@
     </section>
 
     <!-- ===== PUBLICATIONS ===== -->
-    <section class="py-20 bg-background" aria-labelledby="research-heading">
+    <section class="py-20 bg-background premium-grid-bg" aria-labelledby="research-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-end mb-12">
           <div>
             <p class="font-mono text-xs text-primary uppercase tracking-widest mb-3">Publications — Open Access</p>
-            <h2 id="research-heading" class="text-3xl md:text-4xl font-bold tracking-tight text-textPrimary">Research Papers</h2>
+            <h2 id="research-heading" class="text-3xl md:text-4xl font-bold tracking-tight text-textPrimary text-gradient-primary">Research Papers</h2>
             <p class="text-textSecondary mt-2 text-sm">All publications free — no registration, no paywall, no embargo.</p>
           </div>
           <a href="/research/" class="text-sm font-medium text-primary hover:text-secondary hidden sm:inline-flex items-center gap-1 transition-colors">
@@ -610,11 +618,11 @@
     </section>
 
     <!-- ===== PROGRAMS ===== -->
-    <section class="py-20 bg-background">
+    <section class="py-20 bg-background premium-grid-bg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12">
           <p class="font-mono text-xs text-primary uppercase tracking-widest mb-3">What We Do</p>
-          <h2 class="text-3xl md:text-4xl font-bold text-textPrimary">Three programs. One mission.</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-textPrimary text-gradient-primary">Three programs. One mission.</h2>
           <p class="text-textSecondary mt-3 max-w-2xl">Each program addresses a different dimension of the same problem: communities being left behind by AI without the research, tools, or knowledge to respond.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -757,4 +765,26 @@
             <li><a href="/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">Midwest Workforce Readiness</a></li>
             <li><a href="/assets/papers/OCF_SouthDakota_WorkforceReadiness_v3.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">SD Workforce Readiness</a></li>
             <li><a href="/assets/papers/observable-function-v3.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">Observable Function v3.0</a></li>
-          
+            <li><a href="/assets/papers/OCF_RPE_Standard_v4.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">RPE Standard v4.0</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
+      <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
+      <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; May 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('shadow-sm');
+      } else {
+        header.classList.remove('shadow-sm');
+      }
+    });
+  </script>
+</body>
+</html>

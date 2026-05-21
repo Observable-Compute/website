@@ -34,10 +34,14 @@ docs/                 # Production static files served by Hostinger
 
 ## Development
 
+> [!WARNING]
+> **DO NOT** run `npm run build` and overwrite the `docs/` directory. 
+> The templates under `src/` are currently out of sync (they represent the legacy January 2026 Terminology version of the site). The live website is maintained as static files directly under the `docs/` directory. All edits to the live website must be made directly in the `docs/` directory to avoid destroying the live Workforce Readiness layout.
+
 ```bash
 npm install
 npm start          # Local dev server with hot reload
-npm run build      # Build to dist/
+# DO NOT COPY dist/ TO docs/ WITHOUT REWRITING THE src/ TEMPLATES FIRST!
 ```
 
 ## Publications

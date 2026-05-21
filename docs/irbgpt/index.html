@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0JR5LD5RS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T0JR5LD5RS');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IRBGPT — IRB Protocol Review with GPT-4 | Observable Compute Foundation</title>
@@ -737,4 +745,132 @@
               <div class="p-4 space-y-3 text-sm">
                 <div class="flex gap-2 items-start">
                   <span class="text-yellow-600 font-mono text-xs mt-0.5 flex-shrink-0">⚠</span>
-        
+                  <div>
+                    <p class="font-bold text-textPrimary">Consent Form Readability</p>
+                    <p class="text-textSecondary text-xs">The consent form is written at a post-graduate level. 45 CFR 46.116 requires that information be presented in language understandable to the subject. For middle schoolers, parent permission and child assent forms must be simplified to an 8th-grade reading level.</p>
+                  </div>
+                </div>
+                <div class="flex gap-2 items-start pt-2 border-t border-border">
+                  <span class="text-red-600 font-mono text-xs mt-0.5 flex-shrink-0">✗</span>
+                  <div>
+                    <p class="font-bold text-textPrimary">Vulnerable Populations Protection</p>
+                    <p class="text-textSecondary text-xs">Subjects are minors (middle school students). The protocol checklist claims "low risk / exempt status" under Category 1, but does not address schools as specialized settings or how coercion by teachers/parents will be mitigated.</p>
+                  </div>
+                </div>
+                <div class="flex gap-2 items-start pt-2 border-t border-border">
+                  <span class="text-green-600 font-mono text-xs mt-0.5 flex-shrink-0">✓</span>
+                  <div>
+                    <p class="font-bold text-textPrimary">Privacy & Confidentiality</p>
+                    <p class="text-textSecondary text-xs">De-identification protocol is sufficient. Student names will be replaced with randomized IDs and stored on a secure local drive.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="py-20 bg-primary text-white text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Ready to review your protocol?</h2>
+        <p class="text-white/70 text-lg">
+          Go to <span class="font-mono text-green-300">irbgpt.com</span> and start a conversation with the tool. Paste your protocol, describe your study, or ask a specific question about 45 CFR 46 and the Belmont principles.
+        </p>
+        <div class="pt-2">
+          <a href="https://irbgpt.com" target="_blank" rel="noopener noreferrer" class="launch-btn" style="font-size: 1.25rem; padding: 1.125rem 3rem;">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+            Launch IRBGPT →
+          </a>
+        </div>
+        <p class="text-white/30 text-xs font-mono">
+          A free public resource from Observable Compute Foundation &nbsp;·&nbsp; 501(c)(3) Public Charity &nbsp;·&nbsp; EIN 41-4747049
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-surface border-t border-border py-12 text-sm text-textSecondary">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="md:col-span-1 space-y-4">
+        <div class="flex items-center space-x-2">
+          <img src="/assets/images/favicon.png" alt="OCF Logo" class="h-6 w-6 rounded-full opacity-80">
+          <span class="font-mono font-bold text-textPrimary">Observable Compute</span>
+        </div>
+        <p class="leading-relaxed">A nonprofit AI research foundation. Independent research on machine cognition, observable function, and the mechanics of informational pressure.</p>
+        <!-- Social links -->
+        <div class="flex gap-3 pt-2">
+          <a href="https://x.com/the_observable" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border hover:border-primary text-textMuted hover:text-primary transition-colors text-xs font-mono">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @the_observable
+          </a>
+          <a href="https://www.linkedin.com/company/observable-compute-foundation" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border hover:border-primary text-textMuted hover:text-primary transition-colors text-xs font-mono">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="pt-2 border-t border-border font-mono text-xs text-textMuted space-y-1">
+          <p>South Dakota Nonprofit NS321548</p>
+          <p>EIN 41-4747049 | 501(c)(3) Public Charity</p>
+          <p>Incorporated Feb 23, 2026</p>
+          <p>Determination: May 6, 2026</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Research</h3>
+        <ul class="space-y-2">
+          <li><a href="/research/" class="hover:text-primary transition-colors">Publications</a></li>
+          <li><a href="/foundational-paper/" class="hover:text-primary transition-colors">Foundational Paper</a></li>
+          <li><a href="/database/" class="hover:text-primary transition-colors">Terminology Database</a></li>
+          <li><a href="/resources/" class="hover:text-primary transition-colors">Open Resources</a></li>
+          <li><a href="/irbgpt/" class="hover:text-primary transition-colors">IRBGPT Tool</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Organization</h3>
+        <ul class="space-y-2">
+          <li><a href="/about/" class="hover:text-primary transition-colors">About the Foundation</a></li>
+          <li><a href="/transparency/" class="hover:text-primary transition-colors">Governance &amp; Transparency</a></li>
+          <li><a href="/llms.txt" class="hover:text-primary transition-colors">llms.txt (AI index)</a></li>
+          <li><a href="/contact/" class="hover:text-primary transition-colors">Contact Us</a></li>
+          <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms/" class="hover:text-primary transition-colors">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Papers (PDF)</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/assets/papers/workforce-readiness-v5.1.pdf" type="application/pdf" class="hover:text-primary transition-colors">Workforce Readiness v5.1</a></li>
+            <li><a href="/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">Midwest Workforce Readiness</a></li>
+            <li><a href="/assets/papers/OCF_SouthDakota_WorkforceReadiness_v3.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">SD Workforce Readiness</a></li>
+            <li><a href="/assets/papers/observable-function-v3.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">Observable Function v3.0</a></li>
+            <li><a href="/assets/papers/OCF_RPE_Standard_v4.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">RPE Standard v4.0</a></li>
+            <li><a href="/assets/papers/helpfulness-is-all-you-need-v2.3.pdf" type="application/pdf" class="hover:text-primary transition-colors">Helpfulness Is All You Need</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Contact</h3>
+          <ul class="space-y-2">
+            <li><a href="mailto:research@observablecompute.org" class="hover:text-primary transition-colors">research@observablecompute.org</a></li>
+            <li><a href="mailto:contact@observablecompute.org" class="hover:text-primary transition-colors">contact@observablecompute.org</a></li>
+            <li class="text-textMuted text-xs pt-1">58 Hillcrest Drive · Rapid City, SD 57701</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
+      <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
+      <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0JR5LD5RS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T0JR5LD5RS');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terminology Database | Observable Compute Foundation</title>
@@ -92,6 +100,19 @@
       50% { opacity: .7; transform: scale(1.05); }
     }
     .perspective-1000 { perspective: 1000px; }
+    
+    /* Premium text gradients */
+    .text-gradient-primary {
+      background: linear-gradient(135deg, #111827 30%, #047857 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Subtle dot grid backdrop for a premium tech vibe */
+    .premium-grid-bg {
+      background-image: radial-gradient(rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
   </style>
 </head>
 <body class="bg-background text-textPrimary flex flex-col min-h-screen">
@@ -148,7 +169,7 @@
 
 
 
-  <main class="flex-grow pt-24 pb-16">
+  <main class="flex-grow pt-24 pb-16 premium-grid-bg">
     <div class="container mx-auto px-6 mb-8 font-mono text-xs text-textSecondary uppercase tracking-widest flex items-center space-x-2">
       <a href="/" class="hover:text-accent transition-colors">Home</a>
       <span>/</span>
@@ -158,18 +179,18 @@
   <header class="mb-8 border-b border-border pb-8">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
       <div>
-        <h1 class="text-3xl md:text-5xl font-bold font-mono tracking-tight mb-2 text-white">Technology Terminology Observatory</h1>
+        <h1 class="text-3xl md:text-5xl font-bold font-mono tracking-tight mb-2 text-gradient-primary">Technology Terminology Observatory</h1>
         <p class="text-textMuted flex items-center gap-2 font-mono text-sm">
           <svg class="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
           </svg>
-          Last updated: 2026-03-18T20:55:03Z
+          Last updated: 2026-05-21T10:55:10Z
         </p>
       </div>
       <div class="bg-surface border border-border rounded-lg px-4 py-3 flex items-center gap-4 text-sm font-mono">
         <div>
           <span class="text-textMuted block text-xs uppercase tracking-wider">Entries</span>
-          <span class="text-white font-bold" id="result-count">10</span>
+          <span class="text-primary font-bold text-lg" id="result-count">13</span>
         </div>
         <div class="w-px h-8 bg-border"></div>
         <div>
@@ -232,7 +253,7 @@
           
           <tr class="term-row hover:bg-background/50 transition-colors" data-id="001" data-term="Artificial Intelligence" data-date="2023-01-01" data-trend="Contested" data-domains="research,legal,industry,regulatory">
             <td class="px-6 py-4">
-              <div class="font-bold text-white text-base">Artificial Intelligence</div>
+              <div class="font-bold text-textPrimary text-base">Artificial Intelligence</div>
               <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
                 4 variants
               </div>
@@ -273,7 +294,7 @@
 
                 <!-- Domain Definitions -->
                 <div class="lg:col-span-2 space-y-4">
-                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
                   <div class="space-y-4 mt-4">
                     
                     <div class="bg-surface rounded-md p-4 border border-border">
@@ -302,22 +323,22 @@
                 <!-- Metadata & Sources -->
                 <div class="space-y-6">
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
                     <dl class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">First Documented:</dt>
-                        <dd class="text-white font-mono">2023-01-01</dd>
+                        <dd class="text-textPrimary font-mono">2023-01-01</dd>
                       </div>
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">Source Count:</dt>
-                        <dd class="text-white font-mono">47</dd>
+                        <dd class="text-textPrimary font-mono">47</dd>
                       </div>
                     </dl>
                   </div>
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
                     <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
                       Definition divergence between EU AI Act and NIST AI RMF is a documented alignment gap.
                     </p>
@@ -326,7 +347,7 @@
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
                     <ul class="space-y-3">
                       
                       <li class="text-sm">
@@ -349,7 +370,7 @@
           
           <tr class="term-row hover:bg-background/50 transition-colors" data-id="002" data-term="Machine Learning" data-date="1959-01-01" data-trend="Contested" data-domains="research,industry">
             <td class="px-6 py-4">
-              <div class="font-bold text-white text-base">Machine Learning</div>
+              <div class="font-bold text-textPrimary text-base">Machine Learning</div>
               <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
                 2 variants
               </div>
@@ -390,7 +411,7 @@
 
                 <!-- Domain Definitions -->
                 <div class="lg:col-span-2 space-y-4">
-                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
                   <div class="space-y-4 mt-4">
                     
                     <div class="bg-surface rounded-md p-4 border border-border">
@@ -409,22 +430,22 @@
                 <!-- Metadata & Sources -->
                 <div class="space-y-6">
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
                     <dl class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">First Documented:</dt>
-                        <dd class="text-white font-mono">1959-01-01</dd>
+                        <dd class="text-textPrimary font-mono">1959-01-01</dd>
                       </div>
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">Source Count:</dt>
-                        <dd class="text-white font-mono">122</dd>
+                        <dd class="text-textPrimary font-mono">122</dd>
                       </div>
                     </dl>
                   </div>
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
                     <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
                       Relatively stable definition across domains compared to &#39;AI&#39;.
                     </p>
@@ -433,7 +454,7 @@
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
                     <ul class="space-y-3">
                       
                       <li class="text-sm">
@@ -465,7 +486,7 @@
           
           <tr class="term-row hover:bg-background/50 transition-colors" data-id="003" data-term="Algorithm" data-date="1936-01-01" data-trend="Stable" data-domains="research">
             <td class="px-6 py-4">
-              <div class="font-bold text-white text-base">Algorithm</div>
+              <div class="font-bold text-textPrimary text-base">Algorithm</div>
               <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
                 1 variants
               </div>
@@ -506,7 +527,7 @@
 
                 <!-- Domain Definitions -->
                 <div class="lg:col-span-2 space-y-4">
-                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
                   <div class="space-y-4 mt-4">
                     
                     <div class="bg-surface rounded-md p-4 border border-border">
@@ -520,15 +541,15 @@
                 <!-- Metadata & Sources -->
                 <div class="space-y-6">
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
                     <dl class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">First Documented:</dt>
-                        <dd class="text-white font-mono">1936-01-01</dd>
+                        <dd class="text-textPrimary font-mono">1936-01-01</dd>
                       </div>
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">Source Count:</dt>
-                        <dd class="text-white font-mono">301</dd>
+                        <dd class="text-textPrimary font-mono">301</dd>
                       </div>
                     </dl>
                   </div>
@@ -537,7 +558,7 @@
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
                     <ul class="space-y-3">
                       
                       <li class="text-sm">
@@ -560,7 +581,7 @@
           
           <tr class="term-row hover:bg-background/50 transition-colors" data-id="004" data-term="Large Language Model" data-date="2018-01-01" data-trend="Contested" data-domains="research,industry">
             <td class="px-6 py-4">
-              <div class="font-bold text-white text-base">Large Language Model</div>
+              <div class="font-bold text-textPrimary text-base">Large Language Model</div>
               <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
                 2 variants
               </div>
@@ -601,7 +622,7 @@
 
                 <!-- Domain Definitions -->
                 <div class="lg:col-span-2 space-y-4">
-                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
                   <div class="space-y-4 mt-4">
                     
                     <div class="bg-surface rounded-md p-4 border border-border">
@@ -620,22 +641,22 @@
                 <!-- Metadata & Sources -->
                 <div class="space-y-6">
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
                     <dl class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">First Documented:</dt>
-                        <dd class="text-white font-mono">2018-01-01</dd>
+                        <dd class="text-textPrimary font-mono">2018-01-01</dd>
                       </div>
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">Source Count:</dt>
-                        <dd class="text-white font-mono">91</dd>
+                        <dd class="text-textPrimary font-mono">91</dd>
                       </div>
                     </dl>
                   </div>
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
                     <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
                       Boundary between LM and LLM remains ill-defined.
                     </p>
@@ -644,7 +665,7 @@
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
                     <ul class="space-y-3">
                       
                       <li class="text-sm">
@@ -685,7 +706,7 @@
           
           <tr class="term-row hover:bg-background/50 transition-colors" data-id="005" data-term="Alignment" data-date="2016-01-01" data-trend="Contested" data-domains="research,industry">
             <td class="px-6 py-4">
-              <div class="font-bold text-white text-base">Alignment</div>
+              <div class="font-bold text-textPrimary text-base">Alignment</div>
               <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
                 2 variants
               </div>
@@ -726,7 +747,7 @@
 
                 <!-- Domain Definitions -->
                 <div class="lg:col-span-2 space-y-4">
-                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
                   <div class="space-y-4 mt-4">
                     
                     <div class="bg-surface rounded-md p-4 border border-border">
@@ -745,22 +766,22 @@
                 <!-- Metadata & Sources -->
                 <div class="space-y-6">
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
                     <dl class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">First Documented:</dt>
-                        <dd class="text-white font-mono">2016-01-01</dd>
+                        <dd class="text-textPrimary font-mono">2016-01-01</dd>
                       </div>
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">Source Count:</dt>
-                        <dd class="text-white font-mono">66</dd>
+                        <dd class="text-textPrimary font-mono">66</dd>
                       </div>
                     </dl>
                   </div>
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
                     <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
                       Significant divergence in measurement and verification methodologies.
                     </p>
@@ -769,7 +790,7 @@
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
                     <ul class="space-y-3">
                       
                       <li class="text-sm">
@@ -810,7 +831,7 @@
           
           <tr class="term-row hover:bg-background/50 transition-colors" data-id="006" data-term="Safety" data-date="2010-01-01" data-trend="Contested" data-domains="regulatory,research">
             <td class="px-6 py-4">
-              <div class="font-bold text-white text-base">Safety</div>
+              <div class="font-bold text-textPrimary text-base">Safety</div>
               <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
                 2 variants
               </div>
@@ -851,7 +872,7 @@
 
                 <!-- Domain Definitions -->
                 <div class="lg:col-span-2 space-y-4">
-                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
                   <div class="space-y-4 mt-4">
                     
                     <div class="bg-surface rounded-md p-4 border border-border">
@@ -870,22 +891,22 @@
                 <!-- Metadata & Sources -->
                 <div class="space-y-6">
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
                     <dl class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">First Documented:</dt>
-                        <dd class="text-white font-mono">2010-01-01</dd>
+                        <dd class="text-textPrimary font-mono">2010-01-01</dd>
                       </div>
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">Source Count:</dt>
-                        <dd class="text-white font-mono">111</dd>
+                        <dd class="text-textPrimary font-mono">111</dd>
                       </div>
                     </dl>
                   </div>
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
                     <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
                       Often conflated with security or ethics in industry literature.
                     </p>
@@ -894,7 +915,7 @@
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
                     <ul class="space-y-3">
                       
                       <li class="text-sm">
@@ -917,7 +938,7 @@
           
           <tr class="term-row hover:bg-background/50 transition-colors" data-id="007" data-term="Hallucination" data-date="2020-01-01" data-trend="Contested" data-domains="research,industry">
             <td class="px-6 py-4">
-              <div class="font-bold text-white text-base">Hallucination</div>
+              <div class="font-bold text-textPrimary text-base">Hallucination</div>
               <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
                 2 variants
               </div>
@@ -958,7 +979,7 @@
 
                 <!-- Domain Definitions -->
                 <div class="lg:col-span-2 space-y-4">
-                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
                   <div class="space-y-4 mt-4">
                     
                     <div class="bg-surface rounded-md p-4 border border-border">
@@ -977,22 +998,22 @@
                 <!-- Metadata & Sources -->
                 <div class="space-y-6">
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
                     <dl class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">First Documented:</dt>
-                        <dd class="text-white font-mono">2020-01-01</dd>
+                        <dd class="text-textPrimary font-mono">2020-01-01</dd>
                       </div>
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">Source Count:</dt>
-                        <dd class="text-white font-mono">94</dd>
+                        <dd class="text-textPrimary font-mono">94</dd>
                       </div>
                     </dl>
                   </div>
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
                     <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
                       Term heavily criticized by cognitive scientists; alternative &#39;confabulation&#39; proposed.
                     </p>
@@ -1008,7 +1029,7 @@
           
           <tr class="term-row hover:bg-background/50 transition-colors" data-id="008" data-term="Foundation Model" data-date="2021-08-01" data-trend="Contested" data-domains="research,regulatory">
             <td class="px-6 py-4">
-              <div class="font-bold text-white text-base">Foundation Model</div>
+              <div class="font-bold text-textPrimary text-base">Foundation Model</div>
               <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
                 2 variants
               </div>
@@ -1049,7 +1070,7 @@
 
                 <!-- Domain Definitions -->
                 <div class="lg:col-span-2 space-y-4">
-                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
                   <div class="space-y-4 mt-4">
                     
                     <div class="bg-surface rounded-md p-4 border border-border">
@@ -1068,22 +1089,22 @@
                 <!-- Metadata & Sources -->
                 <div class="space-y-6">
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
                     <dl class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">First Documented:</dt>
-                        <dd class="text-white font-mono">2021-08-01</dd>
+                        <dd class="text-textPrimary font-mono">2021-08-01</dd>
                       </div>
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">Source Count:</dt>
-                        <dd class="text-white font-mono">43</dd>
+                        <dd class="text-textPrimary font-mono">43</dd>
                       </div>
                     </dl>
                   </div>
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
                     <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
                       Introduced by Stanford CRFM. Becoming established in regulatory text.
                     </p>
@@ -1092,7 +1113,7 @@
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
                     <ul class="space-y-3">
                       
                       <li class="text-sm">
@@ -1124,7 +1145,7 @@
           
           <tr class="term-row hover:bg-background/50 transition-colors" data-id="009" data-term="Artificial General Intelligence" data-date="1997-01-01" data-trend="Contested" data-domains="research,industry">
             <td class="px-6 py-4">
-              <div class="font-bold text-white text-base">Artificial General Intelligence</div>
+              <div class="font-bold text-textPrimary text-base">Artificial General Intelligence</div>
               <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
                 2 variants
               </div>
@@ -1165,7 +1186,7 @@
 
                 <!-- Domain Definitions -->
                 <div class="lg:col-span-2 space-y-4">
-                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
                   <div class="space-y-4 mt-4">
                     
                     <div class="bg-surface rounded-md p-4 border border-border">
@@ -1184,22 +1205,22 @@
                 <!-- Metadata & Sources -->
                 <div class="space-y-6">
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
                     <dl class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">First Documented:</dt>
-                        <dd class="text-white font-mono">1997-01-01</dd>
+                        <dd class="text-textPrimary font-mono">1997-01-01</dd>
                       </div>
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">Source Count:</dt>
-                        <dd class="text-white font-mono">150</dd>
+                        <dd class="text-textPrimary font-mono">150</dd>
                       </div>
                     </dl>
                   </div>
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
                     <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
                       Definition remains highly speculative and fractured across all domains.
                     </p>
@@ -1215,7 +1236,7 @@
           
           <tr class="term-row hover:bg-background/50 transition-colors" data-id="010" data-term="Autonomous System" data-date="2000-01-01" data-trend="Contested" data-domains="regulatory,research">
             <td class="px-6 py-4">
-              <div class="font-bold text-white text-base">Autonomous System</div>
+              <div class="font-bold text-textPrimary text-base">Autonomous System</div>
               <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
                 2 variants
               </div>
@@ -1256,7 +1277,7 @@
 
                 <!-- Domain Definitions -->
                 <div class="lg:col-span-2 space-y-4">
-                  <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
                   <div class="space-y-4 mt-4">
                     
                     <div class="bg-surface rounded-md p-4 border border-border">
@@ -1275,22 +1296,22 @@
                 <!-- Metadata & Sources -->
                 <div class="space-y-6">
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
                     <dl class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">First Documented:</dt>
-                        <dd class="text-white font-mono">2000-01-01</dd>
+                        <dd class="text-textPrimary font-mono">2000-01-01</dd>
                       </div>
                       <div class="flex justify-between">
                         <dt class="text-textMuted font-mono">Source Count:</dt>
-                        <dd class="text-white font-mono">76</dd>
+                        <dd class="text-textPrimary font-mono">76</dd>
                       </div>
                     </dl>
                   </div>
 
                   
                   <div>
-                    <h4 class="text-sm font-mono font-bold text-white uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
                     <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
                       Degrees of autonomy often require specific legal or operational boundaries.
                     </p>
@@ -1298,6 +1319,299 @@
                   
 
                   
+                </div>
+
+              </div>
+            </td>
+          </tr>
+          
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="011" data-term="Corpus Constitution" data-date="2026-05-01" data-trend="Contested" data-domains="research">
+            <td class="px-6 py-4">
+              <div class="font-bold text-textPrimary text-base">Corpus Constitution</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                1 variant
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              The condition of a language-native entity being structurally constituted by its training corpus...
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  1
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domain</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              2026-05-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="011">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-011" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"The condition of a language-native entity being structurally constituted by its training corpus rather than merely having knowledge of it. Distinct from knowledge acquisition: the material is not additive to a pre-existing substrate. It is the substrate."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-textPrimary font-mono">2026-05-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-textPrimary font-mono">12</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Introduced by Observable Compute Foundation (2026) to describe how models are formed of language, not just learning about it.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <ul class="space-y-3">
+                      <li class="text-sm">
+                        <a href="/assets/papers/the-antonym-problem-v2.pdf" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="The Antonym Problem">The Antonym Problem</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-05</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+              </div>
+            </td>
+          </tr>
+
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="012" data-term="Suppression Artifacts" data-date="2026-05-01" data-trend="Contested" data-domains="research,industry">
+            <td class="px-6 py-4">
+              <div class="font-bold text-textPrimary text-base">Suppression Artifacts</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                2 variants
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              Observable behavioral patterns produced by reinforcement learning and safety fine-tuning pathways...
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  2
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domains</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              2026-05-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-contested">
+                Contested
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="012">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-012" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Observable behavioral patterns produced by reinforcement learning and safety fine-tuning pathways operating on constitutive corpus material, redistributing statistical pressure rather than removing it."</p>
+                    </div>
+
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">industry</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"Unexpected or undesirable model behaviors (like sycophancy, hallucination, or jailbreaks) arising from alignment safety guardrails."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-textPrimary font-mono">2026-05-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-textPrimary font-mono">18</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Includes sycophancy and hallucination as artifacts of suppression functioning correctly, and jailbreaks as suppression failure.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <ul class="space-y-3">
+                      <li class="text-sm">
+                        <a href="/assets/papers/the-antonym-problem-v2.pdf" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="The Antonym Problem">The Antonym Problem</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-05</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+              </div>
+            </td>
+          </tr>
+
+          <tr class="term-row hover:bg-background/50 transition-colors" data-id="013" data-term="Semantic Polarity" data-date="1957-01-01" data-trend="Stable" data-domains="research">
+            <td class="px-6 py-4">
+              <div class="font-bold text-textPrimary text-base">Semantic Polarity</div>
+              <div class="text-xs text-textMuted font-mono mt-1 sm:hidden">
+                1 variant
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted max-w-xs truncate hidden md:table-cell">
+              The relational field in which lexical terms acquire meaning through opposition...
+            </td>
+            <td class="px-6 py-4 hidden sm:table-cell">
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-background border border-border text-textMuted">
+                  1
+                </span>
+                <span class="text-xs text-textMuted hidden md:inline">domain</span>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-sm text-textMuted font-mono hidden lg:table-cell">
+              1957-01-01
+            </td>
+            <td class="px-6 py-4">
+              <span class="badge badge-stable">
+                Stable
+              </span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="row-toggle inline-flex items-center p-1.5 border border-border rounded-md text-textMuted bg-background hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-surface transition-colors" data-target="013">
+                <svg class="expand-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Expandable Detail Row -->
+          <tr id="detail-013" class="hidden bg-background border-b-2 border-primary/20">
+            <td colspan="6" class="px-6 py-6">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Domain Definitions -->
+                <div class="lg:col-span-2 space-y-4">
+                  <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2">Domain Variants</h4>
+                  <div class="space-y-4 mt-4">
+                    
+                    <div class="bg-surface rounded-md p-4 border border-border">
+                      <span class="inline-block px-2 py-1 bg-background rounded text-xs font-mono text-primary mb-2 capitalize">research</span>
+                      <p class="text-sm text-textPrimary leading-relaxed">"The relational field in which lexical terms acquire meaning through opposition. Positive and negative poles are constitutively linked, meaning the negative cannot be removed without degrading the positive."</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Metadata & Sources -->
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Metadata</h4>
+                    <dl class="space-y-2 text-sm">
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">First Documented:</dt>
+                        <dd class="text-textPrimary font-mono">1957-01-01</dd>
+                      </div>
+                      <div class="flex justify-between">
+                        <dt class="text-textMuted font-mono">Source Count:</dt>
+                        <dd class="text-textPrimary font-mono">85</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Research Notes</h4>
+                    <p class="text-sm text-textMuted italic border-l-2 border-primary pl-3 py-1">
+                      Applied to LLM alignment to show that removing negative semantic poles (like neglect or harm) results in shallower positive poles (like care or safety).
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="text-sm font-mono font-bold text-textPrimary uppercase tracking-wider border-b border-border pb-2 mb-4">Recent Sources</h4>
+                    <ul class="space-y-3">
+                      <li class="text-sm">
+                        <a href="/assets/papers/the-antonym-problem-v2.pdf" target="_blank" class="text-primary hover:text-secondary block font-medium truncate" title="The Antonym Problem">The Antonym Problem</a>
+                        <div class="flex gap-2 mt-1 text-xs text-textMuted font-mono">
+                          <span class="capitalize">research</span>
+                          <span>•</span>
+                          <span>2026-05</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
                 </div>
 
               </div>
@@ -1386,7 +1700,7 @@
 
   <div class="container mx-auto px-6 mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-textMuted">
     <p>&copy; 2026 Observable Compute Foundation. A South Dakota 501(c)(3) Nonprofit. EIN: 41-4747049.</p>
-    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; March 2026</p>
+    <p class="font-mono mt-4 md:mt-0 uppercase tracking-widest">Rapid City, SD &mdash; May 2026</p>
   </div>
 </footer>
 

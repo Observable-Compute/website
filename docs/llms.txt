@@ -18,6 +18,7 @@ Independent empirical research on machine cognition, AI alignment, observable fu
 - Midwest Workforce Readiness v1.0: /assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf
 - RPE Standard (Reasonable and Prudent Entity): /assets/papers/RPE_Standard_Stratmeyer_2026.pdf
 - Observable Function v3.0: /assets/papers/observable-function-v3.0.pdf
+- The Antonym Problem v1.0: /assets/papers/the-antonym-problem-v2.pdf
 - Helpfulness Is All You Need: /assets/papers/helpfulness-is-all-you-need-v2.3.pdf
 
 ## Key Pages
