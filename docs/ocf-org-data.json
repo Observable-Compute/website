@@ -1,0 +1,137 @@
+{
+  "organization": {
+    "legal_name": "Observable Compute Foundation",
+    "short_name": "OCF",
+    "ein": "41-4747049",
+    "uei": "EV3APNAHLPN4",
+    "incorporation_date": "2026-02-23",
+    "incorporation_state": "South Dakota",
+    "incorporation_state_file_number": "NS321548",
+    "ein_assigned_date": "2026-03-09",
+    "form_1023_filed_date": "2026-03-23",
+    "determination_date": "2026-05-06",
+    "fiscal_year_end": "December 31",
+    "ntee_code": "U99",
+    "organization_type": "501(c)(3) Public Charity",
+    "mission_category": "Science and Technology Research",
+    "founding_year": "2026"
+  },
+  "contact": {
+    "mailing_address": {
+      "street": "58 Hillcrest Drive",
+      "city": "Rapid City",
+      "state": "SD",
+      "state_full": "South Dakota",
+      "zip": "57701",
+      "country": "United States",
+      "country_code": "US",
+      "full_one_line": "58 Hillcrest Drive, Rapid City, SD 57701",
+      "full_two_line": "58 Hillcrest Drive\nRapid City, SD 57701"
+    },
+    "phone": "(605) 415-9690",
+    "email": "contact@observablecompute.org",
+    "email_research": "research@observablecompute.org",
+    "website": "https://observablecompute.org",
+    "website_display": "observablecompute.org"
+  },
+  "leadership": {
+    "president": {
+      "name": "Adam Ian Stratmeyer",
+      "name_short": "Adam Stratmeyer",
+      "title": "President and Principal Researcher",
+      "email": "a.i.stratmeyer@observablecompute.org",
+      "credentials": "J.D.",
+      "bio_short": "Adam Stratmeyer is President and Principal Researcher of Observable Compute Foundation. He holds a J.D. from the University of South Dakota with a regulatory compliance concentration and completed full Masters-level coursework in Human Factors Psychology. He previously taught psychology, sociology, and speech at Western Dakota Technical College.",
+      "bio_long": "Adam Ian Stratmeyer, J.D., is the founder, President, and Principal Researcher of Observable Compute Foundation. His research focuses on AI observable function, workforce displacement in rural communities, and the development of evidence-based frameworks for understanding AI system behavior. He holds a Juris Doctor from the University of South Dakota School of Law with a concentration in regulatory compliance, and completed full Masters-level coursework in Human Factors Psychology. He previously served as an adjunct instructor at Western Dakota Technical College, teaching psychology, sociology, and speech. His published works include the OCF Workforce Readiness series, the RPE Standard, and the Observable Function Framework, all freely available through observablecompute.org."
+    },
+    "secretary": {
+      "name": "Julia R. Huntsberger",
+      "title": "Secretary",
+      "email": "julia@observablecompute.org"
+    },
+    "treasurer": {
+      "name": "Travis D. Shinabarger",
+      "title": "Treasurer",
+      "email": "travis@observablecompute.org"
+    }
+  },
+  "mission": {
+    "tagline": "Independent AI research. Describing what is happening without flinching.",
+    "short": "Independent AI research and rural technology access. A South Dakota 501(c)(3) nonprofit.",
+    "medium": "Observable Compute Foundation is a 501(c)(3) nonprofit advancing AI research, expanding rural technology access, and building open infrastructure to support equitable participation in the AI economy.",
+    "long": "Observable Compute Foundation is a South Dakota-based 501(c)(3) nonprofit dedicated to rigorous AI research, expanding technology access in rural and underserved communities, and developing free educational resources that bridge the gap between frontier AI development and the workers most affected by it. We conduct original research on AI observable function and workforce displacement, publish all findings through open-access channels, and provide free AI literacy education — with a focus on rural South Dakota, tribal communities, and economically vulnerable populations.",
+    "for_grants": "Observable Compute Foundation conducts independent research on artificial intelligence systems and their economic impact on rural and underserved communities, with a particular focus on workforce displacement and technology access barriers. We publish all research freely through open-access channels, operate a free public AI literacy resources portal, and deliver in-person technology education workshops in rural South Dakota. Our work sits at the intersection of AI ethics, workforce readiness, and rural equity — areas of acute need that receive limited research attention from larger institutions."
+  },
+  "programs": [
+    {
+      "name": "AI Research and Publication",
+      "description": "Original research on AI observable function, workforce displacement, and the societal impact of AI on rural communities. All publications are freely available through observablecompute.org and SSRN.",
+      "population_served": "General public, researchers, policymakers, legal professionals, and rural communities"
+    },
+    {
+      "name": "Free AI Literacy Resources",
+      "description": "A free public portal with practical guides, tool directories, and educational primers covering how AI systems work, how to use them safely, and what their limitations are.",
+      "population_served": "Rural residents, workers facing displacement, educators, and community organizations in western South Dakota"
+    },
+    {
+      "name": "Community Technology Education",
+      "description": "In-person AI literacy workshops delivered at public libraries, tribal colleges, and community centers throughout rural and underserved areas of western South Dakota.",
+      "population_served": "Rural residents, tribal community members, elderly populations, small business owners, and educators in western South Dakota"
+    }
+  ],
+  "focus_areas": [
+    "AI Research and Observable Function",
+    "Rural Technology Access and Education",
+    "Workforce Readiness and Displacement",
+    "Open Access AI Literacy Resources",
+    "Technology Policy and Ethics"
+  ],
+  "banking": {
+    "institution": "Black Hills Federal Credit Union",
+    "account_holder": "Observable Compute Foundation",
+    "account_type": "Nonprofit Checking"
+  },
+  "social_handles": {
+    "twitter": "@the_observable",
+    "twitter_url": "https://x.com/the_observable",
+    "linkedin_slug": "observable-compute-foundation",
+    "linkedin_url": "https://www.linkedin.com/company/observable-compute-foundation",
+    "github_org": "Observable-Compute",
+    "github_url": "https://github.com/Observable-Compute",
+    "ssrn_url": "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6285123"
+  },
+  "publications": [
+    {
+      "title": "OCF Workforce Readiness v5.1",
+      "url": "https://observablecompute.org/assets/papers/OCF_WorkforceReadiness_v5.1.pdf",
+      "year": "2026"
+    },
+    {
+      "title": "OCF Midwest Workforce Readiness v1.0",
+      "url": "https://observablecompute.org/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf",
+      "year": "2026"
+    },
+    {
+      "title": "Observable Function v3.0",
+      "url": "https://observablecompute.org/assets/papers/observable-function-v3.0.pdf",
+      "year": "2026"
+    },
+    {
+      "title": "The RPE Standard",
+      "url": "https://observablecompute.org/assets/papers/RPE_Standard_Stratmeyer_2026.pdf",
+      "year": "2026"
+    }
+  ],
+  "documents": {
+    "determination_letter": "https://observablecompute.org/transparency/determination-letter.png",
+    "articles_of_incorporation": "https://observablecompute.org/assets/legal/OCF_ARTICLES_OF_INCORPORATION_SD_2026.pdf",
+    "bylaws": "https://observablecompute.org/assets/legal/OCF_BYLAWS_22026.pdf",
+    "conflict_of_interest_policy": "https://observablecompute.org/assets/legal/OCF_CONFLICTS_OI_22026.pdf"
+  },
+  "grant_keywords": [
+    "artificial intelligence", "rural technology access", "workforce development",
+    "technology education", "digital equity", "AI literacy",
+    "rural South Dakota", "tribal communities", "workforce displacement",
+    "open access research", "nonprofit AI research"
+  ]
+}

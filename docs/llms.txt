@@ -29,6 +29,7 @@ Independent empirical research on machine cognition, AI alignment, observable fu
 - Resources (free AI tools): /resources/
 - Governance & Transparency: /transparency/
 - Contact: /contact/
+- Machine-Readable Org Metadata (JSON): /ocf-org-data.json or /api/ocf-org-data.json
 
 ## Organization
 Principal Researcher: Adam Ian Stratmeyer, J.D.
@@ -43,6 +44,12 @@ Principal Researcher: Adam Ian Stratmeyer, J.D.
 
 Board: Julia R. Huntsberger (Secretary), Travis D. Shinabarger (Treasurer)
 IRS determination: May 6, 2026
+
+## External Curricula & Preparedness Frameworks
+- Google AI Essentials: https://grow.google/ai-essentials
+- Anthropic Prompt Engineering Tutorial: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
+- Microsoft Generative AI Learning Path: https://learn.microsoft.com/en-us/training/paths/get-started-with-generative-ai/
+- The AI Education Project (aiEDU): https://www.aiedu.org
 
 ## Technical Notes
 - Site: GitHub Pages, static HTML

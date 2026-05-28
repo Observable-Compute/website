@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="canonical" href="https://observablecompute.org/resources/">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable site summary">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,6 +69,10 @@
     .badge-no-account { background: #dbeafe; color: #1e40af; }
     .badge-local { background: #ede9fe; color: #5b21b6; }
     .badge-web { background: #fef3c7; color: #92400e; }
+    .badge-google { background: #fee2e2; color: #b91c1c; }
+    .badge-anthropic { background: #ffedd5; color: #c2410c; }
+    .badge-microsoft { background: #e0f2fe; color: #0369a1; }
+    .badge-aiedu { background: #fae8ff; color: #a21caf; }
     .primer-step {
       counter-increment: primer-steps;
     }
@@ -299,6 +304,102 @@
             <div class="mt-auto pt-4 border-t border-border flex items-center justify-between">
               <span class="font-mono text-xs text-textMuted">notebooklm.google.com</span>
               <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-primary hover:text-primary/80 transition-colors">Open &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 4: INSTITUTIONAL AI PREPAREDNESS CURRICULA
+           ══════════════════════════════════════════ -->
+      <section id="institutional-curricula" class="mb-20">
+        <div class="flex items-center gap-4 mb-2">
+          <h2 class="text-2xl font-bold font-mono text-textPrimary">Institutional AI Preparedness & Curricula</h2>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <p class="text-textSecondary mb-8 max-w-2xl">Official AI training, digital literacy frameworks, and preparedness curricula developed by major AI providers, research institutes, and educational organizations.</p>
+
+        <!-- Infographic Banner -->
+        <div class="mb-10 rounded-2xl overflow-hidden border border-border shadow-lg bg-surface">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 lg:p-8 items-center">
+            <div class="lg:col-span-7 space-y-4">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-bold bg-primary/10 text-primary border border-primary/20 tracking-wide uppercase">Educational Model</span>
+              <h3 class="text-xl font-bold text-textPrimary">The AI Literacy &amp; Competency Framework</h3>
+              <p class="text-sm text-textSecondary leading-relaxed">
+                Building a future-ready workforce requires a structured progression: establishing core digital skill <strong>Foundations</strong>, mastering <strong>Practical Tools &amp; Applications</strong>, and developing <strong>Strategic Application</strong> capability. 
+              </p>
+              <p class="text-sm text-textSecondary leading-relaxed">
+                Explore the curricula below from leading institutions aligned to these learning pathways to build your capability or design training programs for your team.
+              </p>
+            </div>
+            <div class="lg:col-span-5 flex justify-center">
+              <img src="/assets/images/ai_preparedness_curricula.png" 
+                   alt="OCF AI Literacy &amp; Competency Framework Infographic" 
+                   class="rounded-xl border border-border max-h-[300px] object-contain shadow-md hover:scale-[1.02] transition-transform duration-300">
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Google AI Essentials -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">Google AI Essentials</h3>
+              <span class="tool-badge badge-google">Google</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow font-sans">
+              A foundational course developed by Google's AI experts. It teaches practical AI skills to boost productivity, covering prompting, AI safety, and identifying biases. Designed for workers across all industries with zero technical background required.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between font-mono text-xs">
+              <span class="text-textMuted">grow.google/ai-essentials</span>
+              <a href="https://grow.google/ai-essentials" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary/80 transition-colors">Access Course &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Anthropic Prompt Engineering -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">Anthropic Prompt Engineering Tutorial</h3>
+              <span class="tool-badge badge-anthropic">Anthropic</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow font-sans">
+              Anthropic's interactive developer and user prompt engineering tutorial. Walks through best practices for eliciting structured, high-quality responses from Claude, including XML tags, pre-filling, and chain-of-thought prompting.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between font-mono text-xs">
+              <span class="text-textMuted">docs.anthropic.com</span>
+              <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary/80 transition-colors">View Tutorial &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Microsoft AI School -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">Microsoft AI Learn & Business School</h3>
+              <span class="tool-badge badge-microsoft">Microsoft</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow font-sans">
+              Comprehensive learning paths for business leaders, developers, and everyday users. Microsoft's curriculum focuses on responsible AI implementation, generative AI fundamentals, and practical integration in workplace workflows.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between font-mono text-xs">
+              <span class="text-textMuted">learn.microsoft.com/ai</span>
+              <a href="https://learn.microsoft.com/en-us/training/paths/get-started-with-generative-ai/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary/80 transition-colors">Explore Curriculum &rarr;</a>
+            </div>
+          </div>
+
+          <!-- aiEDU Curriculum -->
+          <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary/40 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold text-textPrimary">The AI Education Project (aiEDU)</h3>
+              <span class="tool-badge badge-aiedu">aiEDU</span>
+            </div>
+            <p class="text-sm text-textSecondary mb-4 flex-grow font-sans">
+              Nonprofit organization creating free, high-quality, and culturally-relevant AI curricula for schools, teachers, and adult learners. Focuses on foundational literacy and demystifying AI's societal and career impacts.
+            </p>
+            <div class="mt-auto pt-4 border-t border-border flex items-center justify-between font-mono text-xs">
+              <span class="text-textMuted">aiedu.org</span>
+              <a href="https://www.aiedu.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary/80 transition-colors">Browse Curricula &rarr;</a>
             </div>
           </div>
 
