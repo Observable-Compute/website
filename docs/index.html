@@ -166,6 +166,16 @@
       "publisher": {"@type": "NonProfitOrganization", "name": "Observable Compute Foundation"},
       "url": "https://observablecompute.org/assets/papers/OCF_SouthDakota_WorkforceReadiness_v3.0.pdf",
       "isAccessibleForFree": true
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": "Left Before the Bell: A National Meta-Analysis of K-12 Education in the Age of Automation",
+      "author": {"@type": "Person", "name": "Adam Ian Stratmeyer", "honorificSuffix": "J.D."},
+      "datePublished": "2026-05",
+      "publisher": {"@type": "NonProfitOrganization", "name": "Observable Compute Foundation"},
+      "url": "https://observablecompute.org/assets/papers/left-before-the-bell-v6.pdf",
+      "isAccessibleForFree": true
     }
   ]
   </script>
@@ -532,6 +542,20 @@
 
           <!-- Other papers grid (3 col) -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Left Before the Bell -->
+            <article class="bg-surface border border-border rounded-xl p-6 hover:border-primary/50 transition-colors shadow-sm group flex flex-col"
+                     itemscope itemtype="https://schema.org/ScholarlyArticle">
+              <link itemprop="url" href="https://observablecompute.org/assets/papers/left-before-the-bell-v6.pdf">
+              <meta itemprop="isAccessibleForFree" content="true">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">K-12 Education</span>
+                <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">AI Literacy</span>
+              </div>
+              <p class="text-xs font-mono text-textMuted mb-1"><time itemprop="datePublished" datetime="2026-05">2026-05</time> · v1.0</p>
+              <h3 class="text-base font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors flex-grow" itemprop="name">Left Before the Bell: A National Meta-Analysis of K-12 Education</h3>
+              <p class="text-xs text-textMuted font-mono mb-3" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Adam Ian Stratmeyer</span><span itemprop="honorificSuffix">, J.D.</span></p>
+              <a href="/assets/papers/left-before-the-bell-v6.pdf" target="_blank" type="application/pdf" class="mt-auto text-sm px-4 py-2 rounded border border-border hover:border-primary text-textSecondary hover:text-primary transition-colors text-center" itemprop="url">PDF</a>
+            </article>
             <!-- Observable Function -->
             <article class="bg-surface border border-border rounded-xl p-6 hover:border-primary/50 transition-colors shadow-sm group flex flex-col"
                      itemscope itemtype="https://schema.org/ScholarlyArticle">
@@ -761,6 +785,7 @@
         <div>
           <h3 class="font-mono font-bold text-textPrimary mb-4 uppercase tracking-wider text-xs">Papers (PDF)</h3>
           <ul class="space-y-2 text-xs">
+            <li><a href="/assets/papers/left-before-the-bell-v6.pdf" type="application/pdf" class="hover:text-primary transition-colors">Left Before the Bell v1.0 (Draft)</a></li>
             <li><a href="/assets/papers/workforce-readiness-v5.1.pdf" type="application/pdf" class="hover:text-primary transition-colors">Workforce Readiness v5.1</a></li>
             <li><a href="/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">Midwest Workforce Readiness</a></li>
             <li><a href="/assets/papers/OCF_SouthDakota_WorkforceReadiness_v3.0.pdf" type="application/pdf" class="hover:text-primary transition-colors">SD Workforce Readiness</a></li>

@@ -1,83 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
   <url>
-    <loc>https://observablecompute.foundation/about/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
+    <loc>https://observablecompute.org/about/</loc>
+    <lastmod>2026-05-21T10:40:56.002Z</lastmod>
   </url>
-  
   <url>
-    <loc>https://observablecompute.foundation/contact/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
+    <loc>https://observablecompute.org/about/team/</loc>
+    <lastmod>2026-05-21T10:40:56.002Z</lastmod>
   </url>
-  
   <url>
-    <loc>https://observablecompute.foundation/database/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
+    <loc>https://observablecompute.org/api/</loc>
+    <lastmod>2026-05-21T10:40:56.002Z</lastmod>
   </url>
-  
   <url>
-    <loc>https://observablecompute.foundation/disclaimer/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
+    <loc>https://observablecompute.org/community/</loc>
+    <lastmod>2026-05-21T10:40:56.002Z</lastmod>
   </url>
-  
   <url>
-    <loc>https://observablecompute.foundation/foundational-paper/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
+    <loc>https://observablecompute.org/framework/</loc>
+    <lastmod>2026-05-21T10:40:56.002Z</lastmod>
   </url>
-  
   <url>
-    <loc>https://observablecompute.foundation/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
+    <loc>https://observablecompute.org/</loc>
+    <lastmod>2026-05-21T10:40:56.003Z</lastmod>
   </url>
-  
   <url>
-    <loc>https://observablecompute.foundation/media-assets/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
+    <loc>https://observablecompute.org/lexicon/concept/agentic-ai/</loc>
+    <lastmod>2026-05-21T10:40:56.003Z</lastmod>
   </url>
-  
   <url>
-    <loc>https://observablecompute.foundation/privacy-policy/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
+    <loc>https://observablecompute.org/lexicon/</loc>
+    <lastmod>2026-05-21T10:40:56.003Z</lastmod>
   </url>
-  
   <url>
-    <loc>https://observablecompute.foundation/research-note-02/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
+    <loc>https://observablecompute.org/reports/</loc>
+    <lastmod>2026-05-21T10:40:56.003Z</lastmod>
   </url>
-  
   <url>
-    <loc>https://observablecompute.foundation/research-note-03/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://observablecompute.foundation/research/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://observablecompute.foundation/resources/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://observablecompute.foundation/services/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://observablecompute.foundation/terms/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://observablecompute.foundation/transparency/</loc>
-    <lastmod>Tue Mar 24 2026 08:06:08 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-
-  <url>
-    <loc>https://observablecompute.org/workforce-readiness/</loc>
-    <lastmod>Mon May 04 2026 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+    <loc>https://observablecompute.org/tools/</loc>
+    <lastmod>2026-05-21T10:40:56.003Z</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>API Documentation | Observable Compute Foundation</title>
+    <meta name="description" content="Public API for querying technology terminology evolution, legal-technical gaps, and conceptual clustering.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://observablecompute.org/api/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="API Documentation | Observable Compute Foundation">
+    <meta property="og:description" content="Public API for querying technology terminology evolution, legal-technical gaps, and conceptual clustering.">
+    <meta property="og:image" content="https://observablecompute.org/images/banner.png">
+    <meta property="og:url" content="https://observablecompute.org/api/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@the_observable">
+    <meta name="twitter:title" content="API Documentation | Observable Compute Foundation">
+    <meta name="twitter:description" content="Public API for querying technology terminology evolution, legal-technical gaps, and conceptual clustering.">
+    <meta name="twitter:image" content="https://observablecompute.org/images/banner.png">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M73QWN4V');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415300754694996" crossorigin="anonymous"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NonProfitOrganization",
+      "name": "Observable Compute Foundation",
+      "alternateName": "OCF",
+      "url": "https://observablecompute.org",
+      "description": "Independent AI research, workforce readiness, and rural technology access. A South Dakota 501(c)(3) nonprofit.",
+      "foundingDate": "2026-02-23",
+      "taxID": "41-4747049",
+      "nonprofitStatus": "501(c)(3)",
+      "logo": "https://observablecompute.org/images/logo.png",
+      "image": "https://observablecompute.org/images/banner.png",
+      "email": "contact@observablecompute.org",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "58 Hillcrest Drive",
+        "addressLocality": "Rapid City",
+        "addressRegion": "SD",
+        "postalCode": "57701",
+        "addressCountry": "US"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Ian Stratmeyer",
+        "jobTitle": "President and Principal Researcher"
+      },
+      "sameAs": [
+        "https://x.com/the_observable",
+        "https://www.linkedin.com/company/observable-compute-foundation",
+        "https://github.com/Observable-Compute",
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6285123"
+      ]
+    }
+    </script>
+    
+    
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M73QWN4V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" alt="Observable Compute Foundation" height="50">
+      </a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/lexicon/" >Lexicon</a>
+      <a href="/reports/" >Reports</a>
+      <a href="/framework/" >Framework</a>
+      <a href="/community/" >Community</a>
+      <a href="/api/" class="active">API</a>
+      <a href="/about/" >About</a>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main-content">
+        
+<section class="section">
+  <div class="container container-narrow">
+    <h1>Observable Compute API</h1>
+    <p class="lead">Public API for querying technology terminology evolution, legal-technical gaps, and conceptual clustering. Free tier: 100 requests/day. Premium tier: unlimited.</p>
+    
+    <div class="api-quickstart">
+      <h2>Quick Start</h2>
+      <pre><code>curl https://api.observablecompute.org/v1/concept/agentic-ai</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container container-narrow">
+    <h2>Endpoints</h2>
+    
+    <div class="endpoint">
+      <h3>GET /v1/concept/{slug}</h3>
+      <p>Retrieve full concept data including definitions, sources, clustering, timeline.</p>
+      <pre><code>{
+  "id": "uuid",
+  "canonical_term": "Agentic AI",
+  "slug": "agentic-ai",
+  "first_observed": "2025-10-15",
+  "status": "emerging",
+  "definitions": [...],
+  "co_occurrence": [...],
+  "timeline": [...]
+}</code></pre>
+    </div>
+    
+    <div class="endpoint">
+      <h3>GET /v1/search?q={query}</h3>
+      <p>Search concepts by keyword, returns ranked results.</p>
+      <pre><code>{
+  "query": "reasoning",
+  "results": [
+    {
+      "concept": "Multi-step Reasoning",
+      "relevance": 0.95,
+      "url": "/concept/multi-step-reasoning"
+    }
+  ]
+}</code></pre>
+    </div>
+    
+    <div class="endpoint">
+      <h3>GET /v1/clustering?threshold={0.7}</h3>
+      <p>Retrieve concept clusters above correlation threshold.</p>
+    </div>
+    
+    <div class="endpoint">
+      <h3>GET /v1/gaps?severity={critical}</h3>
+      <p>List legal-technical alignment gaps by severity.</p>
+    </div>
+    
+    <div class="endpoint">
+      <h3>GET /v1/timeline?concept_id={uuid}</h3>
+      <p>Get evolution timeline for specific concept.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow">
+    <h2>Authentication</h2>
+    <p>Free tier requires API key (100 req/day). Premium tier requires subscription ($50/mo, unlimited).</p>
+    <pre><code>curl -H "Authorization: Bearer YOUR_API_KEY" \
+  https://api.observablecompute.org/v1/concept/agentic-ai</code></pre>
+    <a href="/api/get-key/" class="btn-primary">Get Free API Key</a>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container container-narrow">
+    <h2>Rate Limits</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tier</th>
+          <th>Requests/Day</th>
+          <th>Requests/Minute</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Free</td>
+          <td>100</td>
+          <td>10</td>
+          <td>$0</td>
+        </tr>
+        <tr>
+          <td>Premium</td>
+          <td>Unlimited</td>
+          <td>100</td>
+          <td>$50/mo</td>
+        </tr>
+        <tr>
+          <td>Enterprise</td>
+          <td>Unlimited</td>
+          <td>1000</td>
+          <td>Contact</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow">
+    <h2>SDKs & Libraries</h2>
+    <p>Official client libraries coming soon:</p>
+    <ul>
+      <li>Python: <code>pip install observablecompute</code> (planned)</li>
+      <li>JavaScript: <code>npm install @observablecompute/api</code> (planned)</li>
+    </ul>
+    
+    <h2 class="mt-lg">Need Help?</h2>
+    <p>Questions about the API? <a href="mailto:api@observablecompute.org">Contact our developer support</a> or join the <a href="/community/">community discussion</a>.</p>
+  </div>
+</section>
+
+    </main>
+    
+    <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Observable Compute Foundation</h4>
+        <p>Independent AI research, workforce readiness, and rural technology access. A South Dakota 501(c)(3) nonprofit.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/lexicon/">Living Lexicon</a></li>
+          <li><a href="/reports/">Quarterly Reports</a></li>
+          <li><a href="/api/">Public API</a></li>
+          <li><a href="/framework/">Research Framework</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:contact@observablecompute.org">contact@observablecompute.org</a></li>
+          <li><a href="https://github.com/Observable-Compute" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://x.com/the_observable" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+          <li><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6285123" target="_blank" rel="noopener noreferrer">SSRN</a></li>
+          <li><a href="/about/team/">Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; 2026 Observable Compute Foundation. Open Access.</p>
+      <p>EIN: 41-4747049 | South Dakota 501(c)(3) Nonprofit</p>
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>
