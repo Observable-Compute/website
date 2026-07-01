@@ -14,6 +14,7 @@ SSRN: https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6285123
 Independent empirical research on machine cognition, AI alignment, observable function in processing systems, and AI workforce readiness. All publications are open access — no paywall, no registration, no embargo.
 
 ## Publications (Open Access PDFs)
+- Built for This v1.1 (Working Draft) — SD Educational Adaptive Capacity: /assets/papers/built-for-this-v1.1.pdf
 - Left Before the Bell v1.0 (Working Draft): /assets/papers/left-before-the-bell-v6.pdf
 - Workforce Readiness v5.1: /assets/papers/workforce-readiness-v5.1.pdf
 - Midwest Workforce Readiness v1.0: /assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf
