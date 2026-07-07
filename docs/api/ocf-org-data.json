@@ -97,37 +97,63 @@
     "linkedin_slug": "observable-compute-foundation",
     "linkedin_url": "https://www.linkedin.com/company/observable-compute-foundation",
     "github_org": "Observable-Compute",
-    "github_url": "https://github.com/Observable-Compute"
+    "github_url": "https://github.com/Observable-Compute",
+    "ssrn_url": "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6285123"
   },
   "publications": [
     {
-      "title": "Left Before the Bell: A National Meta-Analysis of K-12 Education",
+      "title": "Left Before the Bell: A National Meta-Analysis of K-12 Education (Part I)",
       "url": "https://observablecompute.org/assets/papers/left-before-the-bell-v6.pdf",
       "year": "2026"
     },
     {
-      "title": "OCF Workforce Readiness v5.1",
-      "url": "https://observablecompute.org/assets/papers/OCF_WorkforceReadiness_v5.1.pdf",
+      "title": "Wired and Unprepared: A Regional Meta-Analysis of K-12 Technology Integration (Part II, Working Draft)",
+      "url": "https://observablecompute.org/assets/papers/wired-and-unprepared-v1.2.pdf",
       "year": "2026"
     },
     {
-      "title": "OCF Midwest Workforce Readiness v1.0",
+      "title": "Built for This: A Quantitative Analysis of South Dakota's Educational Adaptive Capacity (Part III)",
+      "url": "https://observablecompute.org/assets/papers/built-for-this-v1.1.pdf",
+      "year": "2026"
+    },
+    {
+      "title": "The Skills Gap Is Here: Workforce Readiness v5.1",
+      "url": "https://observablecompute.org/assets/papers/workforce-readiness-v5.1.pdf",
+      "year": "2026"
+    },
+    {
+      "title": "Already Left Behind: Workforce Readiness in the Midwest and Great Lakes Region v1.0",
       "url": "https://observablecompute.org/assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf",
       "year": "2026"
     },
     {
-      "title": "Observable Function v3.0",
+      "title": "Growing. And Not Ready.: AI Exposure and Workforce Readiness in South Dakota v3.0",
+      "url": "https://observablecompute.org/assets/papers/OCF_SouthDakota_WorkforceReadiness_v3.0.pdf",
+      "year": "2026"
+    },
+    {
+      "title": "Observable Function in Processing Entities v3.0",
       "url": "https://observablecompute.org/assets/papers/observable-function-v3.0.pdf",
       "year": "2026"
     },
     {
-      "title": "The RPE Standard",
+      "title": "The Reasonable Prudent Entity Standard",
       "url": "https://observablecompute.org/assets/papers/RPE_Standard_Stratmeyer_2026.pdf",
+      "year": "2026"
+    },
+    {
+      "title": "The Antonym Problem v2",
+      "url": "https://observablecompute.org/assets/papers/the-antonym-problem-v2.pdf",
+      "year": "2026"
+    },
+    {
+      "title": "Helpfulness Is All You Need v2.3",
+      "url": "https://observablecompute.org/assets/papers/helpfulness-is-all-you-need-v2.3.pdf",
       "year": "2026"
     }
   ],
   "documents": {
-    "determination_letter": "https://observablecompute.org/transparency/determination-letter.png",
+    "determination_letter": "https://observablecompute.org/transparency/determination-letter.jpg",
     "articles_of_incorporation": "https://observablecompute.org/assets/legal/OCF_ARTICLES_OF_INCORPORATION_SD_2026.pdf",
     "bylaws": "https://observablecompute.org/assets/legal/OCF_BYLAWS_22026.pdf",
     "conflict_of_interest_policy": "https://observablecompute.org/assets/legal/OCF_CONFLICTS_OI_22026.pdf"
