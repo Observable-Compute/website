@@ -335,7 +335,10 @@
             </article>
 
             <!-- Paper: Education Trilogy Part 2 (Upcoming) -->
-            <article class="bg-surface/65 border border-dashed border-border rounded-xl p-8 transition-colors group opacity-90">
+            <article class="bg-surface border border-border rounded-xl p-8 hover:border-primary/50 transition-colors shadow-sm group"
+                     itemscope itemtype="https://schema.org/ScholarlyArticle">
+              <link itemprop="url" href="https://observablecompute.org/assets/papers/wired-and-unprepared-v1.2.pdf">
+              <meta itemprop="isAccessibleForFree" content="true">
               <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
                 <div class="flex-1">
                   <div class="flex flex-wrap gap-2 mb-3">
@@ -344,16 +347,16 @@
                     <span class="text-xs font-mono px-2 py-1 rounded-full bg-background text-textMuted border border-border">Educator Training</span>
                   </div>
                   <p class="text-xs font-mono text-textMuted mb-2">
-                    Part 2 &nbsp;|&nbsp; v1.2 &nbsp;|&nbsp; Web Publication Pending
+                    Part 2 &nbsp;|&nbsp; v1.2 &nbsp;|&nbsp; Working Draft
                   </p>
-                  <h2 class="text-xl font-bold text-textSecondary/80 mb-2">Wired and Unprepared</h2>
+                  <h2 class="text-xl font-bold text-textPrimary mb-2" itemprop="name">Wired and Unprepared: A Regional Meta-Analysis of K-12 Technology Integration</h2>
                   <p class="text-sm text-textMuted font-mono mb-4">
-                    Observable Compute Foundation
+                    <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Observable Compute Foundation</span></span>
                   </p>
-                  <p class="text-textSecondary/70 leading-relaxed">The second paper in the Education and Workforce Readiness Series, documenting the structural K-12 preparation gap at regional scale across the Northern Great Plains corridor. Currently at v1.2; publication on this site is pending.</p>
+                  <p class="text-textSecondary leading-relaxed" itemprop="abstract">The second paper in the Education and Workforce Readiness Series, documenting the structural K-12 preparation gap at regional scale across the Northern Great Plains and Mountain West — where connectivity arrived but preparation did not.</p>
                 </div>
                 <div class="flex flex-row md:flex-col gap-3 min-w-[120px] justify-center items-center">
-                  <span class="text-xs font-mono px-3 py-1.5 rounded bg-border text-textMuted font-medium select-none">Pending</span>
+                  <a href="/assets/papers/wired-and-unprepared-v1.2.pdf" class="text-xs font-mono px-3 py-1.5 rounded bg-primary text-white hover:bg-primary/90 transition-colors font-medium">Read PDF</a>
                 </div>
               </div>
             </article>

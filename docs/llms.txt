@@ -16,6 +16,7 @@ Independent empirical research on machine cognition, AI alignment, observable fu
 ## Publications (Open Access PDFs)
 - Built for This v1.1 (Working Draft) — SD Educational Adaptive Capacity: /assets/papers/built-for-this-v1.1.pdf
 - Left Before the Bell v1.0 (Working Draft): /assets/papers/left-before-the-bell-v6.pdf
+- Wired and Unprepared v1.2 (Working Draft) — K-12 Technology Integration, Northern Great Plains & Mountain West: /assets/papers/wired-and-unprepared-v1.2.pdf
 - Workforce Readiness v5.1: /assets/papers/workforce-readiness-v5.1.pdf
 - Midwest Workforce Readiness v1.0: /assets/papers/OCF_Midwest_WorkforceReadiness_v1.0.pdf
 - RPE Standard (Reasonable and Prudent Entity): /assets/papers/RPE_Standard_Stratmeyer_2026.pdf
